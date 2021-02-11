@@ -13,20 +13,31 @@ body{
 #innerKeyboard{
     /* background: red; */
     width: 90%;
-    height: 80%;
+    height: 99%;
     margin-left: 5%;
     margin-right: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+#textField{
+    background-color: #ffffff;
+    height: 8vmin;
+    width: 100%;
+    /* margin: 3vw 0; */
+    border-radius: 999px;
+    box-shadow: 2px 4px 4px 0 rgba(0,0,0,0.25);
 }
 .flexDiv{
     display: flex;
-    justify-content: space-evenly;
-    height: 25%;
+    justify-content: space-between;
+    /* height: 25%; */
 }
 .keyButton{
-    width: 5vw;
-    height: 5vw;
-    min-width: 50px;
-    min-height: 50px;
+    width: 8vmin;
+    height: 8vmin;
+    /* min-width: 50px; */
+    /* min-height: 50px; */
     /* margin: .2vw 2.26vw; */
     border-radius: 50%;
     outline: none;
