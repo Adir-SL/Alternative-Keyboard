@@ -58,7 +58,7 @@ body{
     visibility: hidden;
 }
 .keyButton:active, .keyButton:focus{
-    animation: keyPress 200ms linear;
+    /* animation: keyPress 200ms linear; */
     -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 

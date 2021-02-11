@@ -6,48 +6,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alternative Keyboard</title>
     <link rel="stylesheet" href="styles.css">
+    <script>
+        function keyCheck(e){
+            console.log(e.target.getAttribute("keyValue"));
+            e.target.style.animationName = "none";
+            setTimeout(function(){
+                e.target.style.animationName = "keyPress";
+            }, 50);
+        }
+    </script>
 </head>
 <body>
     <div id="keyboard">
         <div id="innerKeyboard">
             <div id="textField"></div>
             <div class="flexDiv">
-                <button class="keyButton" keyValue="א"></button>
-                <button class="keyButton" keyValue="ב"></button>
-                <button class="keyButton" keyValue="ג"></button>
-                <button class="keyButton" keyValue="ד"></button>
-                <button class="keyButton" keyValue="ה"></button>
-                <button class="keyButton" keyValue="ו"></button>
-                <button class="keyButton" keyValue="ז"></button>
+                <button class="keyButton" onclick="keyCheck(event);" keyValue="א"></button>
+                <button class="keyButton" onclick="keyCheck(event);" keyValue="ב"></button>
+                <button class="keyButton" onclick="keyCheck(event);" keyValue="ג"></button>
+                <button class="keyButton" onclick="keyCheck(event);" keyValue="ד"></button>
+                <button class="keyButton" onclick="keyCheck(event);" keyValue="ה"></button>
+                <button class="keyButton" onclick="keyCheck(event);" keyValue="ו"></button>
+                <button class="keyButton" onclick="keyCheck(event);" keyValue="ז"></button>
             </div>
 
             <div class="flexDiv">
-                <button class="keyButton" keyValue="ח"></button>
-                <button class="keyButton" keyValue="ט"></button>
-                <button class="keyButton" keyValue="י"></button>
-                <button class="keyButton" keyValue="כ"></button>
-                <button class="keyButton" keyValue="ך"></button>
-                <button class="keyButton" keyValue="ל"></button>
-                <button class="keyButton" keyValue="מ"></button>
+                <button class="keyButton" onclick="keyCheck(event);" keyValue="ח"></button>
+                <button class="keyButton" onclick="keyCheck(event);" keyValue="ט"></button>
+                <button class="keyButton" onclick="keyCheck(event);" keyValue="י"></button>
+                <button class="keyButton" onclick="keyCheck(event);" keyValue="כ"></button>
+                <button class="keyButton" onclick="keyCheck(event);" keyValue="ך"></button>
+                <button class="keyButton" onclick="keyCheck(event);" keyValue="ל"></button>
+                <button class="keyButton" onclick="keyCheck(event);" keyValue="מ"></button>
             </div>
             
             <div class="flexDiv">
-                <button class="keyButton" keyValue="ם"></button>
-                <button class="keyButton" keyValue="נ"></button>
-                <button class="keyButton" keyValue="ן"></button>
-                <button class="keyButton" keyValue="ס"></button>
-                <button class="keyButton" keyValue="ע"></button>
-                <button class="keyButton" keyValue="פ"></button>
-                <button class="keyButton" keyValue="ף"></button>
+                <button class="keyButton" onclick="keyCheck(event);" keyValue="ם"></button>
+                <button class="keyButton" onclick="keyCheck(event);" keyValue="נ"></button>
+                <button class="keyButton" onclick="keyCheck(event);" keyValue="ן"></button>
+                <button class="keyButton" onclick="keyCheck(event);" keyValue="ס"></button>
+                <button class="keyButton" onclick="keyCheck(event);" keyValue="ע"></button>
+                <button class="keyButton" onclick="keyCheck(event);" keyValue="פ"></button>
+                <button class="keyButton" onclick="keyCheck(event);" keyValue="ף"></button>
             </div>
 
             <div class="flexDiv">
-                <button class="keyButton" keyValue="צ"></button>
-                <button class="keyButton" keyValue="ץ"></button>
-                <button class="keyButton" keyValue="ק"></button>
-                <button class="keyButton" keyValue="ר"></button>
-                <button class="keyButton" keyValue="ש"></button>
-                <button class="keyButton" keyValue="ת"></button>
+                <button class="keyButton" onclick="keyCheck(event);" keyValue="צ"></button>
+                <button class="keyButton" onclick="keyCheck(event);" keyValue="ץ"></button>
+                <button class="keyButton" onclick="keyCheck(event);" keyValue="ק"></button>
+                <button class="keyButton" onclick="keyCheck(event);" keyValue="ר"></button>
+                <button class="keyButton" onclick="keyCheck(event);" keyValue="ש"></button>
+                <button class="keyButton" onclick="keyCheck(event);" keyValue="ת"></button>
                 <button class="keyButton hideMe"></button>
             </div>
         </div>
