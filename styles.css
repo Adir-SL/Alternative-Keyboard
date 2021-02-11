@@ -32,6 +32,6 @@ body{
     outline: none;
     border: none;
 }
-.hideMe{
+.keyButton:empty{
     visibility: hidden;
 }
