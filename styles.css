@@ -16,7 +16,6 @@ body{
     left: 0;
 }
 #innerKeyboard{
-    /* background: red; */
     width: 90%;
     height: 99%;
     margin-left: 5%;
@@ -29,23 +28,16 @@ body{
     background-color: #ffffff;
     height: 8vmin;
     width: 100%;
-    /* margin: 3vw 0; */
     border-radius: 999px;
     box-shadow: 2px 4px 4px 0 rgba(0,0,0,0.25);
 }
 .flexDiv{
     display: flex;
     justify-content: space-between;
-    /* height: 25%; */
 }
 .keyButton{
-    /* width: 8vmin;
-    height: 8vmin; */
     padding: 4vmin;
     cursor: pointer;
-    /* min-width: 50px; */
-    /* min-height: 50px; */
-    /* margin: .2vw 2.26vw; */
     background-color: #E0E0E0;
     border-radius: 50%;
     outline: none;
@@ -53,6 +45,7 @@ body{
     font-family: Frank, sans-serif;
     font-size: 5vmin;
     color: #323232;
+    animation: none 200ms linear;
     box-shadow: 2px 4px 4px 0 rgba(0,0,0,0.25);
 }
 .keyButton::after{
@@ -64,7 +57,7 @@ body{
     visibility: hidden;
 }
 .keyButton:active{
-    animation: keyPress 200ms linear;
+    animation-name: keyPress;
 }
 
 @keyframes keyPress{
