@@ -39,8 +39,9 @@ body{
     /* height: 25%; */
 }
 .keyButton{
-    width: 8vmin;
-    height: 8vmin;
+    /* width: 8vmin;
+    height: 8vmin; */
+    padding: 4vmin;
     cursor: pointer;
     /* min-width: 50px; */
     /* min-height: 50px; */
