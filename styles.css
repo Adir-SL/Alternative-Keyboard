@@ -1,17 +1,37 @@
 body{
-    background-color: lightgray;
+    background-color: #E0E0E0;
+    direction: rtl;
+}
+#keyboard{
+    background-color: #C6C6C6;
+    position: fixed;
+    width: 100%;
+    height: 50%;
+    bottom: 0;
+    left: 0;
+}
+#innerKeyboard{
+    /* background: red; */
+    width: 90%;
+    height: 80%;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 .flexDiv{
     display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 98vh;
+    justify-content: space-evenly;
+    height: 25%;
 }
-.panelDiv{
-    background-color: white;
-    color: #333333;
-    font-family: sans-serif;
-    padding: 32px;
-    border-radius: 8px;
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+.keyButton{
+    width: 5vw;
+    height: 5vw;
+    min-width: 50px;
+    min-height: 50px;
+    /* margin: .2vw 2.26vw; */
+    border-radius: 50%;
+    outline: none;
+    border: none;
+}
+.hideMe{
+    visibility: hidden;
 }
