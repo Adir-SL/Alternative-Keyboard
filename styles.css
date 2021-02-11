@@ -1,6 +1,6 @@
 @font-face {
     font-family: Frank;
-    src: url(FrankRuhlLibre-Regular.ttf);
+    src: url(font/FrankRuhlLibre-Regular.ttf);
   }
 
 body{
@@ -48,6 +48,8 @@ body{
     outline: none;
     border: none;
     font-family: Frank, sans-serif;
+    font-size: 3em;
+    color: #323232;
     box-shadow: 2px 4px 4px 0 rgba(0,0,0,0.25);
 }
 .keyButton:empty{
