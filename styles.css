@@ -49,7 +49,7 @@ body{
     outline: none;
     border: none;
     font-family: Frank, sans-serif;
-    font-size: 3em;
+    font-size: 5vmin;
     color: #323232;
     box-shadow: 2px 4px 4px 0 rgba(0,0,0,0.25);
 }
