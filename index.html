@@ -9,10 +9,10 @@
     <script>
         function keyCheck(e){
             console.log(e.target.getAttribute("keyValue"));
-            e.target.style.animationName = "none";
+            e.target.style.transform = "scale(0.8)";
             setTimeout(function(){
-                e.target.style.animationName = "keyPress";
-            }, 50);
+                e.target.style.transform = "scale(1)";
+            }, 100);
         }
     </script>
 </head>
