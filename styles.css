@@ -41,6 +41,7 @@ body{
 .keyButton{
     width: 8vmin;
     height: 8vmin;
+    cursor: pointer;
     /* min-width: 50px; */
     /* min-height: 50px; */
     /* margin: .2vw 2.26vw; */
@@ -53,7 +54,12 @@ body{
     color: #323232;
     box-shadow: 2px 4px 4px 0 rgba(0,0,0,0.25);
 }
-.keyButton:empty{
+.keyButton::after{
+    content: attr(keyValue);
+    position: absolute;
+    transform: translate(50%, -50%);
+}
+.hideMe{
     visibility: hidden;
 }
 .keyButton:active{
