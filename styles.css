@@ -47,6 +47,7 @@ body{
     color: #323232;
     animation: none 200ms linear;
     box-shadow: 2px 4px 4px 0 rgba(0,0,0,0.25);
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 .keyButton::after{
     content: attr(keyValue);
@@ -58,6 +59,7 @@ body{
 }
 .keyButton:active, .keyButton:focus{
     animation-name: keyPress;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
 @keyframes keyPress{
