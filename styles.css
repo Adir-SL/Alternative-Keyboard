@@ -56,7 +56,7 @@ body{
 .hideMe{
     visibility: hidden;
 }
-.keyButton:active{
+.keyButton:active, .keyButton:focus{
     animation-name: keyPress;
 }
 
