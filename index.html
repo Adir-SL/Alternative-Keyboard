@@ -12,20 +12,14 @@
                 console.log(e.target.getAttribute("keyValue"));
                 e.target.style.transform = "translateY(-50%)";
                 setTimeout(function () {
-                    // e.target.style.opacity = 0;
                     setTimeout(function () {
                         e.target.style.transform = "translateY(0)";
-                        setTimeout(function () {
-                            // e.target.style.opacity = 1;
-										//Greetings from iPad;
-                        }, 100);
                     }, 100);
                 }, 100);
                 if (document.getElementById("textField").getElementsByTagName("button").length < 9) {
                     document.getElementById("textField").innerHTML += '<button class="keyButton" onclick="keyCheck(event);" keyValue="' + e.target.getAttribute("keyValue") + '">' + e.target.getAttribute("keyValue") + "</button>";
                 }
                 buttonsOn();
-                //Glitch env testing;
             }
             function buttonsOn() {
                 document.getElementById("buttonWrapper").getElementsByTagName("button")[0].className = "";
