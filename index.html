@@ -52,12 +52,22 @@
                     document.getElementById("buttonWrapper").getElementsByTagName("button")[1].className = "greenBtn disabled";
                 }
             }
+            function toggleLang(e){
+                // alert(e.target.innerText)
+                if(e.target.innerText == "a"){
+                    document.getElementsByClassName("statusBar")[0].getElementsByTagName("button")[1].innerText = "א";
+                    document.getElementsByClassName("statusBar")[0].getElementsByTagName("button")[1].setAttribute("keyValue","א");
+                }else{
+                    document.getElementsByClassName("statusBar")[0].getElementsByTagName("button")[1].innerText = "a";
+                    document.getElementsByClassName("statusBar")[0].getElementsByTagName("button")[1].setAttribute("keyValue","a");
+                }
+            }
         </script>
     </head>
     <body>
         <div class="statusBar flexDiv">
             <button>O</button>
-            <button>O</button>
+            <button class="showBtn" keyValue="a" onclick="toggleLang(event);">a</button>
             <button>O</button>
         </div>
         <div id="innerWords"></div>
