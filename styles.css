@@ -2,20 +2,26 @@
     font-family: Frank;
     src: url(font/FrankRuhlLibre-Regular.ttf);
   }
-
-body{
+  
+  body {
     background-color: #E0E0E0;
+    background-color: #ffffff;
     direction: rtl;
-}
-#keyboard{
+    touch-action: manipulation;
+    user-select: none;
+  }
+  button {
+    font-family: Frank, sans-serif;
+  }
+  #keyboard {
     background-color: #C6C6C6;
     position: fixed;
     width: 100%;
     height: 50%;
     bottom: 0;
     left: 0;
-}
-#innerKeyboard{
+  }
+  #innerKeyboard {
     width: 90%;
     height: 99%;
     margin-left: 5%;
@@ -23,46 +29,132 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-}
-#textField{
+  }
+  #textField {
     background-color: #ffffff;
     height: 8vmin;
+    padding: 1vmin;
     width: 100%;
     border-radius: 999px;
-    box-shadow: 2px 4px 4px 0 rgba(0,0,0,0.25);
-}
-.flexDiv{
+    box-shadow: 2px 4px 4px 0 rgba(0, 0, 0, 0.25);
+    /*     overflow: hidden; */
+  }
+  #buttonWrapper {
+    display: flex;
+  }
+  #buttonWrapper button {
+    flex-grow: 1;
+    border-radius: 999px;
+    background-color: #FCF4D6;
+    color: red;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    box-shadow: 2px 4px 4px 0 rgba(0, 0, 0, 0.25);
+    transition: all 100ms ease-in-out 0s;
+  }
+  #buttonWrapper .greenBtn {
+    margin-right: 2vmin;
+    color: green;
+  }
+  #buttonWrapper .disabled {
+    color: #A4A4A4;
+    background-color: transparent;
+    box-shadow: 0 0 0 1px;
+    cursor: default;
+  }
+  .flexDiv {
     display: flex;
     justify-content: space-between;
-}
-.keyButton{
+  }
+  .keyButton {
     padding: 4vmin;
     cursor: pointer;
     background-color: #E0E0E0;
     border-radius: 50%;
     outline: none;
     border: none;
-    font-family: Frank, sans-serif;
     font-size: 5vmin;
     color: #323232;
-    box-shadow: 2px 4px 4px 0 rgba(0,0,0,0.25);
-    transition: transform 100ms linear 0s;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-}
-.keyButton::after{
+    box-shadow: 2px 4px 4px 0 rgba(0, 0, 0, 0.25);
+    transition: transform 100ms ease-in-out 0s, opacity 100ms linear 0s;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+  #textField .keyButton {
+    margin-left: 1vmin;
+    background-color: #767676;
+    color: #ffffff;
+    font-size: 0px;
+  }
+  #textField .keyButton:last-of-type {
+    animation: addKey 100ms ease-out;
+  }
+  .keyButton::after {
     content: attr(keyValue);
     position: absolute;
+    font-size: 5vmin;
     transform: translate(50%, -50%);
-}
-.hideMe{
+  }
+  .hideMe {
     visibility: hidden;
-}
-.keyButton:active, .keyButton:focus{
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-}
-
-@keyframes keyPress{
-    0%{transform: scale(1);}
-    50%{transform: scale(0.8);}
-    100%{transform: scale(1);}
-}
+  }
+  .keyButton:active,
+  .keyButton:focus {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+  #innerWords{
+    margin-top: 10vmin;
+  }
+  #innerWords button {
+    border: none;
+    outline: none;
+    font-size: 5vmin;
+    padding: 1vmin 3vmin;
+    margin: 1vmin;
+    border-radius: 999px;
+    background-color: #E0E0E0;
+    color: #161616;
+    box-shadow: 2px 4px 4px 0 rgba(0, 0, 0, 0.25);
+  }
+  .statusBar{
+    position: fixed;
+    width: 100vw;
+    height: 8vmin;
+    top: 0;
+    left: 0;
+    background-color: #525252;
+  }
+  .statusBar button{
+    margin: 1vmin;
+    background-color: #6F6F6F;
+    border: 0;
+    outline: 0;
+    color: #6F6F6F;
+    border-radius: 50%;
+    height: 6vmin;
+    width: 6vmin;
+    box-shadow: 2px 4px 4px 0 rgba(0, 0, 0, 0.25);
+  }
+  
+  @keyframes keyPress {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(0.8);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @keyframes addKey {
+    0% {
+      transform: translateX(20%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  

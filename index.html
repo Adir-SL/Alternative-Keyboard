@@ -1,66 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alternative Keyboard</title>
-    <link rel="stylesheet" href="styles.css">
-    <script>
-        function keyCheck(e){
-            console.log(e.target.getAttribute("keyValue"));
-            e.target.style.transform = "scale(0.8)";
-            setTimeout(function(){
-                e.target.style.transform = "scale(1)";
-            }, 100);
-        }
-    </script>
-</head>
-<body>
-    <div id="keyboard">
-        <div id="innerKeyboard">
-            <div id="textField"></div>
-            <div class="flexDiv">
-                <button class="keyButton" onclick="keyCheck(event);" keyValue="א"></button>
-                <button class="keyButton" onclick="keyCheck(event);" keyValue="ב"></button>
-                <button class="keyButton" onclick="keyCheck(event);" keyValue="ג"></button>
-                <button class="keyButton" onclick="keyCheck(event);" keyValue="ד"></button>
-                <button class="keyButton" onclick="keyCheck(event);" keyValue="ה"></button>
-                <button class="keyButton" onclick="keyCheck(event);" keyValue="ו"></button>
-                <button class="keyButton" onclick="keyCheck(event);" keyValue="ז"></button>
-            </div>
-
-            <div class="flexDiv">
-                <button class="keyButton" onclick="keyCheck(event);" keyValue="ח"></button>
-                <button class="keyButton" onclick="keyCheck(event);" keyValue="ט"></button>
-                <button class="keyButton" onclick="keyCheck(event);" keyValue="י"></button>
-                <button class="keyButton" onclick="keyCheck(event);" keyValue="כ"></button>
-                <button class="keyButton" onclick="keyCheck(event);" keyValue="ך"></button>
-                <button class="keyButton" onclick="keyCheck(event);" keyValue="ל"></button>
-                <button class="keyButton" onclick="keyCheck(event);" keyValue="מ"></button>
-            </div>
-            
-            <div class="flexDiv">
-                <button class="keyButton" onclick="keyCheck(event);" keyValue="ם"></button>
-                <button class="keyButton" onclick="keyCheck(event);" keyValue="נ"></button>
-                <button class="keyButton" onclick="keyCheck(event);" keyValue="ן"></button>
-                <button class="keyButton" onclick="keyCheck(event);" keyValue="ס"></button>
-                <button class="keyButton" onclick="keyCheck(event);" keyValue="ע"></button>
-                <button class="keyButton" onclick="keyCheck(event);" keyValue="פ"></button>
-                <button class="keyButton" onclick="keyCheck(event);" keyValue="ף"></button>
-            </div>
-
-            <div class="flexDiv">
-                <button class="keyButton" onclick="keyCheck(event);" keyValue="צ"></button>
-                <button class="keyButton" onclick="keyCheck(event);" keyValue="ץ"></button>
-                <button class="keyButton" onclick="keyCheck(event);" keyValue="ק"></button>
-                <button class="keyButton" onclick="keyCheck(event);" keyValue="ר"></button>
-                <button class="keyButton" onclick="keyCheck(event);" keyValue="ש"></button>
-                <button class="keyButton" onclick="keyCheck(event);" keyValue="ת"></button>
-                <button class="keyButton hideMe"></button>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Alternative Keyboard</title>
+        <link rel="stylesheet" href="styles.css" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+        <script>
+            function keyCheck(e) {
+                console.log(e.target.getAttribute("keyValue"));
+                e.target.style.transform = "translateY(-50%)";
+                setTimeout(function () {
+                    // e.target.style.opacity = 0;
+                    setTimeout(function () {
+                        e.target.style.transform = "translateY(0)";
+                        setTimeout(function () {
+                            // e.target.style.opacity = 1;
+                        }, 100);
+                    }, 100);
+                }, 100);
+                if (document.getElementById("textField").getElementsByTagName("button").length < 9) {
+                    document.getElementById("textField").innerHTML += '<button class="keyButton" onclick="keyCheck(event);" keyValue="' + e.target.getAttribute("keyValue") + '">' + e.target.getAttribute("keyValue") + "</button>";
+                }
+                buttonsOn();
+                //Glitch env testing;
+            }
+            function buttonsOn() {
+                document.getElementById("buttonWrapper").getElementsByTagName("button")[0].className = "";
+                document.getElementById("buttonWrapper").getElementsByTagName("button")[1].className = "greenBtn";
+            }
+            function approveWord() {
+                document.getElementById("innerWords").innerHTML += "<button>" + document.getElementById("textField").innerText + "</button>";
+                document.getElementById("textField").innerHTML = "";
+                document.getElementById("buttonWrapper").getElementsByTagName("button")[1].style.transform = "scale(0.8)";
+                setTimeout(function () {
+                    toggleButtons();
+                    document.getElementById("buttonWrapper").getElementsByTagName("button")[1].style.transform = "scale(1)";
+                }, 100);
+            }
+            function cancelWord() {
+                document.getElementById("textField").innerHTML = "";
+    
+                document.getElementById("buttonWrapper").getElementsByTagName("button")[0].style.transform = "scale(0.8)";
+                setTimeout(function () {
+                    toggleButtons();
+                    document.getElementById("buttonWrapper").getElementsByTagName("button")[0].style.transform = "scale(1)";
+                }, 100);
+            }
+            function toggleButtons() {
+                if (document.getElementById("buttonWrapper").getElementsByTagName("button")[0].className == "disabled") {
+                    document.getElementById("buttonWrapper").getElementsByTagName("button")[0].className = "";
+                    document.getElementById("buttonWrapper").getElementsByTagName("button")[1].className = "greenBtn";
+                } else {
+                    document.getElementById("buttonWrapper").getElementsByTagName("button")[0].className = "disabled";
+                    document.getElementById("buttonWrapper").getElementsByTagName("button")[1].className = "greenBtn disabled";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="statusBar flexDiv">
+            <button>O</button>
+            <button>O</button>
+            <button>O</button>
+        </div>
+        <div id="innerWords"></div>
+        <div id="keyboard">
+            <div id="innerKeyboard">
+                <div id="buttonWrapper">
+                    <button class="disabled" onclick="cancelWord();"><i class="material-icons mx-6">cancel</i></button>
+                    <button class="greenBtn disabled" onclick="approveWord();"><i class="material-icons mx-6">check_circle</i></button>
+                </div>
+                <div id="textField"></div>
+                <div class="flexDiv">
+                    <button class="keyButton" onclick="keyCheck(event);" keyValue="א"></button>
+                    <button class="keyButton" onclick="keyCheck(event);" keyValue="ב"></button>
+                    <button class="keyButton" onclick="keyCheck(event);" keyValue="ג"></button>
+                    <button class="keyButton" onclick="keyCheck(event);" keyValue="ד"></button>
+                    <button class="keyButton" onclick="keyCheck(event);" keyValue="ה"></button>
+                    <button class="keyButton" onclick="keyCheck(event);" keyValue="ו"></button>
+                    <button class="keyButton" onclick="keyCheck(event);" keyValue="ז"></button>
+                </div>
+    
+                <div class="flexDiv">
+                    <button class="keyButton" onclick="keyCheck(event);" keyValue="ח"></button>
+                    <button class="keyButton" onclick="keyCheck(event);" keyValue="ט"></button>
+                    <button class="keyButton" onclick="keyCheck(event);" keyValue="י"></button>
+                    <button class="keyButton" onclick="keyCheck(event);" keyValue="כ"></button>
+                    <button class="keyButton" onclick="keyCheck(event);" keyValue="ך"></button>
+                    <button class="keyButton" onclick="keyCheck(event);" keyValue="ל"></button>
+                    <button class="keyButton" onclick="keyCheck(event);" keyValue="מ"></button>
+                </div>
+    
+                <div class="flexDiv">
+                    <button class="keyButton" onclick="keyCheck(event);" keyValue="ם"></button>
+                    <button class="keyButton" onclick="keyCheck(event);" keyValue="נ"></button>
+                    <button class="keyButton" onclick="keyCheck(event);" keyValue="ן"></button>
+                    <button class="keyButton" onclick="keyCheck(event);" keyValue="ס"></button>
+                    <button class="keyButton" onclick="keyCheck(event);" keyValue="ע"></button>
+                    <button class="keyButton" onclick="keyCheck(event);" keyValue="פ"></button>
+                    <button class="keyButton" onclick="keyCheck(event);" keyValue="ף"></button>
+                </div>
+    
+                <div class="flexDiv">
+                    <button class="keyButton" onclick="keyCheck(event);" keyValue="צ"></button>
+                    <button class="keyButton" onclick="keyCheck(event);" keyValue="ץ"></button>
+                    <button class="keyButton" onclick="keyCheck(event);" keyValue="ק"></button>
+                    <button class="keyButton" onclick="keyCheck(event);" keyValue="ר"></button>
+                    <button class="keyButton" onclick="keyCheck(event);" keyValue="ש"></button>
+                    <button class="keyButton" onclick="keyCheck(event);" keyValue="ת"></button>
+                    <button class="keyButton hideMe"></button>
+                </div>
             </div>
         </div>
-    </div>
+    </body>
     
-</body>
 </html>
