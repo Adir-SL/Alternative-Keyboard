@@ -1,3 +1,6 @@
+window.abcEng = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+window.abcHeb = ["א","ב","ג","ד","ה","ו","ז","ח","ט","י","כ","ל","מ","ם","נ","ן","ס","ע","פ","ף","צ","ץ","ק","ר","ש","ת"]
+
 function keyCheck(e) {
     console.log(e.target.getAttribute("keyValue"));
     e.target.style.transform = "translateY(-50%)";
