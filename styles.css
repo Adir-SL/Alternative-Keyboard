@@ -143,6 +143,7 @@
   }
   .statusBar .showBtn{
     cursor: pointer;
+    direction: rtl;
   }
   .statusBar .showBtn::after{
     content: attr(keyValue);
