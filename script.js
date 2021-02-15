@@ -1,6 +1,20 @@
 window.abcEng = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
-window.abcHeb = ["א","ב","ג","ד","ה","ו","ז","ח","ט","י","כ","ל","מ","ם","נ","ן","ס","ע","פ","ף","צ","ץ","ק","ר","ש","ת"]
-
+window.abcHeb = ["א","ב","ג","ד","ה","ו","ז","ח","ט","י","כ","ך","ל","מ","ם","נ","ן","ס","ע","פ","ף","צ","ץ","ק","ר","ש","ת"]
+function changeLang(){
+    var x = document.getElementsByClassName("keyButton");
+    var i;
+    for (i = 0; i < x.length; i++) {
+        x[i].setAttribute("keyValue",temp[i]);
+        if(temp[0] == "a"){
+            x[i].className = "keyButton engButton";
+        }else{
+            x[i].className = "keyButton";
+        }
+        if(x[i].getAttribute("keyValue") == "undefined"){
+            x[i].className += " hideMe";
+        }
+    }
+}
 function keyCheck(e) {
     console.log(e.target.getAttribute("keyValue"));
     e.target.style.transform = "translateY(-50%)";
@@ -50,8 +64,14 @@ function toggleLang(e){
     if(e.target.innerText == "a"){
         document.getElementsByClassName("statusBar")[0].getElementsByTagName("button")[1].innerText = "א";
         document.getElementsByClassName("statusBar")[0].getElementsByTagName("button")[1].setAttribute("keyValue","א");
+        temp = window.abcEng;
+        changeLang();
+        document.body.style.direction = "ltr";
     }else{
         document.getElementsByClassName("statusBar")[0].getElementsByTagName("button")[1].innerText = "a";
         document.getElementsByClassName("statusBar")[0].getElementsByTagName("button")[1].setAttribute("keyValue","a");
+        temp = window.abcHeb;
+        changeLang();
+        document.body.style.direction = "rtl";
     }
 }

@@ -95,6 +95,9 @@
     font-size: 5vmin;
     transform: translate(50%, -50%);
   }
+  .engButton::after{
+    transform: translate(-50%, -50%);
+  }
   .hideMe {
     visibility: hidden;
   }
