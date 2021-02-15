@@ -1,5 +1,6 @@
 window.abcEng = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
 window.abcHeb = ["א","ב","ג","ד","ה","ו","ז","ח","ט","י","כ","ך","ל","מ","ם","נ","ן","ס","ע","פ","ף","צ","ץ","ק","ר","ש","ת"]
+temp = window.abcHeb;
 function changeLang(){
     var x = document.getElementsByClassName("keyButton");
     var i;
@@ -14,6 +15,15 @@ function changeLang(){
             x[i].className += " hideMe";
         }
     }
+    var x = document.getElementsByClassName("keepLang");
+    var i;
+    for (i = 0; i < x.length; i++) {
+        if(temp[0] == "a"){
+            x[i].className = "keepLang engButton";
+        }else{
+            x[i].className = "keepLang";
+        }
+    }
 }
 function keyCheck(e) {
     console.log(e.target.getAttribute("keyValue"));
@@ -24,7 +34,11 @@ function keyCheck(e) {
         }, 100);
     }, 100);
     if (document.getElementById("textField").getElementsByTagName("button").length < 9) {
-        document.getElementById("textField").innerHTML += '<button class="keyButton" onclick="keyCheck(event);" keyValue="' + e.target.getAttribute("keyValue") + '">' + e.target.getAttribute("keyValue") + "</button>";
+        if(temp[0] == "a"){
+            document.getElementById("textField").innerHTML += '<button class="keepLang engButton" onclick="keyCheck(event);" keyValue="' + e.target.getAttribute("keyValue") + '">' + e.target.getAttribute("keyValue") + "</button>";
+        }else{
+            document.getElementById("textField").innerHTML += '<button class="keepLang" onclick="keyCheck(event);" keyValue="' + e.target.getAttribute("keyValue") + '">' + e.target.getAttribute("keyValue") + "</button>";
+        }
     }
     buttonsOn();
 }
