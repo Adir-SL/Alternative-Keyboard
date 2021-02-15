@@ -34,13 +34,15 @@
     background-color: #ffffff;
     height: 8vmin;
     padding: 1vmin;
-    width: 100%;
+    /* padding: 0.5vmin 0; */
+    /* width: 100%; */
     border-radius: 999px;
     box-shadow: 2px 4px 4px 0 rgba(0, 0, 0, 0.25);
     /*     overflow: hidden; */
   }
   #buttonWrapper {
     display: flex;
+    gap: 2vmin;
   }
   #buttonWrapper button {
     flex-grow: 1;
@@ -54,7 +56,7 @@
     transition: all 100ms ease-in-out 0s;
   }
   #buttonWrapper .greenBtn {
-    margin-right: 2vmin;
+    /* margin-right: 2vmin; */
     color: green;
   }
   #buttonWrapper .disabled {
