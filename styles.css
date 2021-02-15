@@ -136,6 +136,9 @@
     text-align: center;
     box-shadow: 2px 4px 4px 0 rgba(0, 0, 0, 0.25);
   }
+  .statusBar .showBtn{
+    cursor: pointer;
+  }
   .statusBar .showBtn::after{
     content: attr(keyValue);
     position: absolute;
