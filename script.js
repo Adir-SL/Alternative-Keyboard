@@ -74,7 +74,6 @@ function toggleButtons() {
     }
 }
 function toggleLang(e){
-    // alert(e.target.innerText)
     if(e.target.innerText == "a"){
         document.getElementsByClassName("statusBar")[0].getElementsByTagName("button")[1].innerText = "א";
         document.getElementsByClassName("statusBar")[0].getElementsByTagName("button")[1].setAttribute("keyValue","א");
