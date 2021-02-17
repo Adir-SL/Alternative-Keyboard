@@ -35,9 +35,9 @@ function keyCheck(e) {
     }, 100);
     if (document.getElementById("textField").getElementsByTagName("button").length < 9) {
         if(temp[0] == "a"){
-            document.getElementById("textField").innerHTML += '<button class="keepLang engButton" onclick="keyCheck(event);" keyValue="' + e.target.getAttribute("keyValue") + '">' + e.target.getAttribute("keyValue") + "</button>";
+            document.getElementById("textField").innerHTML += '<button class="keepLang engButton" onclick="keyFix(event);" keyValue="' + e.target.getAttribute("keyValue") + '">' + e.target.getAttribute("keyValue") + "</button>";
         }else{
-            document.getElementById("textField").innerHTML += '<button class="keepLang" onclick="keyCheck(event);" keyValue="' + e.target.getAttribute("keyValue") + '">' + e.target.getAttribute("keyValue") + "</button>";
+            document.getElementById("textField").innerHTML += '<button class="keepLang" onclick="keyFix(event);" keyValue="' + e.target.getAttribute("keyValue") + '">' + e.target.getAttribute("keyValue") + "</button>";
         }
     }
     buttonsOn();
