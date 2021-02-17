@@ -90,11 +90,11 @@ function toggleLang(e){
 }
 function wordSelect(e){
     resetButtons();
-    e.target.className = "selectButton";
+    e.target.classList.add("selectButton");
 }
 function keyFix(e){
     resetButtons();
-    e.target.className = "keepLang selectButton";
+    e.target.classList.add("selectButton");
 }
 function resetButtons(){
     var x = document.getElementsByTagName("button");
