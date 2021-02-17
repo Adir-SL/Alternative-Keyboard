@@ -92,6 +92,7 @@ function toggleLang(e){
 function selectMe(e){
     resetButtons();
     e.target.classList.add("selectButton");
+    document.getElementById("buttonWrapper").innerHTML = '<button class="disabled" onclick="cancelWord();"><i class="material-icons mx-6">cancel</i></button><button></button><button></button><button></button><button></button><button class="greenBtn disabled" onclick="approveWord();"><i class="material-icons mx-6">check_circle</i></button>';
 }
 function resetButtons(){
     var x = document.getElementsByTagName("button");
