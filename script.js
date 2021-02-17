@@ -35,9 +35,9 @@ function keyCheck(e) {
     }, 100);
     if (document.getElementById("textField").getElementsByTagName("button").length < 9) {
         if(temp[0] == "a"){
-            document.getElementById("textField").innerHTML += '<button class="keepLang engButton" onclick="keyFix(event);" keyValue="' + e.target.getAttribute("keyValue") + '">' + e.target.getAttribute("keyValue") + "</button>";
+            document.getElementById("textField").innerHTML += '<button class="keepLang engButton" onclick="selectMe(event);" keyValue="' + e.target.getAttribute("keyValue") + '">' + e.target.getAttribute("keyValue") + "</button>";
         }else{
-            document.getElementById("textField").innerHTML += '<button class="keepLang" onclick="keyFix(event);" keyValue="' + e.target.getAttribute("keyValue") + '">' + e.target.getAttribute("keyValue") + "</button>";
+            document.getElementById("textField").innerHTML += '<button class="keepLang" onclick="selectMe(event);" keyValue="' + e.target.getAttribute("keyValue") + '">' + e.target.getAttribute("keyValue") + "</button>";
         }
     }
     buttonsOn();
@@ -47,7 +47,7 @@ function buttonsOn() {
     document.getElementById("buttonWrapper").getElementsByTagName("button")[1].className = "greenBtn";
 }
 function approveWord() {
-    document.getElementById("innerWords").innerHTML += "<button onclick='wordSelect(event);'>" + document.getElementById("textField").innerText + "</button>";
+    document.getElementById("innerWords").innerHTML += "<button onclick='selectMe(event);'>" + document.getElementById("textField").innerText + "</button>";
     document.getElementById("textField").innerHTML = "";
     document.getElementById("buttonWrapper").getElementsByTagName("button")[1].style.transform = "scale(0.8)";
     setTimeout(function () {
@@ -88,11 +88,7 @@ function toggleLang(e){
         document.body.style.direction = "rtl";
     }
 }
-function wordSelect(e){
-    resetButtons();
-    e.target.classList.add("selectButton");
-}
-function keyFix(e){
+function selectMe(e){
     resetButtons();
     e.target.classList.add("selectButton");
 }
