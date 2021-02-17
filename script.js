@@ -41,6 +41,7 @@ function keyCheck(e) {
         }
     }
     buttonsOn();
+    resetButtons();
 }
 function buttonsOn() {
     document.getElementById("buttonWrapper").getElementsByTagName("button")[0].className = "";
