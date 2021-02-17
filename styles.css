@@ -49,7 +49,6 @@
     color: red;
     outline: none;
     border: none;
-    cursor: pointer;
     box-shadow: 2px 4px 4px 0 rgba(0, 0, 0, 0.25);
     transition: all 100ms ease-in-out 0s;
   }
@@ -68,7 +67,6 @@
   }
   .keyButton, .keepLang {
     padding: 4vmin;
-    cursor: pointer;
     background-color: #E0E0E0;
     border-radius: 50%;
     outline: none;
@@ -145,7 +143,6 @@
     box-shadow: 2px 4px 4px 0 rgba(0, 0, 0, 0.25);
   }
   .statusBar .showBtn{
-    cursor: pointer;
     direction: rtl;
   }
   .statusBar .showBtn::after{
