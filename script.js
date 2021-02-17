@@ -94,4 +94,6 @@ function wordSelect(e){
     }
     e.target.className = "selectButton";
 }
-function keyFix(e){}
+function keyFix(e){
+    e.target.className = "keepLang selectButton";
+}
