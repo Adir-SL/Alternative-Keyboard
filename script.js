@@ -47,7 +47,7 @@ function buttonsOn() {
     document.getElementById("buttonWrapper").getElementsByTagName("button")[1].className = "greenBtn";
 }
 function approveWord() {
-    document.getElementById("innerWords").innerHTML += "<button>" + document.getElementById("textField").innerText + "</button>";
+    document.getElementById("innerWords").innerHTML += "<button onclick='wordSelect(event);'>" + document.getElementById("textField").innerText + "</button>";
     document.getElementById("textField").innerHTML = "";
     document.getElementById("buttonWrapper").getElementsByTagName("button")[1].style.transform = "scale(0.8)";
     setTimeout(function () {
@@ -63,6 +63,12 @@ function cancelWord() {
         toggleButtons();
         document.getElementById("buttonWrapper").getElementsByTagName("button")[0].style.transform = "scale(1)";
     }, 100);
+}
+function wordSelect(e){
+    if(document.getElementsByClassName("selectButton").length > 0){
+        document.getElementsByClassName("selectButton")[0].className = "";
+    }
+    e.target.className = "selectButton";
 }
 function toggleButtons() {
     if (document.getElementById("buttonWrapper").getElementsByTagName("button")[0].className == "disabled") {
