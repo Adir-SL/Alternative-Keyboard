@@ -119,6 +119,7 @@
   }
   #innerWords .selectButton{
     background-color: #FCDE76;
+    box-shadow: 2px 4px 4px 0 rgb(0 0 0 / 25%), 0 0 0 8px white, 0 0 0 9px #6C6C6C;
   }
   .statusBar{
     position: fixed;
