@@ -89,11 +89,17 @@ function toggleLang(e){
     }
 }
 function wordSelect(e){
-    if(document.getElementsByClassName("selectButton").length > 0){
-        document.getElementsByClassName("selectButton")[0].className = "";
-    }
+    resetButtons();
     e.target.className = "selectButton";
 }
 function keyFix(e){
+    resetButtons();
     e.target.className = "keepLang selectButton";
+}
+function resetButtons(){
+    var x = document.getElementsByTagName("button");
+    var i;
+    for (i = 0; i < x.length; i++) {
+        x[i].classList.remove("selectButton");
+    }
 }
