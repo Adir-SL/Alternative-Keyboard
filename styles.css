@@ -34,11 +34,8 @@
     background-color: #ffffff;
     height: 8vmin;
     padding: 1vmin;
-    /* padding: 0.5vmin 0; */
-    /* width: 100%; */
     border-radius: 999px;
     box-shadow: 2px 4px 4px 0 rgba(0, 0, 0, 0.25);
-    /*     overflow: hidden; */
   }
   #buttonWrapper {
     display: flex;
@@ -56,7 +53,6 @@
     transition: all 100ms ease-in-out 0s;
   }
   #buttonWrapper .greenBtn {
-    /* margin-right: 2vmin; */
     color: green;
   }
   #buttonWrapper .disabled {
