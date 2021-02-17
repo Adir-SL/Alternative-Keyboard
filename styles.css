@@ -12,6 +12,7 @@
   }
   button {
     font-family: Frank, sans-serif;
+    cursor: pointer;
   }
   #keyboard {
     background-color: #C6C6C6;
