@@ -64,12 +64,6 @@ function cancelWord() {
         document.getElementById("buttonWrapper").getElementsByTagName("button")[0].style.transform = "scale(1)";
     }, 100);
 }
-function wordSelect(e){
-    if(document.getElementsByClassName("selectButton").length > 0){
-        document.getElementsByClassName("selectButton")[0].className = "";
-    }
-    e.target.className = "selectButton";
-}
 function toggleButtons() {
     if (document.getElementById("buttonWrapper").getElementsByTagName("button")[0].className == "disabled") {
         document.getElementById("buttonWrapper").getElementsByTagName("button")[0].className = "";
@@ -94,3 +88,10 @@ function toggleLang(e){
         document.body.style.direction = "rtl";
     }
 }
+function wordSelect(e){
+    if(document.getElementsByClassName("selectButton").length > 0){
+        document.getElementsByClassName("selectButton")[0].className = "";
+    }
+    e.target.className = "selectButton";
+}
+function keyFix(e){}
