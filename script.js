@@ -54,7 +54,7 @@ function approveWord() {
     setTimeout(function () {
         toggleButtons();
         document.getElementById("buttonWrapper").getElementsByTagName("button")[1].style.transform = "scale(1)";
-        document.getElementById("buttonWrapper").innerHTML = '<button class="disabled" onclick="cancelWord();"><i class="material-icons mx-6">cancel</i></button><button class="greenBtn disabled" onclick="approveWord();"><i class="material-icons mx-6">check_circle</i></button>';
+        lessButtons();
     }, 100);
 }
 function cancelWord() {
@@ -64,8 +64,14 @@ function cancelWord() {
     setTimeout(function () {
         toggleButtons();
         document.getElementById("buttonWrapper").getElementsByTagName("button")[0].style.transform = "scale(1)";
-        document.getElementById("buttonWrapper").innerHTML = '<button class="disabled" onclick="cancelWord();"><i class="material-icons mx-6">cancel</i></button><button class="greenBtn disabled" onclick="approveWord();"><i class="material-icons mx-6">check_circle</i></button>';
+        lessButtons();
     }, 100);
+}
+function moreButtons(){
+    document.getElementById("buttonWrapper").innerHTML = '<button onclick="cancelWord();"><i class="material-icons mx-6">cancel</i></button><button class="disabled"></button><button class="disabled"></button><button class="disabled"></button><button class="disabled"></button><button class="greenBtn" onclick="approveWord();"><i class="material-icons mx-6">check_circle</i></button>';
+}
+function lessButtons(){
+    document.getElementById("buttonWrapper").innerHTML = '<button class="disabled" onclick="cancelWord();"><i class="material-icons mx-6">cancel</i></button><button class="greenBtn disabled" onclick="approveWord();"><i class="material-icons mx-6">check_circle</i></button>';
 }
 function toggleButtons() {
     if (document.getElementById("buttonWrapper").getElementsByTagName("button")[0].className == "disabled") {
@@ -94,7 +100,7 @@ function toggleLang(e){
 function selectMe(e){
     resetButtons();
     e.target.classList.add("selectButton");
-    document.getElementById("buttonWrapper").innerHTML = '<button onclick="cancelWord();"><i class="material-icons mx-6">cancel</i></button><button class="disabled"></button><button class="disabled"></button><button class="disabled"></button><button class="disabled"></button><button class="greenBtn" onclick="approveWord();"><i class="material-icons mx-6">check_circle</i></button>';
+    moreButtons();
 }
 function resetButtons(){
     var x = document.getElementsByTagName("button");
