@@ -68,7 +68,7 @@ function cancelWord() {
     }, 100);
 }
 function moreButtons(){
-    document.getElementById("buttonWrapper").innerHTML = '<button onclick="cancelWord();"><i class="material-icons">cancel</i></button><button class="disabled"><i class="material-icons">east</i>+</button><button class="disabled"><i class="material-icons">east</i></button><button class="disabled"><i class="material-icons">west</i></button><button class="disabled">+<i class="material-icons">west</i></button><button class="greenBtn" onclick="approveWord();"><i class="material-icons">check_circle</i></button>';
+    document.getElementById("buttonWrapper").innerHTML = '<button onclick="cancelWord();"><i class="material-icons">cancel</i></button><button class="disabled plusAfter"><i class="material-icons">east</i></button><button class="disabled"><i class="material-icons">east</i></button><button class="disabled"><i class="material-icons">west</i></button><button class="disabled plusBefore"><i class="material-icons">west</i></button><button class="greenBtn" onclick="approveWord();"><i class="material-icons">check_circle</i></button>';
 }
 function lessButtons(){
     document.getElementById("buttonWrapper").innerHTML = '<button class="disabled" onclick="cancelWord();"><i class="material-icons">cancel</i></button><button class="greenBtn disabled" onclick="approveWord();"><i class="material-icons">check_circle</i></button>';
