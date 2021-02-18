@@ -44,7 +44,7 @@ function keyCheck(e) {
     resetButtons();
 }
 function buttonsOn() {
-    document.getElementById("buttonWrapper").getElementsByTagName("button")[0].className = "";
+    document.getElementById("buttonWrapper").getElementsByTagName("button")[0].className = "redBtn";
     document.getElementById("buttonWrapper").getElementsByTagName("button")[1].className = "greenBtn";
 }
 function approveWord() {
