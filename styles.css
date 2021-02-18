@@ -58,6 +58,8 @@
   }
   .plusBefore::before, .plusAfter::after{
     content: "+";
+    font-weight: bold;
+    margin-top: -4px;
   }
   #buttonWrapper .material-icons{
     /* padding-top: 4px; */
