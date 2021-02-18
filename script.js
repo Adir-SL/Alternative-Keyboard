@@ -68,10 +68,10 @@ function cancelWord() {
     }, 100);
 }
 function moreButtons(){
-    document.getElementById("buttonWrapper").innerHTML = '<button onclick="cancelWord();"><i class="material-icons mx-6">cancel</i></button><button class="disabled"></button><button class="disabled"></button><button class="disabled"></button><button class="disabled"></button><button class="greenBtn" onclick="approveWord();"><i class="material-icons mx-6">check_circle</i></button>';
+    document.getElementById("buttonWrapper").innerHTML = '<button onclick="cancelWord();"><i class="material-icons">cancel</i></button><button class="disabled"><i class="material-icons">east</i>+</button><button class="disabled"><i class="material-icons">east</i></button><button class="disabled"><i class="material-icons">west</i></button><button class="disabled">+<i class="material-icons">west</i></button><button class="greenBtn" onclick="approveWord();"><i class="material-icons">check_circle</i></button>';
 }
 function lessButtons(){
-    document.getElementById("buttonWrapper").innerHTML = '<button class="disabled" onclick="cancelWord();"><i class="material-icons mx-6">cancel</i></button><button class="greenBtn disabled" onclick="approveWord();"><i class="material-icons mx-6">check_circle</i></button>';
+    document.getElementById("buttonWrapper").innerHTML = '<button class="disabled" onclick="cancelWord();"><i class="material-icons">cancel</i></button><button class="greenBtn disabled" onclick="approveWord();"><i class="material-icons">check_circle</i></button>';
 }
 function toggleButtons() {
     if (document.getElementById("buttonWrapper").getElementsByTagName("button")[0].className == "disabled") {
