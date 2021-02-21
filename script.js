@@ -1,6 +1,7 @@
 window.abcEng = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
 window.abcHeb = ["א","ב","ג","ד","ה","ו","ז","ח","ט","י","כ","ך","ל","מ","ם","נ","ן","ס","ע","פ","ף","צ","ץ","ק","ר","ש","ת"]
 temp = window.abcHeb;
+window.keyNum = 0;
 function changeLang(){
     var x = document.getElementsByClassName("keyButton");
     var i;
@@ -35,10 +36,11 @@ function keyCheck(e) {
     }, 100);
     if (document.getElementById("textField").getElementsByTagName("button").length < 9) {
         if(temp[0] == "a"){
-            document.getElementById("textField").innerHTML += '<button class="keepLang engButton" onclick="selectMe(event);" keyValue="' + e.target.getAttribute("keyValue") + '">' + e.target.getAttribute("keyValue") + "</button>";
+            document.getElementById("textField").innerHTML += '<button class="keepLang engButton" num="'+window.keyNum+'" onclick="selectMe(event);" keyValue="' + e.target.getAttribute("keyValue") + '">' + e.target.getAttribute("keyValue") + "</button>";
         }else{
-            document.getElementById("textField").innerHTML += '<button class="keepLang" onclick="selectMe(event);" keyValue="' + e.target.getAttribute("keyValue") + '">' + e.target.getAttribute("keyValue") + "</button>";
+            document.getElementById("textField").innerHTML += '<button class="keepLang" num="'+window.keyNum+'" onclick="selectMe(event);" keyValue="' + e.target.getAttribute("keyValue") + '">' + e.target.getAttribute("keyValue") + "</button>";
         }
+        window.keyNum += 1;
     }
     buttonsOn();
     resetButtons();
@@ -55,6 +57,7 @@ function approveWord() {
         toggleButtons();
         document.getElementById("buttonWrapper").getElementsByTagName("button")[1].style.transform = "scale(1)";
         lessButtons();
+        window.keyNum = 0;
     }, 100);
 }
 function cancelWord() {
@@ -65,6 +68,7 @@ function cancelWord() {
         toggleButtons();
         document.getElementById("buttonWrapper").getElementsByTagName("button")[0].style.transform = "scale(1)";
         lessButtons();
+        window.keyNum = 0;
     }, 100);
 }
 function toggleButtons() {
@@ -104,8 +108,14 @@ function resetButtons(){
     }
 }
 function moreButtons(){
-    document.getElementById("buttonWrapper").innerHTML = '<button class="redBtn" onclick="cancelWord();"><i class="material-icons">cancel</i></button><button class="plusAfter"><i class="material-icons">east</i></button><button class=""><i class="material-icons">east</i></button><button class=""><i class="material-icons">west</i></button><button class="plusBefore"><i class="material-icons">west</i></button><button class="greenBtn" onclick="approveWord();"><i class="material-icons">check_circle</i></button>';
+    document.getElementById("buttonWrapper").innerHTML = '<button class="redBtn" onclick="cancelWord();"><i class="material-icons">cancel</i></button><button class="plusAfter"><i class="material-icons">east</i></button><button class="" onclick="moveBackward(event);"><i class="material-icons">east</i></button><button class="" onclick="moveForward(event);"><i class="material-icons">west</i></button><button class="plusBefore"><i class="material-icons">west</i></button><button class="greenBtn" onclick="approveWord();"><i class="material-icons">check_circle</i></button>';
 }
 function lessButtons(){
     document.getElementById("buttonWrapper").innerHTML = '<button class="redBtn disabled" onclick="cancelWord();"><i class="material-icons">cancel</i></button><button class="greenBtn disabled" onclick="approveWord();"><i class="material-icons">check_circle</i></button>';
+}
+function moveForward(e){
+    // alert(e.target)
+}
+function moveBackward(e){
+    // alert(e.target)
 }
