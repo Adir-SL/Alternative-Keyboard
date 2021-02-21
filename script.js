@@ -115,14 +115,23 @@ function lessButtons(){
 }
 function moveForward(){
     // alert(e.target)
+    if(Number(document.getElementsByClassName("selectButton")[0].getAttribute("num")) !== document.getElementById("textField").getElementsByTagName("button").length-1){
+        tempNum = Number(document.getElementsByClassName("selectButton")[0].getAttribute("num"));
+        tempKey = document.getElementById("textField").getElementsByTagName("button")[tempNum].getAttribute("keyvalue");
+        document.getElementById("textField").getElementsByTagName("button")[tempNum].setAttribute("keyvalue", document.getElementById("textField").getElementsByTagName("button")[tempNum+1].getAttribute("keyvalue"));
+        document.getElementById("textField").getElementsByTagName("button")[tempNum+1].setAttribute("keyValue", tempKey);
+        document.getElementsByClassName("selectButton")[0].classList.remove("selectButton");
+        document.getElementById("textField").getElementsByTagName("button")[tempNum+1].classList.add("selectButton");
+    }
 }
 function moveBackward(){
     // alert(e.target)
-    
-    tempNum = document.getElementsByClassName("selectButton")[0].getAttribute("num");
-    tempKey = document.getElementById("textField").getElementsByTagName("button")[tempNum].getAttribute("keyvalue");
-    document.getElementById("textField").getElementsByTagName("button")[tempNum].setAttribute("keyvalue", document.getElementById("textField").getElementsByTagName("button")[tempNum-1].innerHTML);
-    document.getElementById("textField").getElementsByTagName("button")[tempNum-1].setAttribute("keyValue", tempKey);
-    document.getElementsByClassName("selectButton")[0].classList.remove("selectButton");
-    document.getElementById("textField").getElementsByTagName("button")[tempNum-1].classList.add("selectButton");
+    if(Number(document.getElementsByClassName("selectButton")[0].getAttribute("num")) !== 0){
+        tempNum = Number(document.getElementsByClassName("selectButton")[0].getAttribute("num"));
+        tempKey = document.getElementById("textField").getElementsByTagName("button")[tempNum].getAttribute("keyvalue");
+        document.getElementById("textField").getElementsByTagName("button")[tempNum].setAttribute("keyvalue", document.getElementById("textField").getElementsByTagName("button")[tempNum-1].getAttribute("keyvalue"));
+        document.getElementById("textField").getElementsByTagName("button")[tempNum-1].setAttribute("keyValue", tempKey);
+        document.getElementsByClassName("selectButton")[0].classList.remove("selectButton");
+        document.getElementById("textField").getElementsByTagName("button")[tempNum-1].classList.add("selectButton");
+    }
 }
