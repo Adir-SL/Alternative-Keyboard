@@ -2,6 +2,7 @@ window.abcEng = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p"
 window.abcHeb = ["א","ב","ג","ד","ה","ו","ז","ח","ט","י","כ","ך","ל","מ","ם","נ","ן","ס","ע","פ","ף","צ","ץ","ק","ר","ש","ת"]
 temp = window.abcHeb;
 window.keyNum = 0;
+window.wordNum = 0;
 function changeLang(){
     var x = document.getElementsByClassName("keyButton");
     var i;
@@ -49,34 +50,53 @@ function buttonsOn() {
     document.getElementById("buttonWrapper").getElementsByTagName("button")[0].className = "redBtn";
     document.getElementById("buttonWrapper").getElementsByTagName("button")[1].className = "greenBtn";
 }
+function validWords(){
+    var x = document.getElementById("innerWords").getElementsByTagName("button");
+    var i;
+    for (i = 0; i < x.length; i++) {
+        if(x[i].innerText == ''){
+            x[i].outerHTML = '';
+        }
+    }
+    if(document.getElementsByClassName("selectButton").length > 0){
+        document.getElementsByClassName("selectButton")[0].classList.remove("selectButton");
+    }
+}
 function approveWord() {
-    document.getElementById("innerWords").innerHTML += "<button onclick='selectMe(event);'>" + document.getElementById("textField").innerText + "</button>";
+    document.getElementById("innerWords").innerHTML += "<button num='"+window.wordNum+"' onclick='selectMe(event);'>" + document.getElementById("textField").innerText + "</button>";
     document.getElementById("textField").innerHTML = "";
-    document.getElementById("buttonWrapper").getElementsByTagName("button")[1].style.transform = "scale(0.8)";
+    document.getElementById("buttonWrapper").getElementsByClassName("greenBtn")[0].style.transform = "scale(0.8)";
+    validWords();
     setTimeout(function () {
         toggleButtons();
-        document.getElementById("buttonWrapper").getElementsByTagName("button")[1].style.transform = "scale(1)";
+        document.getElementById("buttonWrapper").getElementsByClassName("greenBtn")[0].style.transform = "scale(1)";
         lessButtons();
         window.keyNum = 0;
+        window.wordNum += 1;
     }, 100);
 }
 function cancelWord() {
     document.getElementById("textField").innerHTML = "";
-
-    document.getElementById("buttonWrapper").getElementsByTagName("button")[0].style.transform = "scale(0.8)";
+    document.getElementById("buttonWrapper").getElementsByClassName("redBtn")[0].style.transform = "scale(0.8)";
+    if(document.getElementsByClassName("selectButton").length > 0){
+        document.getElementsByClassName("selectButton")[0].classList.remove("selectButton");
+    }
+    if(document.getElementById("buttonWrapper").getElementsByTagName("button").length > 2){
+        lessButtons();
+    }
     setTimeout(function () {
         toggleButtons();
-        document.getElementById("buttonWrapper").getElementsByTagName("button")[0].style.transform = "scale(1)";
+        document.getElementById("buttonWrapper").getElementsByClassName("redBtn")[0].style.transform = "scale(1)";
         lessButtons();
         window.keyNum = 0;
     }, 100);
 }
 function toggleButtons() {
-    if (document.getElementById("buttonWrapper").getElementsByTagName("button")[0].className == "disabled") {
-        document.getElementById("buttonWrapper").getElementsByTagName("button")[0].className = "";
+    if (document.getElementById("buttonWrapper").getElementsByTagName("button")[0].className == "redBtn disabled") {
+        document.getElementById("buttonWrapper").getElementsByTagName("button")[0].className = "redBtn";
         document.getElementById("buttonWrapper").getElementsByTagName("button")[1].className = "greenBtn";
     } else {
-        document.getElementById("buttonWrapper").getElementsByTagName("button")[0].className = "disabled";
+        document.getElementById("buttonWrapper").getElementsByTagName("button")[0].className = "redBtn disabled";
         document.getElementById("buttonWrapper").getElementsByTagName("button")[1].className = "greenBtn disabled";
     }
 }
@@ -115,23 +135,63 @@ function lessButtons(){
 }
 function moveForward(){
     // alert(e.target)
-    if(Number(document.getElementsByClassName("selectButton")[0].getAttribute("num")) !== document.getElementById("textField").getElementsByTagName("button").length-1){
-        tempNum = Number(document.getElementsByClassName("selectButton")[0].getAttribute("num"));
-        tempKey = document.getElementById("textField").getElementsByTagName("button")[tempNum].getAttribute("keyvalue");
-        document.getElementById("textField").getElementsByTagName("button")[tempNum].setAttribute("keyvalue", document.getElementById("textField").getElementsByTagName("button")[tempNum+1].getAttribute("keyvalue"));
-        document.getElementById("textField").getElementsByTagName("button")[tempNum+1].setAttribute("keyValue", tempKey);
-        document.getElementsByClassName("selectButton")[0].classList.remove("selectButton");
-        document.getElementById("textField").getElementsByTagName("button")[tempNum+1].classList.add("selectButton");
+    if(document.getElementsByClassName("selectButton")[0].parentElement.id == "textField"){
+        if(Number(document.getElementsByClassName("selectButton")[0].getAttribute("num")) !== document.getElementById("textField").getElementsByTagName("button").length-1){
+            tempNum = Number(document.getElementsByClassName("selectButton")[0].getAttribute("num"));
+            tempKey = document.getElementById("textField").getElementsByTagName("button")[tempNum].getAttribute("keyvalue");
+            document.getElementById("textField").getElementsByTagName("button")[tempNum].setAttribute("keyvalue", document.getElementById("textField").getElementsByTagName("button")[tempNum+1].getAttribute("keyvalue"));
+            document.getElementById("textField").getElementsByTagName("button")[tempNum+1].setAttribute("keyValue", tempKey);
+            document.getElementsByClassName("selectButton")[0].classList.remove("selectButton");
+            document.getElementById("textField").getElementsByTagName("button")[tempNum+1].classList.add("selectButton");
+            flatten();
+        }
+    }else{
+        if(Number(document.getElementsByClassName("selectButton")[0].getAttribute("num")) !== document.getElementById("textField").getElementsByTagName("button").length-1){
+            tempNum = Number(document.getElementsByClassName("selectButton")[0].getAttribute("num"));
+            tempKey = document.getElementById("innerWords").getElementsByTagName("button")[tempNum].innerText;
+            document.getElementById("innerWords").getElementsByTagName("button")[tempNum].innerText = document.getElementById("innerWords").getElementsByTagName("button")[tempNum+1].innerText;
+            document.getElementById("innerWords").getElementsByTagName("button")[tempNum+1].innerText = tempKey;
+            document.getElementsByClassName("selectButton")[0].classList.remove("selectButton");
+            document.getElementById("innerWords").getElementsByTagName("button")[tempNum+1].classList.add("selectButton");
+            flattenWords();
+        }
     }
 }
 function moveBackward(){
     // alert(e.target)
-    if(Number(document.getElementsByClassName("selectButton")[0].getAttribute("num")) !== 0){
-        tempNum = Number(document.getElementsByClassName("selectButton")[0].getAttribute("num"));
-        tempKey = document.getElementById("textField").getElementsByTagName("button")[tempNum].getAttribute("keyvalue");
-        document.getElementById("textField").getElementsByTagName("button")[tempNum].setAttribute("keyvalue", document.getElementById("textField").getElementsByTagName("button")[tempNum-1].getAttribute("keyvalue"));
-        document.getElementById("textField").getElementsByTagName("button")[tempNum-1].setAttribute("keyValue", tempKey);
-        document.getElementsByClassName("selectButton")[0].classList.remove("selectButton");
-        document.getElementById("textField").getElementsByTagName("button")[tempNum-1].classList.add("selectButton");
+    if(document.getElementsByClassName("selectButton")[0].parentElement.id == "textField"){
+        if(Number(document.getElementsByClassName("selectButton")[0].getAttribute("num")) !== 0){
+            tempNum = Number(document.getElementsByClassName("selectButton")[0].getAttribute("num"));
+            tempKey = document.getElementById("textField").getElementsByTagName("button")[tempNum].getAttribute("keyvalue");
+            document.getElementById("textField").getElementsByTagName("button")[tempNum].setAttribute("keyvalue", document.getElementById("textField").getElementsByTagName("button")[tempNum-1].getAttribute("keyvalue"));
+            document.getElementById("textField").getElementsByTagName("button")[tempNum-1].setAttribute("keyValue", tempKey);
+            document.getElementsByClassName("selectButton")[0].classList.remove("selectButton");
+            document.getElementById("textField").getElementsByTagName("button")[tempNum-1].classList.add("selectButton");
+            flatten();
+        }
+    }else{
+        if(Number(document.getElementsByClassName("selectButton")[0].getAttribute("num")) !== 0){
+            tempNum = Number(document.getElementsByClassName("selectButton")[0].getAttribute("num"));
+            tempKey = document.getElementById("innerWords").getElementsByTagName("button")[tempNum].innerText;
+            document.getElementById("innerWords").getElementsByTagName("button")[tempNum].innerText = document.getElementById("innerWords").getElementsByTagName("button")[tempNum-1].innerText;
+            document.getElementById("innerWords").getElementsByTagName("button")[tempNum-1].innerText = tempKey;
+            document.getElementsByClassName("selectButton")[0].classList.remove("selectButton");
+            document.getElementById("innerWords").getElementsByTagName("button")[tempNum-1].classList.add("selectButton");
+            flattenWords();
+        }
+    }
+}
+function flatten(){
+    var x = document.getElementById("textField").getElementsByTagName("button");
+    var i;
+    for (i = 0; i < x.length; i++) {
+        x[i].innerText = x[i].getAttribute("keyvalue")
+    }
+}
+function flattenWords(){
+    var x = document.getElementById("innerWords").getElementsByTagName("button");
+    var i;
+    for (i = 0; i < x.length; i++) {
+        x[i].setAttribute("num", i);
     }
 }
