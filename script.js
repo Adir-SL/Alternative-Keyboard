@@ -108,14 +108,21 @@ function resetButtons(){
     }
 }
 function moreButtons(){
-    document.getElementById("buttonWrapper").innerHTML = '<button class="redBtn" onclick="cancelWord();"><i class="material-icons">cancel</i></button><button class="plusAfter"><i class="material-icons">east</i></button><button class="" onclick="moveBackward(event);"><i class="material-icons">east</i></button><button class="" onclick="moveForward(event);"><i class="material-icons">west</i></button><button class="plusBefore"><i class="material-icons">west</i></button><button class="greenBtn" onclick="approveWord();"><i class="material-icons">check_circle</i></button>';
+    document.getElementById("buttonWrapper").innerHTML = '<button class="redBtn" onclick="cancelWord();"><i class="material-icons">cancel</i></button><button class="plusAfter"><i class="material-icons">east</i></button><button class="" onclick="moveBackward();"><i class="material-icons">east</i></button><button class="" onclick="moveForward();"><i class="material-icons">west</i></button><button class="plusBefore"><i class="material-icons">west</i></button><button class="greenBtn" onclick="approveWord();"><i class="material-icons">check_circle</i></button>';
 }
 function lessButtons(){
     document.getElementById("buttonWrapper").innerHTML = '<button class="redBtn disabled" onclick="cancelWord();"><i class="material-icons">cancel</i></button><button class="greenBtn disabled" onclick="approveWord();"><i class="material-icons">check_circle</i></button>';
 }
-function moveForward(e){
+function moveForward(){
     // alert(e.target)
 }
-function moveBackward(e){
+function moveBackward(){
     // alert(e.target)
+    
+    tempNum = document.getElementsByClassName("selectButton")[0].getAttribute("num");
+    tempKey = document.getElementById("textField").getElementsByTagName("button")[tempNum].getAttribute("keyvalue");
+    document.getElementById("textField").getElementsByTagName("button")[tempNum].setAttribute("keyvalue", document.getElementById("textField").getElementsByTagName("button")[tempNum-1].innerHTML);
+    document.getElementById("textField").getElementsByTagName("button")[tempNum-1].setAttribute("keyValue", tempKey);
+    document.getElementsByClassName("selectButton")[0].classList.remove("selectButton");
+    document.getElementById("textField").getElementsByTagName("button")[tempNum-1].classList.add("selectButton");
 }
