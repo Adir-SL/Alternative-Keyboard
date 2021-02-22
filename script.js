@@ -128,7 +128,11 @@ function resetButtons(){
     }
 }
 function moreButtons(){
-    document.getElementById("buttonWrapper").innerHTML = '<button class="redBtn" onclick="cancelWord();"><i class="material-icons">cancel</i></button><button class="plusAfter"><i class="material-icons">east</i></button><button class="" onclick="moveBackward();"><i class="material-icons">east</i></button><button class="" onclick="moveForward();"><i class="material-icons">west</i></button><button class="plusBefore"><i class="material-icons">west</i></button><button class="greenBtn" onclick="approveWord();"><i class="material-icons">check_circle</i></button>';
+    if(temp[0] == "a"){
+        document.getElementById("buttonWrapper").innerHTML = '<button class="redBtn" onclick="cancelWord();"><i class="material-icons">cancel</i></button><button class="plusAfter"><i class="material-icons">east</i></button><button class="" onclick="moveBackward();"><i class="material-icons">east</i></button><button class="" onclick="moveForward();"><i class="material-icons">west</i></button><button class="plusBefore"><i class="material-icons">west</i></button><button class="greenBtn" onclick="approveWord();"><i class="material-icons">check_circle</i></button>';
+    }else{
+        document.getElementById("buttonWrapper").innerHTML = '<button class="redBtn" onclick="cancelWord();"><i class="material-icons">cancel</i></button><button class="plusAfter"><i class="material-icons">east</i></button><button class="" onclick="moveBackward();"><i class="material-icons">east</i></button><button class="" onclick="moveForward();"><i class="material-icons">west</i></button><button class="plusBefore"><i class="material-icons">west</i></button><button class="greenBtn" onclick="approveWord();"><i class="material-icons">check_circle</i></button>';
+    }
 }
 function lessButtons(){
     document.getElementById("buttonWrapper").innerHTML = '<button class="redBtn disabled" onclick="cancelWord();"><i class="material-icons">cancel</i></button><button class="greenBtn disabled" onclick="approveWord();"><i class="material-icons">check_circle</i></button>';
