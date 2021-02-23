@@ -183,6 +183,20 @@ function moveBackward(){
         }
     }
 }
+function flatten(){
+    var x = document.getElementById("textField").getElementsByTagName("button");
+    var i;
+    for (i = 0; i < x.length; i++) {
+        x[i].innerText = x[i].getAttribute("keyvalue")
+    }
+}
+function flattenWords(){
+    var x = document.getElementById("innerWords").getElementsByTagName("button");
+    var i;
+    for (i = 0; i < x.length; i++) {
+        x[i].setAttribute("num", i);
+    }
+}
 function addForward(){
     // alert("FORWARD");
 }
@@ -192,6 +206,7 @@ function addBackward(){
         var node = document.createElement("button");   
         document.getElementsByClassName("selectButton")[0].parentElement.insertBefore(node, document.getElementsByClassName("selectButton")[0]);
         selectBeforeButton();
+        findEmptyButton();
     }else{
 
     }
@@ -206,17 +221,13 @@ function selectBeforeButton(){
         }
     }
 }
-function flatten(){
+function findEmptyButton(){
     var x = document.getElementById("textField").getElementsByTagName("button");
     var i;
     for (i = 0; i < x.length; i++) {
-        x[i].innerText = x[i].getAttribute("keyvalue")
-    }
-}
-function flattenWords(){
-    var x = document.getElementById("innerWords").getElementsByTagName("button");
-    var i;
-    for (i = 0; i < x.length; i++) {
-        x[i].setAttribute("num", i);
+        if(x[i].className.indexOf("selectButton") > -1){
+            x[i].classList.remove("selectButton");
+            x[i-1].classList.add("selectButton");
+        }
     }
 }

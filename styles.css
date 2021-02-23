@@ -77,7 +77,7 @@
     display: flex;
     justify-content: space-between;
   }
-  .keyButton, .keepLang {
+  .keyButton, .keepLang, #textField button {
     padding: 4vmin;
     background-color: #E0E0E0;
     border-radius: 50%;
@@ -89,7 +89,7 @@
     transition: transform 100ms ease-in-out 0s, opacity 100ms linear 0s, box-shadow 200ms cubic-bezier(.47,-0.77,.6,1.8), background-color 200ms linear;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
-  #textField .keepLang {
+  #textField .keepLang, #textField button {
     margin-left: 1vmin;
     background-color: #767676;
     color: #ffffff;
