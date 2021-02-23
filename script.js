@@ -28,7 +28,7 @@ function changeLang(){
     }
 }
 function keyCheck(e) {
-    console.log(e.target.getAttribute("keyValue"));
+    // console.log(e.target.getAttribute("keyValue"));
     e.target.style.transform = "translateY(-50%)";
     setTimeout(function () {
         setTimeout(function () {
