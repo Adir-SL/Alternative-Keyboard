@@ -129,16 +129,15 @@ function resetButtons(){
 }
 function moreButtons(){
     if(temp[0] == "a"){
-        document.getElementById("buttonWrapper").innerHTML = '<button class="redBtn" onclick="cancelWord();"><i class="material-icons">cancel</i></button><button class="plusAfter"><i class="material-icons">east</i></button><button class="" onclick="moveForward();"><i class="material-icons">east</i></button><button class="" onclick="moveBackward();"><i class="material-icons">west</i></button><button class="plusBefore"><i class="material-icons">west</i></button><button class="greenBtn" onclick="approveWord();"><i class="material-icons">check_circle</i></button>';
+        document.getElementById("buttonWrapper").innerHTML = '<button class="redBtn" onclick="cancelWord();"><i class="material-icons">cancel</i></button><button class="plusAfter" onclick="addForward();"><i class="material-icons">east</i></button><button class="" onclick="moveForward();"><i class="material-icons">east</i></button><button class="" onclick="moveBackward();"><i class="material-icons">west</i></button><button class="plusBefore" onclick="addBackward();"><i class="material-icons">west</i></button><button class="greenBtn" onclick="approveWord();"><i class="material-icons">check_circle</i></button>';
     }else{
-        document.getElementById("buttonWrapper").innerHTML = '<button class="redBtn" onclick="cancelWord();"><i class="material-icons">cancel</i></button><button class="plusAfter"><i class="material-icons">east</i></button><button class="" onclick="moveBackward();"><i class="material-icons">east</i></button><button class="" onclick="moveForward();"><i class="material-icons">west</i></button><button class="plusBefore"><i class="material-icons">west</i></button><button class="greenBtn" onclick="approveWord();"><i class="material-icons">check_circle</i></button>';
+        document.getElementById("buttonWrapper").innerHTML = '<button class="redBtn" onclick="cancelWord();"><i class="material-icons">cancel</i></button><button class="plusAfter" onclick="addBackward();"><i class="material-icons">east</i></button><button class="" onclick="moveBackward();"><i class="material-icons">east</i></button><button class="" onclick="moveForward();"><i class="material-icons">west</i></button><button class="plusBefore" onclick="addForward();"><i class="material-icons">west</i></button><button class="greenBtn" onclick="approveWord();"><i class="material-icons">check_circle</i></button>';
     }
 }
 function lessButtons(){
     document.getElementById("buttonWrapper").innerHTML = '<button class="redBtn disabled" onclick="cancelWord();"><i class="material-icons">cancel</i></button><button class="greenBtn disabled" onclick="approveWord();"><i class="material-icons">check_circle</i></button>';
 }
 function moveForward(){
-    // alert(e.target)
     if(document.getElementsByClassName("selectButton")[0].parentElement.id == "textField"){
         if(Number(document.getElementsByClassName("selectButton")[0].getAttribute("num")) !== document.getElementById("textField").getElementsByTagName("button").length-1){
             tempNum = Number(document.getElementsByClassName("selectButton")[0].getAttribute("num"));
@@ -162,7 +161,6 @@ function moveForward(){
     }
 }
 function moveBackward(){
-    // alert(e.target)
     if(document.getElementsByClassName("selectButton")[0].parentElement.id == "textField"){
         if(Number(document.getElementsByClassName("selectButton")[0].getAttribute("num")) !== 0){
             tempNum = Number(document.getElementsByClassName("selectButton")[0].getAttribute("num"));
@@ -184,6 +182,12 @@ function moveBackward(){
             flattenWords();
         }
     }
+}
+function addForward(){
+    alert("FORWARD");
+}
+function addBackward(){
+    alert("BACKWARD");
 }
 function flatten(){
     var x = document.getElementById("textField").getElementsByTagName("button");
