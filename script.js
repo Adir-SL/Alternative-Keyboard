@@ -184,10 +184,10 @@ function moveBackward(){
     }
 }
 function addForward(){
-    alert("FORWARD");
+    // alert("FORWARD");
 }
 function addBackward(){
-    alert("BACKWARD");
+    // alert("BACKWARD");
 }
 function flatten(){
     var x = document.getElementById("textField").getElementsByTagName("button");
