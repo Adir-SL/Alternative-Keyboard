@@ -205,9 +205,8 @@ function flattenWords(){
 function addForward(){
     // alert("FORWARD");
     if(document.getElementsByClassName("selectButton")[0].parentElement.id == "textField"){  
-        document.getElementsByClassName("selectButton")[0].outerHTML += "<button class='keepLang selectButton' onclick='selectMe(event);' num='0'></button>";
+        document.getElementsByClassName("selectButton")[0].outerHTML += "<button class='keepLang selectButton' onclick='selectMe(event);'></button>";
         document.getElementsByClassName("selectButton")[0].classList.remove("selectButton");
-        findEmptyButton();
         reNumButtons();
     }else{
 
@@ -242,7 +241,7 @@ function findEmptyButton(){
         if(x[i].getAttribute("keyvalue") == "" || x[i].getAttribute("keyvalue") == null || x[i].getAttribute("keyvalue") == undefined){
             x[i].classList.add("keepLang");
             x[i].setAttribute("keyValue", "0");
-            x[i].onclick = "selectMe(event);";
+            x[i].setAttribute("onclick", "selectMe(event)")
         }
     }
 }
