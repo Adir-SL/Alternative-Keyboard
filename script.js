@@ -221,13 +221,13 @@ function selectBeforeButton(){
         }
     }
 }
-function findEmptyButton(){
-    var x = document.getElementById("textField").getElementsByTagName("button");
-    var i;
-    for (i = 0; i < x.length; i++) {
-        if(x[i].className.indexOf("selectButton") > -1){
-            x[i].classList.remove("selectButton");
-            x[i-1].classList.add("selectButton");
-        }
-    }
-}
+// function findEmptyButton(){
+//     var x = document.getElementById("textField").getElementsByTagName("button");
+//     var i;
+//     for (i = 0; i < x.length; i++) {
+//         if(x[i].className.indexOf("selectButton") > -1){
+//             x[i].classList.remove("selectButton");
+//             x[i-1].classList.add("selectButton");
+//         }
+//     }
+// }
