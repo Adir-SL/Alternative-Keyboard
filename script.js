@@ -48,7 +48,7 @@ function keyCheck(e) {
         resetButtons();
     }else{
         document.getElementsByClassName("selectButton")[0].setAttribute("keyValue", e.target.getAttribute("keyValue"));
-        document.getElementsByClassName("selectButton")[0].innerText = e.target.getAttribute("keyValue")
+        document.getElementsByClassName("selectButton")[0].innerText = e.target.getAttribute("keyValue");
     }
 }
 function buttonsOn() {
