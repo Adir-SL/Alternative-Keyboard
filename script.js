@@ -35,16 +35,21 @@ function keyCheck(e) {
             e.target.style.transform = "translateY(0)";
         }, 100);
     }, 100);
-    if (document.getElementById("textField").getElementsByTagName("button").length < 9) {
-        if(temp[0] == "a"){
-            document.getElementById("textField").innerHTML += '<button class="keepLang engButton" num="'+window.keyNum+'" onclick="selectMe(event);" keyValue="' + e.target.getAttribute("keyValue") + '">' + e.target.getAttribute("keyValue") + "</button>";
-        }else{
-            document.getElementById("textField").innerHTML += '<button class="keepLang" num="'+window.keyNum+'" onclick="selectMe(event);" keyValue="' + e.target.getAttribute("keyValue") + '">' + e.target.getAttribute("keyValue") + "</button>";
+    if(document.getElementsByClassName("selectButton")[0] == undefined){
+        if (document.getElementById("textField").getElementsByTagName("button").length < 9) {
+            if(temp[0] == "a"){
+                document.getElementById("textField").innerHTML += '<button class="keepLang engButton" num="'+window.keyNum+'" onclick="selectMe(event);" keyValue="' + e.target.getAttribute("keyValue") + '">' + e.target.getAttribute("keyValue") + "</button>";
+            }else{
+                document.getElementById("textField").innerHTML += '<button class="keepLang" num="'+window.keyNum+'" onclick="selectMe(event);" keyValue="' + e.target.getAttribute("keyValue") + '">' + e.target.getAttribute("keyValue") + "</button>";
+            }
+            window.keyNum += 1;
         }
-        window.keyNum += 1;
+        buttonsOn();
+        resetButtons();
+    }else{
+        document.getElementsByClassName("selectButton")[0].setAttribute("keyValue", e.target.getAttribute("keyValue"));
+        document.getElementsByClassName("selectButton")[0].innerText = e.target.getAttribute("keyValue")
     }
-    buttonsOn();
-    resetButtons();
 }
 function buttonsOn() {
     document.getElementById("buttonWrapper").getElementsByTagName("button")[0].className = "redBtn";
