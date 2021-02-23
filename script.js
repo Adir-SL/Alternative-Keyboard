@@ -188,6 +188,23 @@ function addForward(){
 }
 function addBackward(){
     // alert("BACKWARD");
+    if(document.getElementsByClassName("selectButton")[0].parentElement.id == "textField"){
+        var node = document.createElement("button");   
+        document.getElementsByClassName("selectButton")[0].parentElement.insertBefore(node, document.getElementsByClassName("selectButton")[0]);
+        selectBeforeButton();
+    }else{
+
+    }
+}
+function selectBeforeButton(){
+    var x = document.getElementById("textField").getElementsByTagName("button");
+    var i;
+    for (i = 0; i < x.length; i++) {
+        if(x[i].className.indexOf("selectButton") > -1){
+            x[i].classList.remove("selectButton");
+            x[i-1].classList.add("selectButton");
+        }
+    }
 }
 function flatten(){
     var x = document.getElementById("textField").getElementsByTagName("button");
