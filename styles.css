@@ -98,6 +98,9 @@
   #textField .keepLang:last-of-type {
     animation: addKey 100ms ease-out;
   }
+  #textField button:empty{
+    color: transparent;
+  }
   .keyButton::after, .keepLang::after {
     content: attr(keyValue);
     position: absolute;
