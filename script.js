@@ -204,6 +204,14 @@ function flattenWords(){
 }
 function addForward(){
     // alert("FORWARD");
+    if(document.getElementsByClassName("selectButton")[0].parentElement.id == "textField"){  
+        document.getElementsByClassName("selectButton")[0].outerHTML += "<button class='keepLang selectButton' onclick='selectMe(event);' num='0'></button>";
+        document.getElementsByClassName("selectButton")[0].classList.remove("selectButton");
+        findEmptyButton();
+        reNumButtons();
+    }else{
+
+    }
 }
 function addBackward(){
     // alert("BACKWARD");
@@ -212,6 +220,7 @@ function addBackward(){
         document.getElementsByClassName("selectButton")[0].parentElement.insertBefore(node, document.getElementsByClassName("selectButton")[0]);
         selectBeforeButton();
         findEmptyButton();
+        reNumButtons();
     }else{
 
     }
@@ -236,7 +245,6 @@ function findEmptyButton(){
             x[i].onclick = "selectMe(event);";
         }
     }
-    reNumButtons();
 }
 function reNumButtons(){
     var x = document.getElementById("textField").getElementsByTagName("button");
