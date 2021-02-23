@@ -233,4 +233,10 @@ function findEmptyButton(){
     }
     reNumButtons();
 }
-function reNumButtons(){}
+function reNumButtons(){
+    var x = document.getElementById("textField").getElementsByTagName("button");
+    var i;
+    for (i = 0; i < x.length; i++) {
+        x[i].setAttribute("num", i);
+    }
+}
