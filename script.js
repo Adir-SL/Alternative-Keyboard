@@ -35,7 +35,7 @@ function keyCheck(e) {
             e.target.style.transform = "translateY(0)";
         }, 100);
     }, 100);
-    if(document.getElementsByClassName("selectButton")[0] == undefined){
+    if(document.getElementsByClassName("selectButton")[0] == undefined || document.getElementsByClassName("selectButton")[0].parentNode.id == "innerWords"){
         if (document.getElementById("textField").getElementsByTagName("button").length < 9) {
             if(temp[0] == "a"){
                 document.getElementById("textField").innerHTML += '<button class="keepLang engButton" num="'+window.keyNum+'" onclick="selectMe(event);" keyValue="' + e.target.getAttribute("keyValue") + '">' + e.target.getAttribute("keyValue") + "</button>";
@@ -45,7 +45,7 @@ function keyCheck(e) {
             window.keyNum += 1;
         }
         buttonsOn();
-        resetButtons();
+        // resetButtons();
     }else{
         document.getElementsByClassName("selectButton")[0].setAttribute("keyValue", e.target.getAttribute("keyValue"));
         document.getElementsByClassName("selectButton")[0].innerText = e.target.getAttribute("keyValue");
@@ -68,7 +68,14 @@ function validWords(){
     }
 }
 function approveWord() {
-    document.getElementById("innerWords").innerHTML += "<button num='"+window.wordNum+"' onclick='selectMe(event);'>" + document.getElementById("textField").innerText + "</button>";
+    if(document.getElementsByClassName("selectButton").length > 0 && document.getElementsByClassName("selectButton")[0].parentNode.id == "innerWords"){
+        document.getElementsByClassName("selectButton")[0].innerText = document.getElementById("textField").innerText;
+        document.getElementById("textField").innerHTML = "";
+        reNumWords();
+        lessButtons();
+        document.getElementsByClassName("selectButton")[0].classList.remove("selectButton");
+    }else{
+        document.getElementById("innerWords").innerHTML += "<button num='"+window.wordNum+"' onclick='selectMe(event);'>" + document.getElementById("textField").innerText + "</button>";
     document.getElementById("textField").innerHTML = "";
     document.getElementById("buttonWrapper").getElementsByClassName("greenBtn")[0].style.transform = "scale(0.8)";
     validWords();
@@ -79,22 +86,30 @@ function approveWord() {
         window.keyNum = 0;
         window.wordNum += 1;
     }, 100);
+    }
+    
 }
 function cancelWord() {
-    document.getElementById("textField").innerHTML = "";
-    document.getElementById("buttonWrapper").getElementsByClassName("redBtn")[0].style.transform = "scale(0.8)";
-    if(document.getElementsByClassName("selectButton").length > 0){
-        document.getElementsByClassName("selectButton")[0].classList.remove("selectButton");
-    }
-    if(document.getElementById("buttonWrapper").getElementsByTagName("button").length > 2){
+    if(document.getElementsByClassName("selectButton").length > 0 && document.getElementsByClassName("selectButton")[0].parentNode.id == "innerWords"){
+        document.getElementsByClassName("selectButton")[0].remove(this)
         lessButtons();
+        reNumWords();
+    }else{
+        document.getElementById("textField").innerHTML = "";
+        document.getElementById("buttonWrapper").getElementsByClassName("redBtn")[0].style.transform = "scale(0.8)";
+        if(document.getElementsByClassName("selectButton").length > 0){
+            document.getElementsByClassName("selectButton")[0].classList.remove("selectButton");
+        }
+        if(document.getElementById("buttonWrapper").getElementsByTagName("button").length > 2){
+            lessButtons();
+        }
+        setTimeout(function () {
+            toggleButtons();
+            document.getElementById("buttonWrapper").getElementsByClassName("redBtn")[0].style.transform = "scale(1)";
+            lessButtons();
+            window.keyNum = 0;
+        }, 100);
     }
-    setTimeout(function () {
-        toggleButtons();
-        document.getElementById("buttonWrapper").getElementsByClassName("redBtn")[0].style.transform = "scale(1)";
-        lessButtons();
-        window.keyNum = 0;
-    }, 100);
 }
 function toggleButtons() {
     if (document.getElementById("buttonWrapper").getElementsByTagName("button")[0].className == "redBtn disabled") {
@@ -207,9 +222,13 @@ function addForward(){
     if(document.getElementsByClassName("selectButton")[0].parentElement.id == "textField"){  
         document.getElementsByClassName("selectButton")[0].outerHTML += "<button class='keepLang selectButton' onclick='selectMe(event);'></button>";
         document.getElementsByClassName("selectButton")[0].classList.remove("selectButton");
+        findEmptyButton();
         reNumButtons();
     }else{
-
+        document.getElementsByClassName("selectButton")[0].outerHTML += "<button class='selectButton' onclick='selectMe(event);'></button>";
+        document.getElementsByClassName("selectButton")[0].classList.remove("selectButton");
+        findEmptyWord();
+        reNumWords();
     }
 }
 function addBackward(){
@@ -218,14 +237,28 @@ function addBackward(){
         var node = document.createElement("button");   
         document.getElementsByClassName("selectButton")[0].parentElement.insertBefore(node, document.getElementsByClassName("selectButton")[0]);
         selectBeforeButton();
-        findEmptyButton();
+        // findEmptyButton();
         reNumButtons();
     }else{
-
+        var node = document.createElement("button");
+        document.getElementsByClassName("selectButton")[0].parentElement.insertBefore(node, document.getElementsByClassName("selectButton")[0]);
+        selectBeforeWord();
+        findEmptyWord();
+        reNumWords();
     }
 }
 function selectBeforeButton(){
     var x = document.getElementById("textField").getElementsByTagName("button");
+    var i;
+    for (i = 0; i < x.length; i++) {
+        if(x[i].className.indexOf("selectButton") > -1){
+            x[i].classList.remove("selectButton");
+            x[i-1].classList.add("selectButton");
+        }
+    }
+}
+function selectBeforeWord(){
+    var x = document.getElementById("innerWords").getElementsByTagName("button");
     var i;
     for (i = 0; i < x.length; i++) {
         if(x[i].className.indexOf("selectButton") > -1){
@@ -240,13 +273,33 @@ function findEmptyButton(){
     for (i = 0; i < x.length; i++) {
         if(x[i].getAttribute("keyvalue") == "" || x[i].getAttribute("keyvalue") == null || x[i].getAttribute("keyvalue") == undefined){
             x[i].classList.add("keepLang");
+            if(temp[0] == "a"){x[i].classList.add("engButton");}
             x[i].setAttribute("keyValue", "0");
+            x[i].setAttribute("onclick", "selectMe(event)")
+        }
+    }
+}
+function findEmptyWord(){
+    var x = document.getElementById("innerWords").getElementsByTagName("button");
+    var i;
+    for (i = 0; i < x.length; i++) {
+        if(x[i].getAttribute("keyvalue") == "" || x[i].getAttribute("keyvalue") == null || x[i].getAttribute("keyvalue") == undefined){
+            // x[i].classList.add("keepLang");
+            // if(temp[0] == "a"){x[i].classList.add("engButton");}
+            // x[i].setAttribute("keyValue", "0");
             x[i].setAttribute("onclick", "selectMe(event)")
         }
     }
 }
 function reNumButtons(){
     var x = document.getElementById("textField").getElementsByTagName("button");
+    var i;
+    for (i = 0; i < x.length; i++) {
+        x[i].setAttribute("num", i);
+    }
+}
+function reNumWords(){
+    var x = document.getElementById("innerWords").getElementsByTagName("button");
     var i;
     for (i = 0; i < x.length; i++) {
         x[i].setAttribute("num", i);
