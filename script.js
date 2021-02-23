@@ -221,13 +221,16 @@ function selectBeforeButton(){
         }
     }
 }
-// function findEmptyButton(){
-//     var x = document.getElementById("textField").getElementsByTagName("button");
-//     var i;
-//     for (i = 0; i < x.length; i++) {
-//         if(x[i].className.indexOf("selectButton") > -1){
-//             x[i].classList.remove("selectButton");
-//             x[i-1].classList.add("selectButton");
-//         }
-//     }
-// }
+function findEmptyButton(){
+    var x = document.getElementById("textField").getElementsByTagName("button");
+    var i;
+    for (i = 0; i < x.length; i++) {
+        if(x[i].getAttribute("keyvalue") == "" || x[i].getAttribute("keyvalue") == null || x[i].getAttribute("keyvalue") == undefined){
+            x[i].classList.add("keepLang");
+            x[i].setAttribute("keyValue", "0");
+            x[i].onclick = "selectMe(event);";
+        }
+    }
+    reNumButtons();
+}
+function reNumButtons(){}
