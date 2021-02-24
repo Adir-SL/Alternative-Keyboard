@@ -95,7 +95,12 @@ function cancelWord() {
         lessButtons();
         reNumWords();
     }else{
-        document.getElementById("textField").innerHTML = "";
+        if(document.getElementsByClassName("selectButton").length > 0 && document.getElementsByClassName("selectButton")[0].parentNode.id == "textField"){
+            document.getElementsByClassName("selectButton")[0].remove(this);
+            lessButtons();
+            reNumButtons();
+        }else{
+            document.getElementById("textField").innerHTML = "";
         document.getElementById("buttonWrapper").getElementsByClassName("redBtn")[0].style.transform = "scale(0.8)";
         if(document.getElementsByClassName("selectButton").length > 0){
             document.getElementsByClassName("selectButton")[0].classList.remove("selectButton");
@@ -109,6 +114,7 @@ function cancelWord() {
             lessButtons();
             window.keyNum = 0;
         }, 100);
+        }
     }
 }
 function toggleButtons() {
