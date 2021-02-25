@@ -79,7 +79,7 @@ function approveWord() {
         document.getElementById("innerWords").innerHTML += "<button num='"+window.wordNum+"' onclick='selectMe(event);'>" + document.getElementById("textField").innerText + "</button>";
         }else{
             document.getElementsByClassName("lastWord")[0].innerText = document.getElementById("textField").innerText;
-            // console.log(document.getElementById("textField").innerText);
+            document.getElementsByClassName("lastWord")[0].classList.remove("lastWord");
         }
     document.getElementById("textField").innerHTML = "";
     document.getElementById("buttonWrapper").getElementsByClassName("greenBtn")[0].style.transform = "scale(0.8)";
