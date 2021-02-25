@@ -167,9 +167,11 @@ function selectMe(e){
 function getSelectedWord(y){
     if(tempY == y.length){
     }else{
-        // document.getElementById("textField").innerHTML += "<button keyValue="+y.charAt(tempY)+">"+y.charAt(tempY)+"</button>";
-        document.getElementById("textField").innerHTML += '<button class="keepLang" num="'+tempY+'" onclick="selectMe(event);" keyvalue="'+y.charAt(tempY)+'">'+y.charAt(tempY)+'</button>';
-        //<button class="keepLang" num="0" onclick="selectMe(event);" keyvalue="א">א</button>
+        if(temp[0] == "a"){
+            document.getElementById("textField").innerHTML += '<button class="keepLang engButton" num="'+tempY+'" onclick="selectMe(event);" keyvalue="'+y.charAt(tempY)+'">'+y.charAt(tempY)+'</button>';
+        }else{
+            document.getElementById("textField").innerHTML += '<button class="keepLang" num="'+tempY+'" onclick="selectMe(event);" keyvalue="'+y.charAt(tempY)+'">'+y.charAt(tempY)+'</button>';
+        }
         tempY += 1;
         getSelectedWord(y);
     }
