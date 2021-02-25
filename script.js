@@ -75,7 +75,12 @@ function approveWord() {
         lessButtons();
         document.getElementsByClassName("selectButton")[0].classList.remove("selectButton");
     }else{
+        if(document.getElementsByClassName("lastWord").length == 0){
         document.getElementById("innerWords").innerHTML += "<button num='"+window.wordNum+"' onclick='selectMe(event);'>" + document.getElementById("textField").innerText + "</button>";
+        }else{
+            document.getElementsByClassName("lastWord")[0].innerText = document.getElementById("textField").innerText;
+            // console.log(document.getElementById("textField").innerText);
+        }
     document.getElementById("textField").innerHTML = "";
     document.getElementById("buttonWrapper").getElementsByClassName("greenBtn")[0].style.transform = "scale(0.8)";
     validWords();
@@ -149,6 +154,7 @@ function selectMe(e){
         tempY = 0;
         document.getElementById("textField").innerHTML = '';
         getSelectedWord(e.target.innerText);
+        e.target.classList.add("lastWord");
     }
     moreButtons();
 }
@@ -156,7 +162,7 @@ function getSelectedWord(y){
     if(tempY == y.length){
     }else{
         // document.getElementById("textField").innerHTML += "<button keyValue="+y.charAt(tempY)+">"+y.charAt(tempY)+"</button>";
-        document.getElementById("textField").innerHTML += '<button class="keepLang" num="'+tempY+'" onclick="selectMe(event);" keyvalue="'+y.charAt(tempY)+'">y.charAt(tempY)</button>';
+        document.getElementById("textField").innerHTML += '<button class="keepLang" num="'+tempY+'" onclick="selectMe(event);" keyvalue="'+y.charAt(tempY)+'">'+y.charAt(tempY)+'</button>';
         //<button class="keepLang" num="0" onclick="selectMe(event);" keyvalue="א">א</button>
         tempY += 1;
         getSelectedWord(y);
