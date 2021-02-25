@@ -91,7 +91,8 @@ function approveWord() {
 }
 function cancelWord() {
     if(document.getElementsByClassName("selectButton").length > 0 && document.getElementsByClassName("selectButton")[0].parentNode.id == "innerWords"){
-        document.getElementsByClassName("selectButton")[0].remove(this)
+        document.getElementsByClassName("selectButton")[0].remove(this);
+        document.getElementById("textField").innerHTML = "";
         lessButtons();
         reNumWords();
     }else{
@@ -144,7 +145,22 @@ function toggleLang(e){
 function selectMe(e){
     resetButtons();
     e.target.classList.add("selectButton");
+    if(e.target.parentNode.id == "innerWords"){
+        tempY = 0;
+        document.getElementById("textField").innerHTML = '';
+        getSelectedWord(e.target.innerText);
+    }
     moreButtons();
+}
+function getSelectedWord(y){
+    if(tempY == y.length){
+    }else{
+        // document.getElementById("textField").innerHTML += "<button keyValue="+y.charAt(tempY)+">"+y.charAt(tempY)+"</button>";
+        document.getElementById("textField").innerHTML += '<button class="keepLang" num="'+tempY+'" onclick="selectMe(event);" keyvalue="'+y.charAt(tempY)+'">y.charAt(tempY)</button>';
+        //<button class="keepLang" num="0" onclick="selectMe(event);" keyvalue="א">א</button>
+        tempY += 1;
+        getSelectedWord(y);
+    }
 }
 function resetButtons(){
     var x = document.getElementsByTagName("button");
