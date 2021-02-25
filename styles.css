@@ -68,10 +68,10 @@
     color: #198038;
   }
   #buttonWrapper .disabled{
-    color: #A4A4A4;
+    /* color: #A4A4A4;
     background-color: transparent;
     box-shadow: 0 0 0 1px;
-    cursor: default;
+    cursor: default; */
   }
   .flexDiv {
     display: flex;
