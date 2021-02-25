@@ -249,6 +249,7 @@ function addForward(){
     }else{
         document.getElementsByClassName("selectButton")[0].outerHTML += "<button class='selectButton' onclick='selectMe(event);'></button>";
         document.getElementsByClassName("selectButton")[0].classList.remove("selectButton");
+        document.getElementById("textField").innerHTML = "";
         findEmptyWord();
         reNumWords();
     }
@@ -264,6 +265,7 @@ function addBackward(){
     }else{
         var node = document.createElement("button");
         document.getElementsByClassName("selectButton")[0].parentElement.insertBefore(node, document.getElementsByClassName("selectButton")[0]);
+        document.getElementById("textField").innerHTML = "";
         selectBeforeWord();
         findEmptyWord();
         reNumWords();
