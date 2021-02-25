@@ -29,7 +29,9 @@ function changeLang(){
 }
 function keyCheck(e) {
     // console.log(e.target.getAttribute("keyValue"));
-    document.getElementById("textField").classList.add("fieldSelected");
+    if(document.getElementsByClassName("selectButton").length == 0){
+        document.getElementById("textField").classList.add("fieldSelected");
+    }
     e.target.style.transform = "translateY(-50%)";
     setTimeout(function () {
         setTimeout(function () {
