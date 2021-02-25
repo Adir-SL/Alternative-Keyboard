@@ -29,6 +29,7 @@ function changeLang(){
 }
 function keyCheck(e) {
     // console.log(e.target.getAttribute("keyValue"));
+    document.getElementById("textField").classList.add("fieldSelected");
     e.target.style.transform = "translateY(-50%)";
     setTimeout(function () {
         setTimeout(function () {
@@ -68,6 +69,7 @@ function validWords(){
     }
 }
 function approveWord() {
+    document.getElementById("textField").classList.remove("fieldSelected");
     if(document.getElementsByClassName("selectButton").length > 0 && document.getElementsByClassName("selectButton")[0].parentNode.id == "innerWords"){
         document.getElementsByClassName("selectButton")[0].innerText = document.getElementById("textField").innerText;
         document.getElementById("textField").innerHTML = "";
@@ -95,6 +97,7 @@ function approveWord() {
     
 }
 function cancelWord() {
+    document.getElementById("textField").classList.remove("fieldSelected");
     if(document.getElementsByClassName("selectButton").length > 0 && document.getElementsByClassName("selectButton")[0].parentNode.id == "innerWords"){
         document.getElementsByClassName("selectButton")[0].remove(this);
         document.getElementById("textField").innerHTML = "";
@@ -148,6 +151,7 @@ function toggleLang(e){
     }
 }
 function selectMe(e){
+    document.getElementById("textField").classList.remove("fieldSelected");
     resetButtons();
     e.target.classList.add("selectButton");
     if(e.target.parentNode.id == "innerWords"){

@@ -101,6 +101,9 @@
   #textField button:empty{
     color: transparent;
   }
+  .fieldSelected{
+    background-color: #FCDE76 !important;
+  }
   .keyButton::after, .keepLang::after {
     content: attr(keyValue);
     position: absolute;
