@@ -349,21 +349,24 @@ function dragElement(e) {
     window.touchYStart = e.touches[0].clientY;
   }
   function stopDrag(e){
-    if(window.touchYStart - window.touchY > 30){
+      console.log(window.touchXStart - window.touchX)
+    if(window.touchYStart - window.touchY > 30 || window.touchX == undefined){
     }else{
-        if(window.touchXStart - window.touchX > 0){
-            resetButtons();
-            e.target.classList.add("selectButton")
-            document.getElementById("textField").classList.remove("fieldSelected");
-            if(temp[0] == "a"){moveBackward(e);}else{moveForward(e);}
-            resetButtons();
-        }else{
-            resetButtons();
-            e.target.classList.add("selectButton")
-            document.getElementById("textField").classList.remove("fieldSelected");
-            if(temp[0] !== "a"){moveBackward(e);}else{moveForward(e);}
-            resetButtons();
-        }
+            if(window.touchXStart - window.touchX > 0 && window.touchX !== undefined){
+                resetButtons();
+                e.target.classList.add("selectButton")
+                document.getElementById("textField").classList.remove("fieldSelected");
+                if(temp[0] == "a"){moveBackward(e);}else{moveForward(e);}
+                resetButtons();
+                resetTouch();
+            }else{
+                resetButtons();
+                e.target.classList.add("selectButton")
+                document.getElementById("textField").classList.remove("fieldSelected");
+                if(temp[0] !== "a"){moveBackward(e);}else{moveForward(e);}
+                resetButtons();
+                resetTouch();
+            }
     }
   }
 function touchHandler(touchEvent){
@@ -372,11 +375,17 @@ function touchHandler(touchEvent){
 }
 
 function fieldStop(e){
-    if(window.touchYStart - window.touchY > 30){
+    if(window.touchYStart - window.touchY > 30 && window.touchY !== undefined){
         approveWord();
+        resetTouch();
     }else{
-        if(window.touchYStart - window.touchY < -30){
+        if(window.touchYStart - window.touchY < -30 && window.touchY !== undefined){
             cancelWord();
+            resetTouch();
         }
     }
+}
+function resetTouch(){
+    window.touchX = undefined;
+    window.touchY = undefined;
 }
