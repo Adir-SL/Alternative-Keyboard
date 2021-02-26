@@ -353,11 +353,13 @@ function dragElement(e) {
         e.target.classList.add("selectButton")
         document.getElementById("textField").classList.remove("fieldSelected");
         if(temp[0] == "a"){moveBackward(e);}else{moveForward(e);}
+        resetButtons();
     }else{
         resetButtons();
         e.target.classList.add("selectButton")
         document.getElementById("textField").classList.remove("fieldSelected");
         if(temp[0] !== "a"){moveBackward(e);}else{moveForward(e);}
+        resetButtons();
     }
   }
 function touchHandler(touchEvent){
