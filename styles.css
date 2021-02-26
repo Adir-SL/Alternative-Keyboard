@@ -10,6 +10,9 @@
     touch-action: manipulation;
     user-select: none;
   }
+  body, *{
+    overflow: hidden;
+  }
   button {
     font-family: Frank, sans-serif;
     cursor: pointer;
