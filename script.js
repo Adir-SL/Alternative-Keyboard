@@ -41,9 +41,9 @@ function keyCheck(e) {
     if(document.getElementsByClassName("selectButton")[0] == undefined || document.getElementsByClassName("selectButton")[0].parentNode.id == "innerWords"){
         if (document.getElementById("textField").getElementsByTagName("button").length < 9) {
             if(temp[0] == "a"){
-                document.getElementById("textField").innerHTML += '<button class="keepLang engButton" num="'+window.keyNum+'" onclick="selectMe(event);" keyValue="' + e.target.getAttribute("keyValue") + '">' + e.target.getAttribute("keyValue") + "</button>";
+                document.getElementById("textField").innerHTML += '<button class="keepLang engButton" num="'+window.keyNum+'" draggable="true" onclick="selectMe(event);" ontouchstart="dragElement(event);" ontouchmove="touchHandler(event);" ontouchend="stopDrag(event);" keyValue="' + e.target.getAttribute("keyValue") + '">' + e.target.getAttribute("keyValue") + "</button>";
             }else{
-                document.getElementById("textField").innerHTML += '<button class="keepLang" num="'+window.keyNum+'" onclick="selectMe(event);" keyValue="' + e.target.getAttribute("keyValue") + '">' + e.target.getAttribute("keyValue") + "</button>";
+                document.getElementById("textField").innerHTML += '<button class="keepLang" num="'+window.keyNum+'" draggable="true" onclick="selectMe(event);" ontouchstart="dragElement(event);" ontouchmove="touchHandler(event);" ontouchend="stopDrag(event);" keyValue="' + e.target.getAttribute("keyValue") + '">' + e.target.getAttribute("keyValue") + "</button>";
             }
             window.keyNum += 1;
         }
@@ -80,7 +80,7 @@ function approveWord() {
         document.getElementsByClassName("selectButton")[0].classList.remove("selectButton");
     }else{
         if(document.getElementsByClassName("lastWord").length == 0){
-        document.getElementById("innerWords").innerHTML += "<button num='"+window.wordNum+"' onclick='selectMe(event);'>" + document.getElementById("textField").innerText + "</button>";
+        document.getElementById("innerWords").innerHTML += "<button num='"+window.wordNum+"' onclick='selectMe(event);' ontouchstart='dragElement(event);' ontouchmove='touchHandler(event);' ontouchend='stopDrag(event);'>" + document.getElementById("textField").innerText + "</button>";
         }else{
             document.getElementsByClassName("lastWord")[0].innerText = document.getElementById("textField").innerText;
             document.getElementsByClassName("lastWord")[0].classList.remove("lastWord");
@@ -342,4 +342,25 @@ function reNumWords(){
     for (i = 0; i < x.length; i++) {
         x[i].setAttribute("num", i);
     }
+}
+
+function dragElement(e) {
+    window.touchXStart = e.touches[0].clientX;
+  }
+  function stopDrag(e){
+    if(window.touchXStart - window.touchX > 0){
+        resetButtons();
+        e.target.classList.add("selectButton")
+        document.getElementById("textField").classList.remove("fieldSelected");
+        if(temp[0] == "a"){moveBackward(e);}else{moveForward(e);}
+    }else{
+        resetButtons();
+        e.target.classList.add("selectButton")
+        document.getElementById("textField").classList.remove("fieldSelected");
+        if(temp[0] !== "a"){moveBackward(e);}else{moveForward(e);}
+    }
+  }
+function touchHandler(touchEvent){
+    window.touchX = touchEvent.touches[0].clientX;
+    window.touchY = touchEvent.touches[0].clientY;
 }
