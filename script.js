@@ -346,23 +346,37 @@ function reNumWords(){
 
 function dragElement(e) {
     window.touchXStart = e.touches[0].clientX;
+    window.touchYStart = e.touches[0].clientY;
   }
   function stopDrag(e){
-    if(window.touchXStart - window.touchX > 0){
-        resetButtons();
-        e.target.classList.add("selectButton")
-        document.getElementById("textField").classList.remove("fieldSelected");
-        if(temp[0] == "a"){moveBackward(e);}else{moveForward(e);}
-        resetButtons();
+    if(window.touchYStart - window.touchY > 30){
     }else{
-        resetButtons();
-        e.target.classList.add("selectButton")
-        document.getElementById("textField").classList.remove("fieldSelected");
-        if(temp[0] !== "a"){moveBackward(e);}else{moveForward(e);}
-        resetButtons();
+        if(window.touchXStart - window.touchX > 0){
+            resetButtons();
+            e.target.classList.add("selectButton")
+            document.getElementById("textField").classList.remove("fieldSelected");
+            if(temp[0] == "a"){moveBackward(e);}else{moveForward(e);}
+            resetButtons();
+        }else{
+            resetButtons();
+            e.target.classList.add("selectButton")
+            document.getElementById("textField").classList.remove("fieldSelected");
+            if(temp[0] !== "a"){moveBackward(e);}else{moveForward(e);}
+            resetButtons();
+        }
     }
   }
 function touchHandler(touchEvent){
     window.touchX = touchEvent.touches[0].clientX;
     window.touchY = touchEvent.touches[0].clientY;
+}
+
+function fieldStop(e){
+    if(window.touchYStart - window.touchY > 30){
+        approveWord();
+    }else{
+        if(window.touchYStart - window.touchY < -30){
+            cancelWord();
+        }
+    }
 }
