@@ -8,10 +8,8 @@
     background-color: #ffffff;
     direction: rtl;
     touch-action: manipulation;
-    user-select: none;
-  }
-  body, *{
     overflow: hidden;
+    user-select: none;
   }
   button {
     font-family: Frank, sans-serif;
