@@ -349,7 +349,6 @@ function dragElement(e) {
     window.touchYStart = e.touches[0].clientY;
   }
   function stopDrag(e){
-      console.log(window.touchXStart - window.touchX)
     if(window.touchYStart - window.touchY > 30 || window.touchX == undefined){
     }else{
             if(window.touchXStart - window.touchX > 0 && window.touchX !== undefined){
