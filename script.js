@@ -29,6 +29,7 @@ function changeLang(){
 }
 function keyCheck(e) {
     // console.log(e.target.getAttribute("keyValue"));
+    document.getElementById("biggerButtons").innerHTML = "";
     if(document.getElementsByClassName("selectButton").length == 0){
         document.getElementById("textField").classList.add("fieldSelected");
     }
@@ -392,6 +393,9 @@ function resetTouch(){
 function biggerKeys(e){
     if(e.target.className == "flexDiv"){
         document.getElementById("biggerButtons").innerHTML = "";
+        document.getElementById("biggerButtons").style.left = e.clientX+"px";
+        // document.getElementById("biggerButtons").style.top = e.clientY+"px";
+        console.log(e.clientX)
         // alert(e.target.className);
         winX = document.getElementById("keyboard").clientWidth / 8;
         winY = document.getElementById("keyboard").clientHeight / 6;
@@ -402,7 +406,9 @@ function biggerKeys(e){
             //x[i].offsetLeft - e.clientX < winX && x[i].offsetLeft - e.clientX > winX * -1 &&
             if(x[i].offsetLeft - e.clientX < winX && x[i].offsetLeft - e.clientX > winX * -1 && x[i].getBoundingClientRect().top - e.clientY < winY && x[i].getBoundingClientRect().top - e.clientY > winY * -1){
                 // alert(x[i].getAttribute('keyValue'));
-                document.getElementById("biggerButtons").innerHTML += "<button>"+x[i].getAttribute('keyValue')+"</button>";
+                if(x[i].getAttribute('keyValue') !== null && x[i].getAttribute('keyValue') !== undefined){
+                    document.getElementById("biggerButtons").innerHTML += "<button class='bigButton' onclick='keyCheck(event);' keyValue="+x[i].getAttribute('keyValue')+">"+x[i].getAttribute('keyValue')+"</button>";
+                }
             }
         }
     }
