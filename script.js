@@ -30,6 +30,7 @@ function changeLang(){
 function keyCheck(e) {
     // console.log(e.target.getAttribute("keyValue"));
     document.getElementById("biggerButtons").innerHTML = "";
+    document.getElementById("innerKeyboard").classList.remove("disabled");
     if(document.getElementsByClassName("selectButton").length == 0){
         document.getElementById("textField").classList.add("fieldSelected");
     }
@@ -392,9 +393,14 @@ function resetTouch(){
 }
 function biggerKeys(e){
     if(e.target.className == "flexDiv"){
-        document.getElementById("biggerButtons").innerHTML = "";
-        document.getElementById("biggerButtons").style.left = e.clientX+"px";
+        if(document.getElementById("innerKeyboard").className == "disabled"){
+            document.getElementById("innerKeyboard").classList.remove("disabled");
+            document.getElementById("biggerButtons").innerHTML = "";
+        }else{
+            document.getElementById("biggerButtons").innerHTML = "";
+        // document.getElementById("biggerButtons").style.left = e.clientX+"px";
         // document.getElementById("biggerButtons").style.top = e.clientY+"px";
+        document.getElementById("innerKeyboard").classList.add("disabled");
         console.log(e.clientX)
         // alert(e.target.className);
         winX = document.getElementById("keyboard").clientWidth / 8;
@@ -411,5 +417,7 @@ function biggerKeys(e){
                 }
             }
         }
+        }
+        
     }
 }

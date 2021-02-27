@@ -88,6 +88,10 @@
     box-shadow: 0 0 0 1px;
     cursor: default; */
   }
+  .disabled{
+    pointer-events: none;
+    opacity: 0.3;
+  }
   .flexDiv {
     display: flex;
     justify-content: space-between;
@@ -190,11 +194,12 @@
     display: grid;
     bottom: 25%;
     gap: 16px;
+    left: 50%;
     grid-template-columns: 1fr 1fr;
     background-color: gray;
     padding: 16px;
     border-radius: 56px;
-    transform: scale(1.5) translateX(-35%);
+    transform: scale(1.5) translateX(-34%);
     transform-origin: top center;
     z-index: 10;
     box-shadow: 2px 4px 4px 0 rgba(0, 0, 0, 0.25);
