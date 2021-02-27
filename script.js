@@ -391,6 +391,7 @@ function resetTouch(){
 }
 function biggerKeys(e){
     if(e.target.className == "flexDiv"){
+        document.getElementById("biggerButtons").innerHTML = "";
         // alert(e.target.className);
         winX = document.getElementById("keyboard").clientWidth / 8;
         winY = document.getElementById("keyboard").clientHeight / 6;
@@ -400,7 +401,8 @@ function biggerKeys(e){
         for (i = 0; i < x.length; i++) {
             //x[i].offsetLeft - e.clientX < winX && x[i].offsetLeft - e.clientX > winX * -1 &&
             if(x[i].offsetLeft - e.clientX < winX && x[i].offsetLeft - e.clientX > winX * -1 && x[i].getBoundingClientRect().top - e.clientY < winY && x[i].getBoundingClientRect().top - e.clientY > winY * -1){
-                alert(x[i].getAttribute('keyValue'));
+                // alert(x[i].getAttribute('keyValue'));
+                document.getElementById("biggerButtons").innerHTML += "<button>"+x[i].getAttribute('keyValue')+"</button>";
             }
         }
     }
