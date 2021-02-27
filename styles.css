@@ -33,6 +33,7 @@
     left: 0;
     /* z-index: -1; */
     background-color: red;
+    display: none;
   }
   #innerKeyboard {
     width: 90%;
@@ -40,6 +41,8 @@
     margin-left: 5%;
     margin-right: 5%;
     display: flex;
+    /* z-index: 1;
+    position: relative; */
     flex-direction: column;
     justify-content: space-evenly;
   }

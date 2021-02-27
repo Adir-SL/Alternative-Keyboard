@@ -390,5 +390,7 @@ function resetTouch(){
     window.touchY = undefined;
 }
 function biggerKeys(e){
-    alert(e.target.id);
+    if(e.target.className == "flexDiv"){
+        alert(e.target.className);
+    }
 }
