@@ -291,6 +291,7 @@ function selectBeforeButton(){
     for (i = 0; i < x.length; i++) {
         if(x[i].className.indexOf("selectButton") > -1){
             x[i].classList.remove("selectButton");
+            x[i-1].classList.add("keepLang");
             x[i-1].classList.add("selectButton");
         }
     }
