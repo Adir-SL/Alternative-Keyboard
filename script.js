@@ -389,3 +389,6 @@ function resetTouch(){
     window.touchX = undefined;
     window.touchY = undefined;
 }
+function biggerKeys(e){
+    alert(e.target.id);
+}
