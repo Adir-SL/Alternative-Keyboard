@@ -350,6 +350,7 @@ function reNumWords(){
 function dragElement(e) {
     window.touchXStart = e.touches[0].clientX;
     window.touchYStart = e.touches[0].clientY;
+    e.target.classList.add("selectButton")
   }
   function stopDrag(e){
     if(window.touchYStart - window.touchY > 30 || window.touchX == undefined){
@@ -359,14 +360,14 @@ function dragElement(e) {
                 e.target.classList.add("selectButton")
                 document.getElementById("textField").classList.remove("fieldSelected");
                 if(temp[0] == "a"){moveBackward(e);}else{moveForward(e);}
-                resetButtons();
+                // resetButtons();
                 resetTouch();
             }else{
                 resetButtons();
                 e.target.classList.add("selectButton")
                 document.getElementById("textField").classList.remove("fieldSelected");
                 if(temp[0] !== "a"){moveBackward(e);}else{moveForward(e);}
-                resetButtons();
+                // resetButtons();
                 resetTouch();
             }
     }
