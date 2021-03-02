@@ -356,9 +356,10 @@ function dragElement(e) {
   function stopDrag(e){
     if(window.touchYStart - window.touchY > 30 || window.touchX == undefined){
     }else{
-        // if(window.touchYStart - window.touchY < -30){
-        //     document.getElementsByClassName("selectButton")[0].outerHTML = "";
-        // }
+        if(window.touchYStart - window.touchY < -30){
+            // document.getElementsByClassName("selectButton")[0].outerHTML = "";
+            cancelWord();
+        }
         if(window.touchXStart - window.touchX > 0 && window.touchX !== undefined){
             resetButtons();
             e.target.classList.add("selectButton")
@@ -387,7 +388,10 @@ function fieldStop(e){
         resetTouch();
     }else{
         if(window.touchYStart - window.touchY < -30 && window.touchY !== undefined){
-            cancelWord();
+            console.log(e.target.id)
+            if(e.target.id == "textField"){
+                cancelWord();
+            }
             resetTouch();
             
         }
