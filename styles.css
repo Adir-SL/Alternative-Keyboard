@@ -162,10 +162,19 @@
   .innerApprove{
     animation: approveAnim 300ms ease-in;
   }
+  .innerCancel{
+    animation: cancelAnim 300ms ease-in;
+  }
   @keyframes approveAnim{
     0%{transform: translateY(0);opacity:1;}
     60%{transform: translateY(-200%);opacity:0;}
     61%{transform: translateY(50%);opacity:0;}
+    100%{transform: translateY(0);opacity:1;}
+  }
+  @keyframes cancelAnim{
+    0%{transform: translateY(0);opacity:1;}
+    60%{transform: translateY(100%);opacity:0;}
+    61%{transform: translateY(-50%);opacity:0;}
     100%{transform: translateY(0);opacity:1;}
   }
   .statusBar{
