@@ -76,20 +76,30 @@ function validWords(){
 function approveWord() {
     if(document.getElementsByClassName("selectButton").length > 0 && document.getElementsByClassName("selectButton")[0].parentNode.id == "innerWords"){
         document.getElementsByClassName("selectButton")[0].innerText = document.getElementById("textField").innerText;
-        reNumWords();
         lessButtons();
+        document.getElementById("textField").classList.add("innerApprove");
         document.getElementsByClassName("selectButton")[0].classList.remove("selectButton");
+        animApprove();
     }else{
         if(document.getElementsByClassName("lastWord").length == 0){
+            if(document.getElementById("textField").innerHTML !== ""){
         document.getElementById("innerWords").innerHTML += "<button num='"+window.wordNum+"' onclick='selectMe(event);' ontouchstart='dragElement(event);' ontouchmove='touchHandler(event);' ontouchend='stopDrag(event);'>" + document.getElementById("textField").innerText + "</button>";
+            }
         }else{
             document.getElementsByClassName("lastWord")[0].innerText = document.getElementById("textField").innerText;
             document.getElementsByClassName("lastWord")[0].classList.remove("lastWord");
         }
     // document.getElementById("textField").innerHTML = "";
     document.getElementById("buttonWrapper").getElementsByClassName("greenBtn")[0].style.transform = "scale(0.8)";
-    document.getElementById("textField").classList.add("innerApprove");
-    validWords();
+    if(document.getElementById("textField").innerHTML !== ""){
+        document.getElementById("textField").classList.add("innerApprove");
+        validWords();
+    }
+    animApprove();
+    }
+    
+}
+function animApprove(){
     setTimeout(function () {
         toggleButtons();
         document.getElementById("buttonWrapper").getElementsByClassName("greenBtn")[0].style.transform = "scale(1)";
@@ -101,14 +111,13 @@ function approveWord() {
     }, 100);
     setTimeout(function () {
         document.getElementById("textField").innerHTML = "";
+        reNumWords();
         document.getElementById("textField").classList.remove("fieldSelected");
     }, 200);
     setTimeout(function () {
         document.getElementById("textField").classList.remove("innerApprove");
         location.reload();
     }, 300);
-    }
-    
 }
 function cancelWord() {
     document.getElementById("textField").classList.remove("fieldSelected");
@@ -278,12 +287,12 @@ function flattenWords(){
 function addForward(){
     // alert("FORWARD");
     if(document.getElementsByClassName("selectButton")[0].parentElement.id == "textField"){  
-        document.getElementsByClassName("selectButton")[0].outerHTML += "<button class='keepLang selectButton' onclick='selectMe(event);'></button>";
+        document.getElementsByClassName("selectButton")[0].outerHTML += "<button class='keepLang selectButton' onclick='selectMe(event);' ontouchstart='dragElement(event);' ontouchmove='touchHandler(event);' ontouchend='stopDrag(event);'></button>";
         document.getElementsByClassName("selectButton")[0].classList.remove("selectButton");
         findEmptyButton();
         reNumButtons();
     }else{
-        document.getElementsByClassName("selectButton")[0].outerHTML += "<button class='selectButton' onclick='selectMe(event);'></button>";
+        document.getElementsByClassName("selectButton")[0].outerHTML += "<button class='selectButton' onclick='selectMe(event);' ontouchstart='dragElement(event);' ontouchmove='touchHandler(event);' ontouchend='stopDrag(event);'></button>";
         document.getElementsByClassName("selectButton")[0].classList.remove("selectButton");
         document.getElementById("textField").innerHTML = "";
         findEmptyWord();
@@ -336,7 +345,10 @@ function findEmptyButton(){
             x[i].classList.add("keepLang");
             if(temp[0] == "a"){x[i].classList.add("engButton");}
             x[i].setAttribute("keyValue", "0");
-            x[i].setAttribute("onclick", "selectMe(event)")
+            x[i].setAttribute("onclick", "selectMe(event)");
+            x[i].setAttribute("ontouchstart", "dragElement(event)");
+            x[i].setAttribute("ontouchmove", "touchHandler(event)");
+            x[i].setAttribute("ontouchend", "stopDrag(event)");
         }
     }
 }
@@ -349,6 +361,9 @@ function findEmptyWord(){
             // if(temp[0] == "a"){x[i].classList.add("engButton");}
             // x[i].setAttribute("keyValue", "0");
             x[i].setAttribute("onclick", "selectMe(event)")
+            x[i].setAttribute("ontouchstart", "dragElement(event)");
+            x[i].setAttribute("ontouchmove", "touchHandler(event)");
+            x[i].setAttribute("ontouchend", "stopDrag(event)");
         }
     }
 }
@@ -364,6 +379,7 @@ function reNumWords(){
     var i;
     for (i = 0; i < x.length; i++) {
         x[i].setAttribute("num", i);
+        x[i].classList.remove("lastWord");
     }
 }
 
