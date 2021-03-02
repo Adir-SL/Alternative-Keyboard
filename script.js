@@ -132,11 +132,15 @@ function cancelWord() {
             lessButtons();
         }
         setTimeout(function () {
+            document.getElementById("textField").classList.add("innerCancel");
             toggleButtons();
             document.getElementById("buttonWrapper").getElementsByClassName("redBtn")[0].style.transform = "scale(1)";
             lessButtons();
             window.keyNum = 0;
         }, 100);
+        setTimeout(function () {
+            document.getElementById("textField").classList.remove("innerCancel");
+        }, 300);
         }
     }
 }
