@@ -356,7 +356,7 @@ function dragElement(e) {
   function stopDrag(e){
     if(window.touchYStart - window.touchY > 30 || window.touchX == undefined){
     }else{
-        if(window.touchYStart - window.touchY < -30){
+        if(window.touchYStart - window.touchY < -30 && e.target.classList[0] == "keepLang"){
             // document.getElementsByClassName("selectButton")[0].outerHTML = "";
             cancelWord();
         }
