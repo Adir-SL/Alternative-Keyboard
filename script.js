@@ -350,26 +350,30 @@ function reNumWords(){
 function dragElement(e) {
     window.touchXStart = e.touches[0].clientX;
     window.touchYStart = e.touches[0].clientY;
-    e.target.classList.add("selectButton")
+    // e.target.classList.add("selectButton")
+    selectMe(e);
   }
   function stopDrag(e){
     if(window.touchYStart - window.touchY > 30 || window.touchX == undefined){
     }else{
-            if(window.touchXStart - window.touchX > 0 && window.touchX !== undefined){
-                resetButtons();
-                e.target.classList.add("selectButton")
-                document.getElementById("textField").classList.remove("fieldSelected");
-                if(temp[0] == "a"){moveBackward(e);}else{moveForward(e);}
-                // resetButtons();
-                resetTouch();
-            }else{
-                resetButtons();
-                e.target.classList.add("selectButton")
-                document.getElementById("textField").classList.remove("fieldSelected");
-                if(temp[0] !== "a"){moveBackward(e);}else{moveForward(e);}
-                // resetButtons();
-                resetTouch();
-            }
+        // if(window.touchYStart - window.touchY < -30){
+        //     document.getElementsByClassName("selectButton")[0].outerHTML = "";
+        // }
+        if(window.touchXStart - window.touchX > 0 && window.touchX !== undefined){
+            resetButtons();
+            e.target.classList.add("selectButton")
+            document.getElementById("textField").classList.remove("fieldSelected");
+            if(temp[0] == "a"){moveBackward(e);}else{moveForward(e);}
+            // resetButtons();
+            resetTouch();
+        }else{
+            resetButtons();
+            e.target.classList.add("selectButton")
+            document.getElementById("textField").classList.remove("fieldSelected");
+            if(temp[0] !== "a"){moveBackward(e);}else{moveForward(e);}
+            // resetButtons();
+            resetTouch();
+        }
     }
   }
 function touchHandler(touchEvent){
@@ -385,6 +389,7 @@ function fieldStop(e){
         if(window.touchYStart - window.touchY < -30 && window.touchY !== undefined){
             cancelWord();
             resetTouch();
+            
         }
     }
 }
