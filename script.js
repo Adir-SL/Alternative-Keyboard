@@ -29,7 +29,7 @@ function changeLang(){
 }
 function keyCheck(e) {
     // console.log(e.target.getAttribute("keyValue"));
-    alert(e.target.getAttribute("keyValue"))
+    // alert(e.target.getAttribute("keyValue"));
     document.getElementById("biggerButtons").innerHTML = "";
     document.getElementById("innerKeyboard").classList.remove("disabled");
     if(document.getElementsByClassName("selectButton").length == 0){
@@ -97,6 +97,8 @@ function approveWord() {
         lessButtons();
         window.keyNum = 0;
         window.wordNum += 1;
+        window.localStorage.setItem('keyboardTyped', document.getElementById("innerWords").innerHTML);
+        location.reload();
     }, 100);
     }
     
