@@ -133,14 +133,20 @@ function cancelWord() {
         }
         setTimeout(function () {
             document.getElementById("textField").classList.add("innerCancel");
+        }, 10);
+        setTimeout(function () {
+            document.getElementById("textField").classList.add("innerCancel");
             toggleButtons();
             document.getElementById("buttonWrapper").getElementsByClassName("redBtn")[0].style.transform = "scale(1)";
             lessButtons();
             window.keyNum = 0;
         }, 100);
         setTimeout(function () {
+            document.getElementById("textField").innerHTML = "";
+        }, 210);
+        setTimeout(function () {
             document.getElementById("textField").classList.remove("innerCancel");
-        }, 300);
+        }, 310);
         }
     }
 }
@@ -364,7 +370,7 @@ function reNumWords(){
 function dragElement(e) {
     window.touchXStart = e.touches[0].clientX;
     window.touchYStart = e.touches[0].clientY;
-    // e.target.classList.add("selectButton")
+    e.target.classList.add("selectButton")
   }
   function stopDrag(e){
     if(window.touchYStart - window.touchY > 30 || window.touchX == undefined){
