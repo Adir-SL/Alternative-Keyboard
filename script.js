@@ -351,7 +351,6 @@ function dragElement(e) {
     window.touchXStart = e.touches[0].clientX;
     window.touchYStart = e.touches[0].clientY;
     // e.target.classList.add("selectButton")
-    selectMe(e);
   }
   function stopDrag(e){
     if(window.touchYStart - window.touchY > 30 || window.touchX == undefined){
@@ -361,6 +360,7 @@ function dragElement(e) {
             cancelWord();
         }
         if(window.touchXStart - window.touchX > 0 && window.touchX !== undefined){
+            selectMe(e);
             resetButtons();
             e.target.classList.add("selectButton")
             document.getElementById("textField").classList.remove("fieldSelected");
@@ -368,6 +368,7 @@ function dragElement(e) {
             // resetButtons();
             resetTouch();
         }else{
+            selectMe(e);
             resetButtons();
             e.target.classList.add("selectButton")
             document.getElementById("textField").classList.remove("fieldSelected");
