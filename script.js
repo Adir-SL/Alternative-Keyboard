@@ -74,10 +74,8 @@ function validWords(){
     }
 }
 function approveWord() {
-    document.getElementById("textField").classList.remove("fieldSelected");
     if(document.getElementsByClassName("selectButton").length > 0 && document.getElementsByClassName("selectButton")[0].parentNode.id == "innerWords"){
         document.getElementsByClassName("selectButton")[0].innerText = document.getElementById("textField").innerText;
-        document.getElementById("textField").innerHTML = "";
         reNumWords();
         lessButtons();
         document.getElementsByClassName("selectButton")[0].classList.remove("selectButton");
@@ -88,8 +86,9 @@ function approveWord() {
             document.getElementsByClassName("lastWord")[0].innerText = document.getElementById("textField").innerText;
             document.getElementsByClassName("lastWord")[0].classList.remove("lastWord");
         }
-    document.getElementById("textField").innerHTML = "";
+    // document.getElementById("textField").innerHTML = "";
     document.getElementById("buttonWrapper").getElementsByClassName("greenBtn")[0].style.transform = "scale(0.8)";
+    document.getElementById("textField").classList.add("innerApprove");
     validWords();
     setTimeout(function () {
         toggleButtons();
@@ -98,8 +97,16 @@ function approveWord() {
         window.keyNum = 0;
         window.wordNum += 1;
         window.localStorage.setItem('keyboardTyped', document.getElementById("innerWords").innerHTML);
-        location.reload();
+        // location.reload();
     }, 100);
+    setTimeout(function () {
+        document.getElementById("textField").innerHTML = "";
+        document.getElementById("textField").classList.remove("fieldSelected");
+    }, 200);
+    setTimeout(function () {
+        document.getElementById("textField").classList.remove("innerApprove");
+        location.reload();
+    }, 300);
     }
     
 }

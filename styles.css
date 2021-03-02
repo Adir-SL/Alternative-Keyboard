@@ -159,6 +159,15 @@
     content: '0';
     color: transparent;
   }
+  .innerApprove{
+    animation: approveAnim 300ms ease-in;
+  }
+  @keyframes approveAnim{
+    0%{transform: translateY(0);opacity:1;}
+    60%{transform: translateY(-200%);opacity:0;}
+    61%{transform: translateY(50%);opacity:0;}
+    100%{transform: translateY(0);opacity:1;}
+  }
   .statusBar{
     position: fixed;
     width: 100vw;
