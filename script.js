@@ -49,7 +49,7 @@ function keyCheck(e) {
             }
             window.keyNum += 1;
         }
-        buttonsOn();
+        // buttonsOn();
         // resetButtons();
     }else{
         document.getElementsByClassName("selectButton")[0].setAttribute("keyValue", e.target.getAttribute("keyValue"));
@@ -57,8 +57,8 @@ function keyCheck(e) {
     }
 }
 function buttonsOn() {
-    document.getElementById("buttonWrapper").getElementsByTagName("button")[0].className = "redBtn";
-    document.getElementById("buttonWrapper").getElementsByTagName("button")[1].className = "greenBtn";
+    // document.getElementById("buttonWrapper").getElementsByTagName("button")[0].className = "redBtn";
+    // document.getElementById("buttonWrapper").getElementsByTagName("button")[1].className = "greenBtn";
 }
 function validWords(){
     var x = document.getElementById("innerWords").getElementsByTagName("button");
