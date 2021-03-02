@@ -29,6 +29,7 @@ function changeLang(){
 }
 function keyCheck(e) {
     // console.log(e.target.getAttribute("keyValue"));
+    alert(e.target.getAttribute("keyValue"))
     document.getElementById("biggerButtons").innerHTML = "";
     document.getElementById("innerKeyboard").classList.remove("disabled");
     if(document.getElementsByClassName("selectButton").length == 0){
