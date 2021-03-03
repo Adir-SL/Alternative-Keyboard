@@ -155,6 +155,7 @@ function cancelWord() {
         }, 210);
         setTimeout(function () {
             document.getElementById("textField").classList.remove("innerCancel");
+            location.reload();
         }, 310);
         }
     }
