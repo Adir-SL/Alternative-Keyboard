@@ -189,6 +189,12 @@ function selectMe(e){
     resetButtons();
     e.target.classList.add("selectButton");
     if(e.target.parentNode.id == "innerWords"){
+        var x = document.getElementsByTagName("button");
+        var i;
+        for (i = 0; i < x.length; i++) {
+            x[i].classList.remove("lastWord");
+        }
+
         tempY = 0;
         document.getElementById("textField").innerHTML = '';
         getSelectedWord(e.target.innerText);
