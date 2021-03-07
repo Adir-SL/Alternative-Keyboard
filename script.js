@@ -116,6 +116,7 @@ function animApprove(){
     }, 200);
     setTimeout(function () {
         document.getElementById("textField").classList.remove("innerApprove");
+        window.localStorage.setItem('keyLang', document.getElementsByClassName("statusBar")[0].getElementsByTagName("button")[1].innerText);
         location.reload();
     }, 300);
 }
@@ -155,6 +156,7 @@ function cancelWord() {
         }, 210);
         setTimeout(function () {
             document.getElementById("textField").classList.remove("innerCancel");
+            window.localStorage.setItem('keyLang', document.getElementsByClassName("statusBar")[0].getElementsByTagName("button")[1].innerText);
             location.reload();
         }, 310);
         }
