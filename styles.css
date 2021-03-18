@@ -50,7 +50,9 @@
   #textField {
     background-color: #ffffff;
     height: 8vmin;
+    height: 11vw;
     padding: 1vmin;
+    padding: 1vw;
     border-radius: 999px;
     box-shadow: 2px 4px 4px 0 rgba(0, 0, 0, 0.25);
   }
