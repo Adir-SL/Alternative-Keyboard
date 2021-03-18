@@ -149,6 +149,7 @@
   }
   #innerWords{
     margin-top: 10vmin;
+    margin-top: 15vw;
   }
   #innerWords button {
     border: none;
@@ -196,12 +197,14 @@
     position: fixed;
     width: 100vw;
     height: 8vmin;
+    height: 11.5vw;
     top: 0;
     left: 0;
     background-color: #525252;
   }
   .statusBar button{
     margin: 1vmin;
+    margin: 2.5vw;
     background-color: #6F6F6F;
     border: 0;
     outline: 0;
