@@ -151,6 +151,8 @@
   #innerWords{
     margin-top: 10vmin;
     margin-top: 15vw;
+    height: 27vw;
+    overflow-y: auto;
   }
   #innerWords button {
     border: none;
