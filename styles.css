@@ -20,6 +20,7 @@
     position: fixed;
     width: 100%;
     height: 50%;
+    height: 90.9vw;
     bottom: 0;
     left: 0;
   }
@@ -56,6 +57,7 @@
   #buttonWrapper {
     display: flex;
     gap: 2vmin;
+    height: 9.1vw;
   }
   #buttonWrapper button {
     flex-grow: 1;
