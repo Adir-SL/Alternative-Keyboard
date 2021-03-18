@@ -9,8 +9,13 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 
         <script src="script.js"></script>
+        <script>
+            function scrollWords(){
+                document.getElementById('innerWords').scrollTop=document.getElementById('innerWords').scrollHeight;
+            }
+        </script>
     </head>
-    <body>
+    <body onload="scrollWords();">
         <div class="statusBar flexDiv">
             <button onclick="window.localStorage.setItem('keyboardTyped','');location.reload();" style="color:white;"><i class="material-icons" style="font-size: 4vmin;line-height:5vmin;">refresh</i></button>
             <button class="showBtn" keyValue="a" onclick="toggleLang(event);">a</button>
