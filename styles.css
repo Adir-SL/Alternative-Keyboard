@@ -150,8 +150,8 @@
   }
   #innerWords{
     margin-top: 10vmin;
-    margin-top: 15vw;
-    height: 27vw;
+    margin-top: 11.5vw;
+    height: 31vw;
     overflow-y: auto;
   }
   #innerWords button {
