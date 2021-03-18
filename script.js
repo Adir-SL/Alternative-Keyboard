@@ -42,7 +42,7 @@ function keyCheck(e) {
         }, 100);
     }, 100);
     if(document.getElementsByClassName("selectButton")[0] == undefined || document.getElementsByClassName("selectButton")[0].parentNode.id == "innerWords"){
-        if (document.getElementById("textField").getElementsByTagName("button").length < 9) {
+        if (document.getElementById("textField").getElementsByTagName("button").length < 8) {
             if(temp[0] == "a"){
                 document.getElementById("textField").innerHTML += '<button class="keepLang engButton" num="'+window.keyNum+'" draggable="true" onclick="selectMe(event);" ontouchstart="dragElement(event);" ontouchmove="touchHandler(event);" ontouchend="stopDrag(event);" keyValue="' + e.target.getAttribute("keyValue") + '">' + e.target.getAttribute("keyValue") + "</button>";
             }else{
