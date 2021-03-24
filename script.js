@@ -231,7 +231,7 @@ function moreButtons(){
     }
 }
 function lessButtons(){
-    document.getElementById("buttonWrapper").innerHTML = '<button class="redBtn disabled" onclick="cancelWord();"><i class="material-icons">cancel</i></button><button class="greenBtn disabled" onclick="approveWord();"><i class="material-icons">check_circle</i></button>';
+    document.getElementById("buttonWrapper").innerHTML = '<button class="redBtn disabled" onclick="cancelWord();"><i class="material-icons">cancel</i></button><button class="muteBtn"></button><button class="greenBtn disabled" onclick="approveWord();"><i class="material-icons">check_circle</i></button>';
 }
 function moveForward(){
     if(document.getElementsByClassName("selectButton")[0].parentElement.id == "textField"){
