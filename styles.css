@@ -84,11 +84,14 @@
     font-size: 1.5em;
   }
   #buttonWrapper .muteBtn{
-    flex-grow: 0.15;
+    flex-grow: 0.09;
     background-color: #ffffff;
   }
   .muteBtn i{
     transform: scale(-1,1);
+  }
+  .material-icons{
+    font-size: 1.5em !important;
   }
   .plusBefore::before, .plusAfter::after{
     content: "+";
