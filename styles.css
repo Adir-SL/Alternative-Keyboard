@@ -160,11 +160,15 @@
     font-size: 5vmin;
     padding: 1vmin 3vmin;
     margin: 1vmin;
+    margin-top: 4.3vmin;
     border-radius: 999px;
     background-color: #E0E0E0;
     color: #161616;
     box-shadow: 2px 4px 4px 0 rgba(0, 0, 0, 0.25);
     transition: box-shadow 200ms cubic-bezier(.47,-0.77,.6,1.8), background-color 200ms linear;
+  }
+  #innerWords button:last-of-type{
+    margin-bottom: 3.2vmin;
   }
   #innerWords .selectButton, #textField .selectButton{
     background-color: #FCDE76;
