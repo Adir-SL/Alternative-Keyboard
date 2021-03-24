@@ -66,6 +66,7 @@
   #buttonWrapper {
     display: flex;
     gap: 2vmin;
+    gap: 4.54vw;
     height: 9.1vw;
   }
   #buttonWrapper button {
