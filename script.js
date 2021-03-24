@@ -68,6 +68,7 @@ function validWords(){
         if(x[i].innerText == ''){
             x[i].outerHTML = '';
         }
+        x[i].classList.remove("lastWord");
     }
     if(document.getElementsByClassName("selectButton").length > 0){
         document.getElementsByClassName("selectButton")[0].classList.remove("selectButton");
