@@ -236,10 +236,15 @@
     text-align: center;
     box-shadow: 2px 4px 4px 0 rgba(0, 0, 0, 0.25);
   }
-  .reloadBtn{
-    background-image: url(icons/reload.svg);
+  .reloadBtn, .muteBtn{
     color: transparent !important;
     background-size: cover;
+  }
+  .reloadBtn{
+    background-image: url(icons/reload.svg);
+  }
+  .muteBtn{
+    background-image: url(icons/sound.svg);
   }
   .statusBar .showBtn{
     direction: rtl;
