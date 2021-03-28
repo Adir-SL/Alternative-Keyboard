@@ -176,12 +176,14 @@ function toggleLang(e){
     if(e.target.innerText == "a"){
         document.getElementsByClassName("statusBar")[0].getElementsByTagName("button")[1].innerText = "א";
         document.getElementsByClassName("statusBar")[0].getElementsByTagName("button")[1].setAttribute("keyValue","א");
+        document.getElementsByClassName("statusBar")[0].getElementsByTagName("button")[1].style.backgroundImage = "url(icons/heb.svg)";
         temp = window.abcEng;
         changeLang();
         document.body.style.direction = "ltr";
     }else{
         document.getElementsByClassName("statusBar")[0].getElementsByTagName("button")[1].innerText = "a";
         document.getElementsByClassName("statusBar")[0].getElementsByTagName("button")[1].setAttribute("keyValue","a");
+        document.getElementsByClassName("statusBar")[0].getElementsByTagName("button")[1].style.backgroundImage = "url(icons/eng.svg)";
         temp = window.abcHeb;
         changeLang();
         document.body.style.direction = "rtl";
