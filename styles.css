@@ -236,7 +236,7 @@
     text-align: center;
     box-shadow: 2px 4px 4px 0 rgba(0, 0, 0, 0.25);
   }
-  .reloadBtn, .muteBtn, .menuBtn, .showBtn, .redBtn, .greenBtn{
+  .reloadBtn, .muteBtn, .menuBtn, .showBtn, .redBtn, .greenBtn, .plusBefore, .plusAfter{
     color: transparent !important;
     background-size: contain;
     background-position: center;
@@ -261,6 +261,10 @@
   .greenBtn{
     background-image: url(icons/v.svg);
     background-size: auto;
+  }
+  .plusBefore, .plusAfter{
+    background-image: url(icons/plus.svg);
+    width: 2em;
   }
   .statusBar .showBtn{
     direction: rtl;
