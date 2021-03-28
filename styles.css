@@ -236,6 +236,11 @@
     text-align: center;
     box-shadow: 2px 4px 4px 0 rgba(0, 0, 0, 0.25);
   }
+  .reloadBtn{
+    background-image: url(icons/reload.svg);
+    color: transparent !important;
+    background-size: cover;
+  }
   .statusBar .showBtn{
     direction: rtl;
   }
