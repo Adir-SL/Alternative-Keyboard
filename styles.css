@@ -236,7 +236,7 @@
     text-align: center;
     box-shadow: 2px 4px 4px 0 rgba(0, 0, 0, 0.25);
   }
-  .reloadBtn, .muteBtn{
+  .reloadBtn, .muteBtn, .menuBtn{
     color: transparent !important;
     background-size: cover;
   }
@@ -245,6 +245,9 @@
   }
   .muteBtn{
     background-image: url(icons/sound.svg);
+  }
+  .menuBtn{
+    background-image: url(icons/menu.svg);
   }
   .statusBar .showBtn{
     direction: rtl;
