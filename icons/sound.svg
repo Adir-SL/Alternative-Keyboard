@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="36px" height="36px" viewBox="0 0 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="36px" height="36px" viewBox="0 0 54 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <title>icon/image/settings/32</title>
+    <style>
+    #Page-1{transform:translate(9px,9px);}
+    </style>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="114-copy-6" transform="translate(-494.000000, -700.000000)" fill="#000000">
             <g id="Group" transform="translate(492.000000, 698.000000)">
