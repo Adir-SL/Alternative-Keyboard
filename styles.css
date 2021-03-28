@@ -236,9 +236,11 @@
     text-align: center;
     box-shadow: 2px 4px 4px 0 rgba(0, 0, 0, 0.25);
   }
-  .reloadBtn, .muteBtn, .menuBtn, .showBtn{
+  .reloadBtn, .muteBtn, .menuBtn, .showBtn, .redBtn, .greenBtn{
     color: transparent !important;
-    background-size: cover;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
   }
   .reloadBtn{
     background-image: url(icons/reload.svg);
@@ -251,6 +253,14 @@
   }
   .showBtn{
     background-image: url(icons/eng.svg);
+  }
+  .redBtn{
+    background-image: url(icons/x.svg);
+    background-size: auto;
+  }
+  .greenBtn{
+    background-image: url(icons/v.svg);
+    background-size: auto;
   }
   .statusBar .showBtn{
     direction: rtl;
