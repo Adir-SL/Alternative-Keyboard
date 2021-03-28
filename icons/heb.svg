@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="54px" height="54px" viewBox="0 0 54 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 4 Copy 5</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="48" height="48" rx="24"></rect>
+        <filter x="-11.5%" y="-7.3%" width="122.9%" height="122.9%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.33 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="113" transform="translate(-237.000000, -12.000000)">
+            <g id="Group-4-Copy-5" transform="translate(240.000000, 13.000000)">
+                <g id="א-copy-2">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <use fill="#6F6F6F" fill-rule="evenodd" xlink:href="#path-1"></use>
+                </g>
+                <path d="M31.28,35.92 C31.8,34.84 32.24,34.04 32.24,33 C32.24,31.72 31.64,30.84 30.84,29.84 L28.04,26.56 C27.44,24.24 27.72,22.76 29.08,20.28 L30.28,18.12 L30.6,18.16 C31.36,18.24 31.6,18.48 31.76,18.8 L32.16,18.8 C32.28,18.56 32.76,17.48 32.76,16.36 C32.76,15.4 32.4,14.16 31,13.96 L29.12,13.72 C28.56,13.64 28.2,13.44 28.2,12.72 L28.2,12 L27.56,12 C27.32,12.48 26.48,14.12 26.48,15.64 C26.48,16.76 26.92,17.64 28.12,17.8 L29.04,17.92 L27.76,19.96 C26.8,21.52 26.2,23.08 26.12,24.28 L18,14.72 C17.08,13.64 16.88,12.8 16.88,12.24 L16.88,12 L16.28,12 C15.92,12.76 15.28,13.76 15.28,15 C15.28,16.16 15.76,17.2 16.24,17.76 L18.68,20.64 L17.28,22.64 C15.88,24.6 15.44,26 15.92,28.8 L16.52,33.04 C16.72,34 16.6,34.44 16.08,34.44 L15,34.44 L15,35.6 L19.84,35.6 C20.12,34.08 20.04,32.68 19.48,31 L18.44,27.8 C17.88,25.92 17.68,24.52 18.76,23 L19.64,21.76 L29.4,33.24 C30.28,34.28 30.68,35.28 30.76,35.92 L31.28,35.92 Z" id="א" fill="#FFFFFF" fill-rule="nonzero"></path>
+            </g>
+        </g>
+    </g>
+</svg>

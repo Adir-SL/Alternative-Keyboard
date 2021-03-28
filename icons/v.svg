@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="42px" height="42px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon/status/checkmark-filled/32</title>
+    <defs>
+        <circle id="path-1" cx="24" cy="24" r="21"></circle>
+        <polygon id="path-3" points="21 32.25 13.5 24.75 15.885 22.5 21 27.525 32.115 16.5 34.5 18.87"></polygon>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="114-copy-6" transform="translate(-83.000000, -697.000000)">
+            <g id="icon/status/checkmark-filled/32" transform="translate(80.000000, 694.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="icon-color" fill="#198038" xlink:href="#path-1"></use>
+                <mask id="mask-4" fill="white">
+                    <use xlink:href="#path-3"></use>
+                </mask>
+                <use id="icon-color" fill="#FFFFFF" xlink:href="#path-3"></use>
+            </g>
+        </g>
+    </g>
+</svg>
