@@ -265,6 +265,7 @@
   .plusBefore, .plusAfter{
     background-image: url(icons/plus.svg);
     width: 2em;
+    background-size: auto;
   }
   .statusBar .showBtn{
     direction: rtl;
