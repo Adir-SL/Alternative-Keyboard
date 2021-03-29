@@ -236,7 +236,7 @@
     text-align: center;
     box-shadow: 2px 4px 4px 0 rgba(0, 0, 0, 0.25);
   }
-  .reloadBtn, .muteBtn, .menuBtn, .showBtn, .redBtn, .greenBtn, .plusBefore, .plusAfter{
+  .reloadBtn, .muteBtn, .menuBtn, .showBtn, .redBtn, .greenBtn, .plusBefore, .plusAfter, #moveForBtn, #moveBackBtn{
     color: transparent !important;
     background-size: contain;
     background-position: center;
@@ -266,6 +266,14 @@
     background-image: url(icons/plus.svg);
     width: 2em;
     background-size: auto;
+  }
+  #moveForBtn, #moveBackBtn{
+    background-image: url(icons/arrow.svg);
+    width: 2em;
+    background-size: auto;
+  }
+  #moveBackBtn{
+    transform: scaleX(-1);
   }
   .statusBar .showBtn{
     direction: rtl;
