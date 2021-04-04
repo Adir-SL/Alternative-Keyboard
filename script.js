@@ -92,7 +92,7 @@ function approveWord() {
             document.getElementsByClassName("lastWord")[0].classList.add("selectButton");
             // document.getElementsByClassName("lastWord")[0].classList.remove("lastWord");
         }
-    document.getElementById("textField").innerHTML = "";
+    // document.getElementById("textField").innerHTML = "";
     document.getElementById("buttonWrapper").getElementsByClassName("greenBtn")[0].style.transform = "scale(0.8)";
     if(document.getElementById("textField").innerHTML !== ""){
         document.getElementById("textField").classList.add("innerApprove");
