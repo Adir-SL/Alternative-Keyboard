@@ -16,7 +16,7 @@
     cursor: pointer;
   }
   #keyboard {
-    background-color: #C6C6C6;
+    background-color: #6DA8FF;
     position: fixed;
     width: 100%;
     height: 50%;
@@ -120,12 +120,12 @@
   .keyButton, .keepLang, #textField button, #biggerButtons button {
     padding: 4vmin;
     padding: 4.54vw;
-    background-color: #E0E0E0;
+    background-color: #CCE2FF;
     border-radius: 50%;
     outline: none;
     border: none;
     font-size: 5vmin;
-    color: #323232;
+    color: #001D6C;
     box-shadow: 2px 4px 4px 0 rgba(0, 0, 0, 0.25);
     transition: transform 100ms ease-in-out 0s, opacity 100ms linear 0s, box-shadow 200ms cubic-bezier(.47,-0.77,.6,1.8), background-color 200ms linear;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -176,8 +176,8 @@
     margin: 2.27vmin;
     margin-top: 4.3vmin;
     border-radius: 999px;
-    background-color: #E0E0E0;
-    color: #161616;
+    background-color: #CCE2FF;
+    color: #001D6C;
     box-shadow: 2px 4px 4px 0 rgba(0, 0, 0, 0.25);
     transition: box-shadow 200ms cubic-bezier(.47,-0.77,.6,1.8), background-color 200ms linear;
   }
@@ -221,15 +221,15 @@
     height: 11.5vw;
     top: 0;
     left: 0;
-    background-color: #525252;
+    background-color: #3087FF;
   }
   .statusBar button{
     margin: 1vmin;
     margin: 2.5vw;
-    background-color: #6F6F6F;
+    background-color: #6DA7FF;
     border: 0;
     outline: 0;
-    color: #6F6F6F;
+    color: #6DA7FF;
     border-radius: 50%;
     height: 6vmin;
     width: 6vmin;
