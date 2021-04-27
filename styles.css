@@ -67,9 +67,10 @@
   }
   #buttonWrapper {
     display: flex;
-    gap: 2vmin;
-    gap: 4.54vw;
+    /* gap: 2vmin;
+    gap: 4.54vw; */
     height: 7vh;
+    justify-content: space-between;
   }
   #buttonWrapper button {
     flex-grow: 1;
@@ -94,7 +95,7 @@
     transform: scale(-1,1);
   }
   #buttonWrapper .largerMute{
-    flex-grow: 1;
+    /* flex-grow: 1; */
   }
   .material-icons{
     font-size: 3em !important;
@@ -312,6 +313,12 @@
   }
   #biggerButtons button{
     font-size: 0;
+  }
+  .circleBtn{
+    /* background-color: #f00 !important; */
+    flex-grow: 0 !important;
+    width: 7vh !important;
+    height: 7vh;
   }
   
   @keyframes keyPress {
