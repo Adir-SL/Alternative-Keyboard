@@ -188,12 +188,12 @@
     margin-bottom: 3.2vmin;
   }
   #innerWords .selectButton, #textField .selectButton{
-    background-color: #FCDE76;
-    color: #363636;
-    box-shadow: 0 0 0 4px white, 0 0 0 6px #3087FF;
+    background-color: #F1C21B;
+    color: #001D6C;
+    box-shadow: 0 0 0 8px white, 0 0 0 10px #3087FF;
   }
   #innerWords .lastWord{
-    box-shadow: 0 0 0 4px white, 0 0 0 6px #3087FF;
+    box-shadow: 0 0 0 8px white, 0 0 0 10px #3087FF;
   }
   #innerWords button:empty::after{
     content: '0';
