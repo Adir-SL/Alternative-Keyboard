@@ -88,7 +88,7 @@
   #buttonWrapper .muteBtn{
     flex-grow: 0;
     width: 7vh;
-    background-color: #ffffff;
+    background-color: #FCF4D6;
   }
   .muteBtn i{
     transform: scale(-1,1);
