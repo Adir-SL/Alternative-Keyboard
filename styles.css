@@ -180,7 +180,7 @@
     border-radius: 999px;
     background-color: #CCE2FF;
     color: #001D6C;
-    box-shadow: 2px 4px 4px 0 rgba(0, 0, 0, 0.25);
+    /* box-shadow: 2px 4px 4px 0 rgba(0, 0, 0, 0.25); */
     transition: box-shadow 200ms cubic-bezier(.47,-0.77,.6,1.8), background-color 200ms linear;
   }
   #innerWords button:last-of-type{
