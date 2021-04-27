@@ -23,6 +23,7 @@
     height: 90.9vw;
     bottom: 0;
     left: 0;
+    border-radius: 5.5vh 5.5vh 0 0;
   }
   #keybg{
     position:absolute;
