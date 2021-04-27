@@ -40,7 +40,7 @@
   #innerKeyboard {
     width: 90%;
     width: 90.92vw;
-    height: 99%;
+    height: 97%;
     margin-left: 5%;
     margin-right: 5%;
     margin-left: 4.54vw;
@@ -55,12 +55,12 @@
   #textField {
     background-color: #ffffff;
     height: 8vmin;
-    height: 11vw;
+    height: 8vh;
     padding: 1vmin;
-    padding: 2vw;
+    padding: 1.2vh;
     width: 90.92vw;
-    margin-right: -2vw;
-    margin-left: -2vw;
+    margin-right: -1vh;
+    margin-left: -1vh;
     border-radius: 999px;
     box-shadow: 2px 4px 4px 0 rgba(0, 0, 0, 0.25);
   }
