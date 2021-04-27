@@ -67,8 +67,8 @@
   }
   #buttonWrapper {
     display: flex;
-    /* gap: 2vmin;
-    gap: 4.54vw; */
+    /* gap: 2vmin; */
+    gap: 4.54vw;
     height: 7vh;
     justify-content: space-between;
   }
