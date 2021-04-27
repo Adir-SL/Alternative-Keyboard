@@ -218,24 +218,24 @@
     position: fixed;
     width: 100vw;
     height: 11.5vw;
-    /* height: 93px; */
+    height: 6.8vh;
     top: 0;
     left: 0;
     background-color: #3087FF;
-    border-radius: 0 0 50px 50px;
+    border-radius: 0 0 3.5vh 3.5vh;
   }
   .statusBar button{
     margin: 1vmin;
-    margin: 2.5vw;
+    margin: 1vh;
     background-color: #6DA7FF;
     border: 0;
     outline: 0;
     color: #6DA7FF;
     border-radius: 50%;
-    height: 6vmin;
-    width: 6vmin;
+    height: 5vh;
+    width: 5vh;
     text-align: center;
-    box-shadow: 2px 4px 4px 0 rgba(0, 0, 0, 0.25);
+    /* box-shadow: 2px 4px 4px 0 rgba(0, 0, 0, 0.25); */
   }
   .reloadBtn, .muteBtn, .menuBtn, .showBtn, .redBtn, .greenBtn, .plusBefore, .plusAfter, #moveForBtn, #moveBackBtn{
     color: transparent !important;
