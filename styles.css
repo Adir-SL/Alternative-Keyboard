@@ -135,7 +135,7 @@
   #textField .keepLang, #textField button {
     margin-left: 2.25vw;
     margin-top: 0.8vw;
-    background-color: #767676;
+    background-color: #3087FF;
     color: #ffffff;
     font-size: 0px;
   }
@@ -146,7 +146,7 @@
     color: transparent;
   }
   .fieldSelected{
-    background-color: #FCDE76 !important;
+    background-color: #FDDC69 !important;
   }
   .keyButton::after, .keepLang::after, #biggerButtons button::after {
     content: attr(keyValue);
