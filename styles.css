@@ -23,7 +23,7 @@
     height: 66.3vh;
     bottom: 0;
     left: 0;
-    border-radius: 5.5vh 5.5vh 0 0;
+    border-radius: 6.6vh 6.6vh 0 0;
   }
   #keybg{
     position:absolute;
@@ -40,17 +40,18 @@
   #innerKeyboard {
     width: 90%;
     width: 90.92vw;
-    height: 97%;
+    height: 92.8%;
     margin-left: 5%;
     margin-right: 5%;
     margin-left: 4.54vw;
     margin-right: 4.54vw;
+    margin-top: 16px;
     display: flex;
-    gap: 1vw;
+    /* gap: 1vw; */
     /* z-index: 1;
     position: relative; */
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
   }
   #textField {
     background-color: #ffffff;
@@ -68,7 +69,7 @@
     display: flex;
     gap: 2vmin;
     gap: 4.54vw;
-    height: 9.1vw;
+    height: 7vh;
   }
   #buttonWrapper button {
     flex-grow: 1;
@@ -120,14 +121,14 @@
   }
   .keyButton, .keepLang, #textField button, #biggerButtons button {
     padding: 4vmin;
-    padding: 4.54vw;
+    padding: 3.6vh;
     background-color: #CCE2FF;
     border-radius: 50%;
     outline: none;
     border: none;
     font-size: 5vmin;
     color: #001D6C;
-    box-shadow: 2px 4px 4px 0 rgba(0, 0, 0, 0.25);
+    /* box-shadow: 2px 4px 4px 0 rgba(0, 0, 0, 0.25); */
     transition: transform 100ms ease-in-out 0s, opacity 100ms linear 0s, box-shadow 200ms cubic-bezier(.47,-0.77,.6,1.8), background-color 200ms linear;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
