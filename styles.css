@@ -190,10 +190,10 @@
   #innerWords .selectButton, #textField .selectButton{
     background-color: #FCDE76;
     color: #363636;
-    box-shadow: 0 0 0 4px white, 0 0 0 5px #6C6C6C;
+    box-shadow: 0 0 0 4px white, 0 0 0 6px #3087FF;
   }
   #innerWords .lastWord{
-    box-shadow: 0 0 0 4px white, 0 0 0 5px #6C6C6C;
+    box-shadow: 0 0 0 4px white, 0 0 0 6px #3087FF;
   }
   #innerWords button:empty::after{
     content: '0';
