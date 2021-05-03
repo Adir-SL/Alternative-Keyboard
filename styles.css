@@ -91,8 +91,9 @@
     margin-left: 0;
   }
   #buttonWrapper .muteBtn{
-    flex-grow: 0;
+    flex-grow: 0 !important;
     width: 7vh !important;
+    height: 7vh !important;
     padding: 0 !important;
     background-color: #FCF4D6;
   }
