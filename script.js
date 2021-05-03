@@ -86,6 +86,9 @@ function approveWord() {
         if(document.getElementsByClassName("lastWord").length == 0){
             if(document.getElementById("textField").innerHTML !== ""){
         document.getElementById("innerWords").innerHTML += "<button num='"+window.wordNum+"' onclick='selectMe(event);' ontouchstart='dragElement(event);' ontouchmove='touchHandler(event);' ontouchend='stopDrag(event);'>" + document.getElementById("textField").innerText + "</button>";
+        if(document.getElementById("textField").innerText.slice(-1) == "."){
+            alert("DOT")
+        }
             }
         }else{
             document.getElementsByClassName("lastWord")[0].innerText = document.getElementById("textField").innerText;
