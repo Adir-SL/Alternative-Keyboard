@@ -100,6 +100,9 @@
   .engKeyboard #buttonWrapper button:last-of-type{
     margin-left: 4.54vw;
   }
+  .engKeyboard #buttonWrapper button:first-of-type{
+    margin-left: 0;
+  }
   .muteBtn i{
     transform: scale(-1,1);
   }
