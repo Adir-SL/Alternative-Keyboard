@@ -186,6 +186,7 @@ function toggleLang(e){
         temp = window.abcEng;
         changeLang();
         document.body.style.direction = "ltr";
+        document.getElementById("keyboard").classList.add("engKeyboard");
     }else{
         document.getElementsByClassName("statusBar")[0].getElementsByTagName("button")[1].innerText = "a";
         document.getElementsByClassName("statusBar")[0].getElementsByTagName("button")[1].setAttribute("keyValue","a");
@@ -193,6 +194,7 @@ function toggleLang(e){
         temp = window.abcHeb;
         changeLang();
         document.body.style.direction = "rtl";
+        document.getElementById("keyboard").classList.remove("engKeyboard");
     }
 }
 function selectMe(e){
