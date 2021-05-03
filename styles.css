@@ -97,6 +97,9 @@
     padding: 0 !important;
     background-color: #FCF4D6;
   }
+  .engKeyboard #buttonWrapper button:last-of-type{
+    margin-left: 4.54vw;
+  }
   .muteBtn i{
     transform: scale(-1,1);
   }
