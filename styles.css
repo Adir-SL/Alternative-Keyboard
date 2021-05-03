@@ -99,9 +99,6 @@
   .muteBtn i{
     transform: scale(-1,1);
   }
-  #buttonWrapper .largerMute{
-    /* flex-grow: 1; */
-  }
   .material-icons{
     font-size: 3em !important;
   }
@@ -116,8 +113,6 @@
   #buttonWrapper .greenBtn{
     color: #198038;
   }
-  /* #buttonWrapper .disabled{
-  } */
   #innerKeyboard.disabled{
     pointer-events: none;
     opacity: 0.3;
