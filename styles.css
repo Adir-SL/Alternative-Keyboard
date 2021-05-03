@@ -85,12 +85,14 @@
     align-items: center;
     justify-content: center;
     font-size: 3em;
+    margin-left: 4.54vw;
+  }
+  #buttonWrapper button:last-of-type{
+    margin-left: 0;
   }
   #buttonWrapper .muteBtn{
     flex-grow: 0;
     width: 7vh;
-    margin-left: 4.54vw;
-    margin-right: 4.54vw;
     background-color: #FCF4D6;
   }
   .muteBtn i{
