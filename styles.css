@@ -314,9 +314,6 @@
   #biggerButtons button{
     font-size: 0;
   }
-  .noGap{
-    /* gap: unset !important; */
-  }
   .noGap button{
     margin: 0 !important;
     margin-left: 0 !important;
