@@ -319,7 +319,10 @@
     font-size: 0;
   }
   .noGap{
-    gap: unset !important;
+    /* gap: unset !important; */
+  }
+  .noGap button{
+    margin-left: 0 !important;
   }
   .circleBtn{
     /* background-color: #f00 !important; */
