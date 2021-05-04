@@ -353,4 +353,15 @@
       opacity: 1;
     }
   }
+  @media (orientation: landscape) {
+    .statusBar, #innerWords, #keyboard{
+      display: none;
+    }
+    body{
+    }
+    body::after{
+      content: 'Rotate your device please';
+      font-size: 10vmin;
+    }
+  }
   
