@@ -358,10 +358,13 @@
       display: none;
     }
     body{
+      margin-top:25%;
+      text-align: center;
     }
     body::after{
       content: 'Rotate your device please';
       font-size: 10vmin;
+      font-family: Frank, sans-serif;
     }
   }
   
