@@ -394,6 +394,7 @@ function reNumButtons(){
     var i;
     for (i = 0; i < x.length; i++) {
         x[i].setAttribute("num", i);
+        if(temp[0] == "a"){x[i].classList.add("engButton");}
     }
 }
 function reNumWords(){
