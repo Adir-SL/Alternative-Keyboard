@@ -1,26 +1,26 @@
-<svg id="Keyborad_status" data-name="Keyborad status" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="70" height="70" viewBox="0 0 70 70">
+<svg id="Keyborad_status" data-name="Keyborad status" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="54" height="54" viewBox="0 0 54 54">
   <defs>
     <clipPath id="clip-path">
-      <path id="Path_13" data-name="Path 13" d="M35-70A35,35,0,0,1,70-35,35,35,0,0,1,35,0,35,35,0,0,1,0-35,35,35,0,0,1,35-70Z" fill="none" clip-rule="evenodd"/>
+      <path id="Path_13" data-name="Path 13" d="M27-70A27,27,0,0,1,54-43,27,27,0,0,1,27-16,27,27,0,0,1,0-43,27,27,0,0,1,27-70Z" transform="translate(0 70)" fill="none" clip-rule="evenodd"/>
     </clipPath>
     <clipPath id="clip-path-2">
-      <path id="Path_16" data-name="Path 16" d="M35-33,25-43l1.414-1.414L35-35.828l8.586-8.586L45-43,35-33Zm12,4v2H23v-2Z" fill="none" clip-rule="evenodd"/>
+      <path id="Path_16" data-name="Path 16" d="M35-33,25-43l1.414-1.414L35-35.828l8.586-8.586L45-43,35-33Zm12,4v2H23v-2Z" transform="translate(-23 44.414)" fill="none" clip-rule="evenodd"/>
     </clipPath>
     <clipPath id="clip-path-3">
-      <rect id="Rectangle_31" data-name="Rectangle 31" width="35" height="28" transform="translate(17 -50)" fill="none"/>
+      <rect id="Rectangle_31" data-name="Rectangle 31" width="35" height="28" fill="none"/>
     </clipPath>
     <clipPath id="clip-path-4">
-      <path id="Path_15" data-name="Path 15" d="M22-27H47V-45H22Z" fill="none"/>
+      <path id="Path_15" data-name="Path 15" d="M22-27H47V-45H22Z" transform="translate(-22 45)" fill="none"/>
     </clipPath>
   </defs>
-  <g id="Group_14" data-name="Group 14" transform="translate(0 70)" clip-path="url(#clip-path)">
-    <path id="Path_12" data-name="Path 12" d="M-5-75H75V5H-5Z" fill="#6da7ff"/>
+  <g id="Group_14" data-name="Group 14" clip-path="url(#clip-path)">
+    <path id="Path_12" data-name="Path 12" d="M-5-75H56.714v61.714H-5Z" transform="translate(1.143 71.143)" fill="#6da7ff"/>
   </g>
-  <g id="Group_18" data-name="Group 18" transform="translate(0 70)" clip-path="url(#clip-path-2)">
-    <g id="Group_17" data-name="Group 17" style="isolation: isolate">
+  <g id="Group_18" data-name="Group 18" transform="translate(15 17.801)" clip-path="url(#clip-path-2)">
+    <g id="Group_17" data-name="Group 17" transform="translate(-6 -5.586)" style="isolation: isolate">
       <g id="Group_16" data-name="Group 16" clip-path="url(#clip-path-3)">
-        <g id="Group_15" data-name="Group 15" clip-path="url(#clip-path-4)">
-          <path id="Path_14" data-name="Path 14" d="M52-49.414V-22H18V-49.414Z" fill="#fff"/>
+        <g id="Group_15" data-name="Group 15" transform="translate(5 5)" clip-path="url(#clip-path-4)">
+          <path id="Path_14" data-name="Path 14" d="M52-49.414V-22H18V-49.414Z" transform="translate(-22 45)" fill="#fff"/>
         </g>
       </g>
     </g>
