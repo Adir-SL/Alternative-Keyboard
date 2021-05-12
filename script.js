@@ -360,7 +360,7 @@ function selectBeforeWord(){
     }
 }
 function toggleMenu(){
-    alert("Y")
+    document.getElementById("buttonWrapper").classList.toggle("hiddenButtons");
 }
 function findEmptyButton(){
     var x = document.getElementById("textField").getElementsByTagName("button");
