@@ -28,8 +28,6 @@ function changeLang(){
     }
 }
 function keyCheck(e) {
-    // console.log(e.target.getAttribute("keyValue"));
-    // alert(e.target.getAttribute("keyValue"));
     document.getElementById("biggerButtons").innerHTML = "";
     document.getElementById("innerKeyboard").classList.remove("disabled");
     if(document.getElementsByClassName("selectButton").length == 0){
@@ -58,8 +56,6 @@ function keyCheck(e) {
     }
 }
 function buttonsOn() {
-    // document.getElementById("buttonWrapper").getElementsByTagName("button")[0].className = "redBtn";
-    // document.getElementById("buttonWrapper").getElementsByTagName("button")[1].className = "greenBtn";
 }
 function validWords(){
     var x = document.getElementById("innerWords").getElementsByTagName("button");
@@ -91,9 +87,7 @@ function approveWord() {
             document.getElementsByClassName("lastWord")[0].innerText = document.getElementById("textField").innerText;
             document.getElementsByClassName("selectButton")[0].classList.remove("selectButton");
             document.getElementsByClassName("lastWord")[0].classList.add("selectButton");
-            // document.getElementsByClassName("lastWord")[0].classList.remove("lastWord");
         }
-    // document.getElementById("textField").innerHTML = "";
     document.getElementById("buttonWrapper").getElementsByClassName("greenBtn")[0].style.transform = "scale(0.8)";
     if(document.getElementById("textField").innerHTML !== ""){
         document.getElementById("textField").classList.add("innerApprove");
@@ -103,7 +97,6 @@ function approveWord() {
     }
     if(document.getElementById("textField").innerText.slice(-1) == "."){
         document.getElementById("innerWords").innerHTML += "<br/>";
-        // alert("BR")
     }
 }
 function animApprove(){
@@ -114,7 +107,6 @@ function animApprove(){
         window.keyNum = 0;
         window.wordNum += 1;
         window.localStorage.setItem('keyboardTyped', document.getElementById("innerWords").innerHTML);
-        // location.reload();
     }, 100);
     setTimeout(function () {
         document.getElementById("textField").innerHTML = "";
@@ -327,7 +319,6 @@ function addBackward(){
         var node = document.createElement("button");   
         document.getElementsByClassName("selectButton")[0].parentElement.insertBefore(node, document.getElementsByClassName("selectButton")[0]);
         selectBeforeButton();
-        // findEmptyButton();
         reNumButtons();
     }else{
         var node = document.createElement("button");
@@ -382,9 +373,6 @@ function findEmptyWord(){
     var i;
     for (i = 0; i < x.length; i++) {
         if(x[i].getAttribute("keyvalue") == "" || x[i].getAttribute("keyvalue") == null || x[i].getAttribute("keyvalue") == undefined){
-            // x[i].classList.add("keepLang");
-            // if(temp[0] == "a"){x[i].classList.add("engButton");}
-            // x[i].setAttribute("keyValue", "0");
             x[i].setAttribute("onclick", "selectMe(event)")
             x[i].setAttribute("ontouchstart", "dragElement(event)");
             x[i].setAttribute("ontouchmove", "touchHandler(event)");
@@ -418,7 +406,6 @@ function dragElement(e) {
     if(window.touchYStart - window.touchY > 30 || window.touchX == undefined){
     }else{
         if(window.touchYStart - window.touchY < -30 && e.target.classList[0] == "keepLang"){
-            // document.getElementsByClassName("selectButton")[0].outerHTML = "";
             cancelWord();
         }
         if(window.touchXStart - window.touchX > 0 && window.touchX !== undefined){
@@ -471,20 +458,14 @@ function biggerKeys(e){
             document.getElementById("biggerButtons").innerHTML = "";
         }else{
             document.getElementById("biggerButtons").innerHTML = "";
-        // document.getElementById("biggerButtons").style.left = e.clientX+"px";
-        // document.getElementById("biggerButtons").style.top = e.clientY+"px";
         document.getElementById("innerKeyboard").classList.add("disabled");
         console.log(e.clientX)
-        // alert(e.target.className);
         winX = document.getElementById("keyboard").clientWidth / 8;
         winY = document.getElementById("keyboard").clientHeight / 6;
-        // console.log(e)
         var x = document.getElementsByClassName("keyButton");
         var i;
         for (i = 0; i < x.length; i++) {
-            //x[i].offsetLeft - e.clientX < winX && x[i].offsetLeft - e.clientX > winX * -1 &&
             if(x[i].offsetLeft - e.clientX < winX && x[i].offsetLeft - e.clientX > winX * -1 && x[i].getBoundingClientRect().top - e.clientY < winY && x[i].getBoundingClientRect().top - e.clientY > winY * -1){
-                // alert(x[i].getAttribute('keyValue'));
                 if(x[i].getAttribute('keyValue') !== null && x[i].getAttribute('keyValue') !== undefined){
                     if(temp[0] == "a"){
                         document.getElementById("biggerButtons").innerHTML += "<button class='bigButton engButton' onclick='keyCheck(event);' keyValue="+x[i].getAttribute('keyValue')+">"+x[i].getAttribute('keyValue')+"</button>";
