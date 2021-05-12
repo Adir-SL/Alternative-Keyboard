@@ -359,6 +359,9 @@ function selectBeforeWord(){
         }
     }
 }
+function toggleMenu(){
+    alert("Y")
+}
 function findEmptyButton(){
     var x = document.getElementById("textField").getElementsByTagName("button");
     var i;
