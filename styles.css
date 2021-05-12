@@ -103,6 +103,9 @@
     height: 0 !important;
     opacity: 0;
   }
+  .hiddenButtons{
+    height: 59.3vh !important;
+  }
   .engKeyboard #buttonWrapper button:last-of-type{
     margin-left: 4.54vw;
   }
