@@ -24,6 +24,7 @@
     bottom: 0;
     left: 0;
     border-radius: 6.6vh 6.6vh 0 0;
+    transition: height 300ms ease-in-out 0s;
   }
   #keybg{
     position:absolute;
