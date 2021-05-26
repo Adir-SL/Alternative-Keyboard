@@ -76,7 +76,9 @@
         <script>
             document.getElementById("innerWords").innerHTML = window.localStorage.getItem('keyboardTyped');
             document.getElementById("innerWords").className = window.localStorage.getItem('wordsHeight');
-            if(document.getElementById("innerWords").className.slice(-9) == "MoreWords"){}
+            if(document.getElementById("innerWords").className.slice(-9) == "MoreWords"){
+                document.getElementById("keyboard").classList.add("hiddenButtons");
+            }
             document.getElementsByClassName("statusBar")[0].getElementsByTagName("button")[1].innerText = window.localStorage.getItem('keyLang');
             if(document.getElementsByClassName("statusBar")[0].getElementsByTagName("button")[1].innerText == "א"){
                 document.getElementsByClassName("statusBar")[0].getElementsByTagName("button")[1].innerText = "א";
