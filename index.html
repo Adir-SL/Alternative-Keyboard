@@ -81,6 +81,10 @@
                 document.getElementById("buttonWrapper").classList.add("noTransitions");
                 document.getElementById("keyboard").classList.add("hiddenButtons");
             }
+            setTimeout(function () {
+                document.getElementById("keyboard").classList.remove("noTransitions");
+                document.getElementById("buttonWrapper").classList.remove("noTransitions");
+            }, 300);
             document.getElementsByClassName("statusBar")[0].getElementsByTagName("button")[1].innerText = window.localStorage.getItem('keyLang');
             if(document.getElementsByClassName("statusBar")[0].getElementsByTagName("button")[1].innerText == "א"){
                 document.getElementsByClassName("statusBar")[0].getElementsByTagName("button")[1].innerText = "א";
@@ -89,7 +93,6 @@
                 changeLang();
                 document.body.style.direction = "ltr";
                 document.getElementById("keyboard").classList.add("engKeyboard");
-                // window.localStorage.setItem('wordsHeight', document.getElementById("innerWords").className);
             }else{
                 document.getElementsByClassName("statusBar")[0].getElementsByTagName("button")[1].innerText = "a";
             }
