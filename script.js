@@ -116,6 +116,7 @@ function animApprove(){
     setTimeout(function () {
         document.getElementById("textField").classList.remove("innerApprove");
         window.localStorage.setItem('keyLang', document.getElementsByClassName("statusBar")[0].getElementsByTagName("button")[1].innerText);
+        window.localStorage.setItem('wordsHeight', document.getElementById("innerWords").className);
         location.reload();
     }, 300);
 }
@@ -156,6 +157,7 @@ function cancelWord() {
         setTimeout(function () {
             document.getElementById("textField").classList.remove("innerCancel");
             window.localStorage.setItem('keyLang', document.getElementsByClassName("statusBar")[0].getElementsByTagName("button")[1].innerText);
+            window.localStorage.setItem('wordsHeight', document.getElementById("innerWords").className);
             location.reload();
         }, 310);
         }
