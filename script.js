@@ -352,6 +352,7 @@ function selectBeforeWord(){
 }
 function toggleMenu(){
     document.getElementById("keyboard").classList.toggle("hiddenButtons");
+    document.getElementById("innerWords").classList.toggle("showMoreWords");
 }
 function findEmptyButton(){
     var x = document.getElementById("textField").getElementsByTagName("button");
