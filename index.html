@@ -17,7 +17,7 @@
     </head>
     <body onload="scrollWords();validWords();">
         <div class="statusBar flexDiv">
-            <button class="reloadBtn" onclick="window.localStorage.setItem('keyboardTyped','');location.reload();" style="color:white;"><i class="material-icons" style="font-size: 4vmin;line-height:5vmin;">refresh</i></button>
+            <button class="reloadBtn" onclick="window.localStorage.setItem('keyboardTyped','');window.localStorage.setItem('wordsHeight','');window.localStorage.setItem('keyLang','');location.reload();" style="color:white;"><i class="material-icons" style="font-size: 4vmin;line-height:5vmin;">refresh</i></button>
             <button class="showBtn" keyValue="a" onclick="toggleLang(event);">a</button>
             <button class="menuBtn" onclick="toggleMenu();">O</button>
         </div>
@@ -75,6 +75,8 @@
         </div>
         <script>
             document.getElementById("innerWords").innerHTML = window.localStorage.getItem('keyboardTyped');
+            document.getElementById("innerWords").className = window.localStorage.getItem('wordsHeight');
+            if(document.getElementById("innerWords").className.slice(-9) == "MoreWords"){}
             document.getElementsByClassName("statusBar")[0].getElementsByTagName("button")[1].innerText = window.localStorage.getItem('keyLang');
             if(document.getElementsByClassName("statusBar")[0].getElementsByTagName("button")[1].innerText == "א"){
                 document.getElementsByClassName("statusBar")[0].getElementsByTagName("button")[1].innerText = "א";
@@ -83,6 +85,7 @@
                 changeLang();
                 document.body.style.direction = "ltr";
                 document.getElementById("keyboard").classList.add("engKeyboard");
+                // window.localStorage.setItem('wordsHeight', document.getElementById("innerWords").className);
             }else{
                 document.getElementsByClassName("statusBar")[0].getElementsByTagName("button")[1].innerText = "a";
             }
