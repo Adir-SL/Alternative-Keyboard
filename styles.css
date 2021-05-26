@@ -191,6 +191,10 @@
     margin-top: 11.5vw;
     height: 31vw;
     overflow-y: auto;
+    transition: height 300ms ease-in-out 0s;
+  }
+  .showMoreWords{
+    height: 40vw !important;
   }
   #innerWords button {
     border: none;
