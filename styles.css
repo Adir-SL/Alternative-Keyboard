@@ -348,6 +348,9 @@
     height: 7vh !important;
     padding: 0 !important;
   }
+  .noTransitions{
+    transition: all 0s linear 0s !important;
+  }
   
   @keyframes keyPress {
     0% {
