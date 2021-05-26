@@ -78,6 +78,7 @@
             document.getElementById("innerWords").className = window.localStorage.getItem('wordsHeight');
             if(document.getElementById("innerWords").className.slice(-9) == "MoreWords"){
                 document.getElementById("keyboard").classList.add("noTransitions");
+                document.getElementById("buttonWrapper").classList.add("noTransitions");
                 document.getElementById("keyboard").classList.add("hiddenButtons");
             }
             document.getElementsByClassName("statusBar")[0].getElementsByTagName("button")[1].innerText = window.localStorage.getItem('keyLang');
