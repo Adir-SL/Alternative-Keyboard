@@ -356,6 +356,10 @@ function toggleMenu(){
     document.getElementById("keyboard").classList.toggle("hiddenButtons");
     document.getElementById("innerWords").classList.toggle("showMoreWords");
 }
+function toggleKeys(){
+    document.getElementById("keyboard").classList.toggle("noKeyboard");
+    document.getElementById("innerWords").classList.toggle("showAll");
+}
 function findEmptyButton(){
     var x = document.getElementById("textField").getElementsByTagName("button");
     var i;
