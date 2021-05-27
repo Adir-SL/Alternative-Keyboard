@@ -283,6 +283,9 @@
   .menuBtn{
     background-image: url(icons/status.svg);
   }
+  .newButton{
+    background-image: url(icons/none.svg);
+  }
   .showBtn{
     background-image: url(icons/eng.svg);
   }
