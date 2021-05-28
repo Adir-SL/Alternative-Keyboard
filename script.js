@@ -115,7 +115,7 @@ function animApprove(){
     }, 200);
     setTimeout(function () {
         document.getElementById("textField").classList.remove("innerApprove");
-        window.localStorage.setItem('keyLang', document.getElementsByClassName("statusBar")[0].getElementsByTagName("button")[1].innerText);
+        window.localStorage.setItem('keyLang', document.getElementById("langButton").innerText);
         window.localStorage.setItem('wordsHeight', document.getElementById("innerWords").className);
         location.reload();
     }, 300);
