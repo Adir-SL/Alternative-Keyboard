@@ -244,6 +244,7 @@
   }
   .statusBar{
     position: fixed;
+    direction: rtl;
     width: 100vw;
     height: 11.5vw;
     height: 6.8vh;
