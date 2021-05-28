@@ -281,10 +281,10 @@
     background-image: url(icons/sound.svg);
   }
   .menuBtn{
-    background-image: url(icons/status.svg);
+    background-image: url(icons/menu.svg);
   }
   .newButton{
-    background-image: url(icons/none.svg);
+    background-image: url(icons/status.svg);
   }
   .showBtn{
     background-image: url(icons/eng.svg);
