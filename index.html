@@ -86,16 +86,16 @@
                 document.getElementById("keyboard").classList.remove("noTransitions");
                 document.getElementById("buttonWrapper").classList.remove("noTransitions");
             }, 300);
-            document.getElementsByClassName("statusBar")[0].getElementsByTagName("button")[1].innerText = window.localStorage.getItem('keyLang');
-            if(document.getElementsByClassName("statusBar")[0].getElementsByTagName("button")[1].innerText == "א"){
-                document.getElementsByClassName("statusBar")[0].getElementsByTagName("button")[1].innerText = "א";
-                document.getElementsByClassName("statusBar")[0].getElementsByTagName("button")[1].setAttribute("keyValue","א");
+            document.getElementById("langButton").innerText = window.localStorage.getItem('keyLang');
+            if(document.getElementById("langButton").innerText == "א"){
+                document.getElementById("langButton").innerText = "א";
+                document.getElementById("langButton").setAttribute("keyValue","א");
                 temp = window.abcEng;
                 changeLang();
                 document.body.style.direction = "ltr";
                 document.getElementById("keyboard").classList.add("engKeyboard");
             }else{
-                document.getElementsByClassName("statusBar")[0].getElementsByTagName("button")[1].innerText = "a";
+                document.getElementById("langButton").innerText = "a";
             }
         </script>
     </body>
