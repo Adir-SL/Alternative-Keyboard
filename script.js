@@ -174,17 +174,17 @@ function toggleButtons() {
 }
 function toggleLang(e){
     if(e.target.innerText == "a"){
-        document.getElementsByClassName("statusBar")[0].getElementsByTagName("button")[1].innerText = "א";
-        document.getElementsByClassName("statusBar")[0].getElementsByTagName("button")[1].setAttribute("keyValue","א");
-        document.getElementsByClassName("statusBar")[0].getElementsByTagName("button")[1].style.backgroundImage = "url(icons/heb.svg)";
+        document.getElementById("langButton").innerText = "א";
+        document.getElementById("langButton").setAttribute("keyValue","א");
+        document.getElementById("langButton").style.backgroundImage = "url(icons/heb.svg)";
         temp = window.abcEng;
         changeLang();
         document.body.style.direction = "ltr";
         document.getElementById("keyboard").classList.add("engKeyboard");
     }else{
-        document.getElementsByClassName("statusBar")[0].getElementsByTagName("button")[1].innerText = "a";
-        document.getElementsByClassName("statusBar")[0].getElementsByTagName("button")[1].setAttribute("keyValue","a");
-        document.getElementsByClassName("statusBar")[0].getElementsByTagName("button")[1].style.backgroundImage = "url(icons/eng.svg)";
+        document.getElementById("langButton").innerText = "a";
+        document.getElementById("langButton").setAttribute("keyValue","a");
+        document.getElementById("langButton").style.backgroundImage = "url(icons/eng.svg)";
         temp = window.abcHeb;
         changeLang();
         document.body.style.direction = "rtl";
