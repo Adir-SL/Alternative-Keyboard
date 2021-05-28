@@ -90,6 +90,7 @@
             if(document.getElementById("langButton").innerText == "א"){
                 document.getElementById("langButton").innerText = "א";
                 document.getElementById("langButton").setAttribute("keyValue","א");
+                document.getElementById("langButton").style.backgroundImage = "url(icons/heb.svg)";
                 temp = window.abcEng;
                 changeLang();
                 document.body.style.direction = "ltr";
