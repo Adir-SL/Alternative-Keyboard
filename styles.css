@@ -367,7 +367,7 @@
     width: 7vh !important;
     height: 7vh !important;
     padding: 0 !important;
-    transition: all 300ms linear 0s;
+    transition: all 300ms linear 0s !important;
   }
   .noTransitions{
     transition: all 0s linear 0s !important;

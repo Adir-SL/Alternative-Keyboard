@@ -230,23 +230,27 @@ function resetButtons(){
 }
 function moreButtons(){
     if(temp[0] == "a"){
+        var x = document.getElementById("moreButtonWrapper").getElementsByClassName("circleBtn");
+        var i;
+        for (i = 0; i < x.length; i++) {
+            x[i].classList.remove("skinButton")
+        }
         document.getElementById("moreButtonWrapper").getElementsByClassName("redBtn")[0].classList.add("circleBtn");
         document.getElementById("moreButtonWrapper").getElementsByClassName("greenBtn")[0].classList.add("circleBtn");
-        document.getElementById("moreButtonWrapper").getElementsByClassName("plusAfter")[0].classList.remove("skinButton");
-        document.getElementById("moreButtonWrapper").getElementById("moveForBtn").classList.remove("skinButton");
-        document.getElementById("moreButtonWrapper").getElementById("moveBackBtn").classList.remove("skinButton");
-        document.getElementById("moreButtonWrapper").getElementsByClassName("plusBefore")[0].classList.remove("skinButton");
+        document.getElementById("moreButtonWrapper").classList.add("noGap");
 
-        document.getElementById("buttonWrapper").innerHTML = '<button class="redBtn circleBtn" onclick="cancelWord();"><i class="material-icons">cancel</i></button><button class="plusAfter circleBtn" onclick="addBackward();"><i class="material-icons">east</i></button><button id="moveForBtn" class="circleBtn" onclick="moveBackward();"><i class="material-icons">west</i></button><button class="muteBtn largerMute circleBtn"><i class="material-icons">volume_up</i></button><button id="moveBackBtn" class="circleBtn" onclick="moveForward();"><i class="material-icons">east</i></button><button class="plusBefore circleBtn" onclick="addForward();"><i class="material-icons">west</i></button><button class="greenBtn circleBtn" onclick="approveWord();"><i class="material-icons">check_circle</i></button>';
+        // document.getElementById("buttonWrapper").innerHTML = '<button class="redBtn circleBtn" onclick="cancelWord();"><i class="material-icons">cancel</i></button><button class="plusAfter circleBtn" onclick="addBackward();"><i class="material-icons">east</i></button><button id="moveForBtn" class="circleBtn" onclick="moveBackward();"><i class="material-icons">west</i></button><button class="muteBtn largerMute circleBtn"><i class="material-icons">volume_up</i></button><button id="moveBackBtn" class="circleBtn" onclick="moveForward();"><i class="material-icons">east</i></button><button class="plusBefore circleBtn" onclick="addForward();"><i class="material-icons">west</i></button><button class="greenBtn circleBtn" onclick="approveWord();"><i class="material-icons">check_circle</i></button>';
     }else{
+        var x = document.getElementById("moreButtonWrapper").getElementsByClassName("circleBtn");
+        var i;
+        for (i = 0; i < x.length; i++) {
+            x[i].classList.remove("skinButton")
+        }
         document.getElementById("moreButtonWrapper").getElementsByClassName("redBtn")[0].classList.add("circleBtn");
         document.getElementById("moreButtonWrapper").getElementsByClassName("greenBtn")[0].classList.add("circleBtn");
-        document.getElementById("moreButtonWrapper").getElementsByClassName("plusAfter")[0].classList.remove("skinButton");
-        document.getElementById("moreButtonWrapper").getElementById("moveForBtn").classList.remove("skinButton");
-        document.getElementById("moreButtonWrapper").getElementById("moveBackBtn").classList.remove("skinButton");
-        document.getElementById("moreButtonWrapper").getElementsByClassName("plusBefore")[0].classList.remove("skinButton");
+        document.getElementById("moreButtonWrapper").classList.add("noGap");
 
-        document.getElementById("buttonWrapper").innerHTML = '<button class="redBtn circleBtn" onclick="cancelWord();"><i class="material-icons">cancel</i></button><button class="plusAfter circleBtn" onclick="addBackward();"><i class="material-icons">east</i></button><button id="moveBackBtn" class="circleBtn" onclick="moveBackward();"><i class="material-icons">east</i></button><button class="muteBtn largerMute"><i class="material-icons">volume_up</i></button><button id="moveForBtn" class="circleBtn" onclick="moveForward();"><i class="material-icons">west</i></button><button class="plusBefore circleBtn" onclick="addForward();"><i class="material-icons">west</i></button><button class="greenBtn circleBtn" onclick="approveWord();"><i class="material-icons">check_circle</i></button>';
+        // document.getElementById("buttonWrapper").innerHTML = '<button class="redBtn circleBtn" onclick="cancelWord();"><i class="material-icons">cancel</i></button><button class="plusAfter circleBtn" onclick="addBackward();"><i class="material-icons">east</i></button><button id="moveBackBtn" class="circleBtn" onclick="moveBackward();"><i class="material-icons">east</i></button><button class="muteBtn largerMute"><i class="material-icons">volume_up</i></button><button id="moveForBtn" class="circleBtn" onclick="moveForward();"><i class="material-icons">west</i></button><button class="plusBefore circleBtn" onclick="addForward();"><i class="material-icons">west</i></button><button class="greenBtn circleBtn" onclick="approveWord();"><i class="material-icons">check_circle</i></button>';
     }
     document.getElementById("buttonWrapper").classList.add("noGap");
 }
