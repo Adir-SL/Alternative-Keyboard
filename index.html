@@ -34,7 +34,15 @@
                 </div>
                 <div id="moreButtonWrapper">
                     <button class="redBtn disabled" onclick="cancelWord();"><i class="material-icons">cancel</i></button>
+
+                    <button class="plusAfter circleBtn skinButton" onclick="addBackward();"><i class="material-icons">east</i></button>
+                    <button id="moveForBtn" class="circleBtn skinButton" onclick="moveBackward();"><i class="material-icons">west</i></button>
+
                     <button class="muteBtn"><i class="material-icons">volume_up</i></button>
+
+                    <button id="moveBackBtn" class="circleBtn skinButton" onclick="moveForward();"><i class="material-icons">east</i></button>
+                    <button class="plusBefore circleBtn skinButton" onclick="addForward();"><i class="material-icons">west</i></button>
+
                     <button class="greenBtn disabled" onclick="approveWord();"><i class="material-icons">check_circle</i></button>
                     
 
