@@ -259,7 +259,9 @@ function lessButtons(){
     var x = document.getElementById("moreButtonWrapper").getElementsByClassName("circleBtn");
         var i;
         for (i = 0; i < x.length; i++) {
-            x[i].classList.add("skinButton")
+            if(x[i].classList[0] !== "redBtn" && x[i].classList[0] !== "greenBtn"){
+                x[i].classList.add("skinButton")
+            }
         }
         document.getElementById("moreButtonWrapper").getElementsByClassName("redBtn")[0].classList.remove("circleBtn");
         document.getElementById("moreButtonWrapper").getElementsByClassName("greenBtn")[0].classList.remove("circleBtn");
