@@ -252,11 +252,20 @@ function moreButtons(){
 
         // document.getElementById("buttonWrapper").innerHTML = '<button class="redBtn circleBtn" onclick="cancelWord();"><i class="material-icons">cancel</i></button><button class="plusAfter circleBtn" onclick="addBackward();"><i class="material-icons">east</i></button><button id="moveBackBtn" class="circleBtn" onclick="moveBackward();"><i class="material-icons">east</i></button><button class="muteBtn largerMute"><i class="material-icons">volume_up</i></button><button id="moveForBtn" class="circleBtn" onclick="moveForward();"><i class="material-icons">west</i></button><button class="plusBefore circleBtn" onclick="addForward();"><i class="material-icons">west</i></button><button class="greenBtn circleBtn" onclick="approveWord();"><i class="material-icons">check_circle</i></button>';
     }
-    document.getElementById("buttonWrapper").classList.add("noGap");
+    // document.getElementById("buttonWrapper").classList.add("noGap");
 }
 function lessButtons(){
-    document.getElementById("buttonWrapper").innerHTML = '<button class="redBtn disabled" onclick="cancelWord();"><i class="material-icons">cancel</i></button><button class="muteBtn"><i class="material-icons">volume_up</i></button><button class="greenBtn disabled" onclick="approveWord();"><i class="material-icons">check_circle</i></button>';
-    document.getElementById("buttonWrapper").classList.remove("noGap");
+    document.getElementById("moreButtonWrapper").classList.remove("noGap");
+    var x = document.getElementById("moreButtonWrapper").getElementsByClassName("circleBtn");
+        var i;
+        for (i = 0; i < x.length; i++) {
+            x[i].classList.add("skinButton")
+        }
+        document.getElementById("moreButtonWrapper").getElementsByClassName("redBtn")[0].classList.remove("circleBtn");
+        document.getElementById("moreButtonWrapper").getElementsByClassName("greenBtn")[0].classList.remove("circleBtn");
+
+    // document.getElementById("buttonWrapper").innerHTML = '<button class="redBtn disabled" onclick="cancelWord();"><i class="material-icons">cancel</i></button><button class="muteBtn"><i class="material-icons">volume_up</i></button><button class="greenBtn disabled" onclick="approveWord();"><i class="material-icons">check_circle</i></button>';
+    // document.getElementById("buttonWrapper").classList.remove("noGap");
 }
 function moveForward(){
     if(document.getElementsByClassName("selectButton")[0].parentElement.id == "textField"){
