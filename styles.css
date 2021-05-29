@@ -66,7 +66,7 @@
     border-radius: 999px;
     /* box-shadow: 2px 4px 4px 0 rgba(0, 0, 0, 0.25); */
   }
-  #buttonWrapper {
+  #buttonWrapper, #moreButtonWrapper {
     display: flex;
     /* gap: 2vmin; */
     /* gap: 4.54vw; */
@@ -74,7 +74,7 @@
     justify-content: space-between;
     transition: height 300ms ease-in-out 0s, opacity 300ms ease-in-out 0s;
   }
-  #buttonWrapper button {
+  #buttonWrapper button, #moreButtonWrapper button {
     flex-grow: 1;
     border-radius: 999px;
     background-color: #FCF4D6;
@@ -89,10 +89,10 @@
     font-size: 3em;
     margin-left: 4.54vw;
   }
-  #buttonWrapper button:last-of-type{
+  #buttonWrapper button:last-of-type, #moreButtonWrapper button:last-of-type{
     margin-left: 0;
   }
-  #buttonWrapper .muteBtn{
+  #buttonWrapper .muteBtn, #moreButtonWrapper .muteBtn{
     flex-grow: 0 !important;
     width: 7vh !important;
     height: 7vh;
@@ -100,17 +100,17 @@
     background-color: #FCF4D6;
     transition: height 300ms ease-in-out 0s, opacity 300ms ease-in-out 0s;
   }
-  .hiddenButtons #buttonWrapper, .hiddenButtons .muteBtn{
+  .hiddenButtons #buttonWrapper, .hiddenButtons .muteBtn, .hiddenButtons #moreButtonWrapper{
     height: 0 !important;
     opacity: 0;
   }
   .hiddenButtons{
     height: 59.3vh !important;
   }
-  .engKeyboard #buttonWrapper button:last-of-type{
+  .engKeyboard #buttonWrapper button:last-of-type, .engKeyboard #moreButtonWrapper button:last-of-type{
     margin-left: 4.54vw;
   }
-  .engKeyboard #buttonWrapper button:first-of-type{
+  .engKeyboard #buttonWrapper button:first-of-type, .engKeyboard #moreButtonWrapper button:first-of-type{
     margin-left: 0;
   }
   .muteBtn i{
@@ -127,10 +127,10 @@
     font-weight: bold;
     margin-top: -4px;
   }
-  #buttonWrapper .redBtn{
+  #buttonWrapper .redBtn, #moreButtonWrapper .redBtn{
     color: #DA1E28;
   }
-  #buttonWrapper .greenBtn{
+  #buttonWrapper .greenBtn, #moreButtonWrapper .greenBtn{
     color: #198038;
   }
   #innerKeyboard.disabled{
