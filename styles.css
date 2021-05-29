@@ -137,9 +137,11 @@
   }
   #buttonWrapper .redBtn, #moreButtonWrapper .redBtn{
     color: #DA1E28;
+    transition: all 300ms linear 0s;
   }
   #buttonWrapper .greenBtn, #moreButtonWrapper .greenBtn{
     color: #198038;
+    transition: all 300ms linear 0s;
   }
   #innerKeyboard.disabled{
     pointer-events: none;
