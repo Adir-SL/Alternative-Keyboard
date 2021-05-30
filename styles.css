@@ -151,7 +151,8 @@
   }
   #innerKeyboard.disabled{
     pointer-events: none;
-    opacity: 0.3;
+    /* opacity: 0.3; */
+    filter: brightness(50%);
   }
   .flexDiv {
     display: flex;
@@ -353,7 +354,7 @@
     gap: 16px;
     left: 50%;
     grid-template-columns: 1fr 1fr;
-    background-color: gray;
+    background-color: #6DA8FF;
     padding: 16px;
     border-radius: 56px;
     transform: scale(1.5) translateX(-34%);
