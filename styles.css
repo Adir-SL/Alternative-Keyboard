@@ -325,7 +325,16 @@
     background-size: auto;
   }
   #moveBackBtn{
+    transform: scaleX(1);
+  }
+  #moveForBtn{
     transform: scaleX(-1);
+  }
+  .engKeyboard #moveBackBtn{
+    transform: scaleX(-1);
+  }
+  .engKeyboard #moveForBtn{
+    transform: scaleX(1);
   }
   .statusBar .showBtn{
     direction: rtl;
