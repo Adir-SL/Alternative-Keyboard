@@ -30,6 +30,7 @@ function changeLang(){
 function keyCheck(e) {
     document.getElementById("biggerButtons").innerHTML = "";
     document.getElementById("innerKeyboard").classList.remove("disabled");
+    document.getElementById("keyboard").classList.remove("grayKeys");
     if(document.getElementsByClassName("selectButton").length == 0){
         document.getElementById("textField").classList.add("fieldSelected");
     }
@@ -491,10 +492,12 @@ function biggerKeys(e){
     if(e.target.className == "flexDiv"){
         if(document.getElementById("innerKeyboard").className == "disabled"){
             document.getElementById("innerKeyboard").classList.remove("disabled");
+            document.getElementById("keyboard").classList.remove("grayKeys");
             document.getElementById("biggerButtons").innerHTML = "";
         }else{
             document.getElementById("biggerButtons").innerHTML = "";
         document.getElementById("innerKeyboard").classList.add("disabled");
+        document.getElementById("keyboard").classList.add("grayKeys");
         console.log(e.clientX)
         winX = document.getElementById("keyboard").clientWidth / 8;
         winY = document.getElementById("keyboard").clientHeight / 6;
