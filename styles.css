@@ -153,8 +153,8 @@
     pointer-events: none;
     /* opacity: 0.3; */
   }
-  #innerKeyboard.disabled div, #innerKeyboard.disabled button{
-    /* filter: blur(2px); */
+  #innerKeyboard.disabled div{
+    filter: brightness(50%);
   }
   .grayKeys{
     background-color: #264386 !important;
