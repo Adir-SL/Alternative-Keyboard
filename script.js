@@ -262,8 +262,6 @@ function lessButtons(){
         document.getElementById("moreButtonWrapper").getElementsByClassName("redBtn")[0].classList.remove("circleBtn");
         document.getElementById("moreButtonWrapper").getElementsByClassName("greenBtn")[0].classList.remove("circleBtn");
 
-    // document.getElementById("buttonWrapper").innerHTML = '<button class="redBtn disabled" onclick="cancelWord();"><i class="material-icons">cancel</i></button><button class="muteBtn"><i class="material-icons">volume_up</i></button><button class="greenBtn disabled" onclick="approveWord();"><i class="material-icons">check_circle</i></button>';
-    // document.getElementById("buttonWrapper").classList.remove("noGap");
 }
 function moveForward(){
     if(document.getElementsByClassName("selectButton")[0].parentElement.id == "textField"){
@@ -446,7 +444,6 @@ function dragElement(e) {
             e.target.classList.add("selectButton")
             document.getElementById("textField").classList.remove("fieldSelected");
             if(temp[0] == "a"){moveBackward(e);}else{moveForward(e);}
-            // resetButtons();
             resetTouch();
         }else{
             selectMe(e);
@@ -454,7 +451,6 @@ function dragElement(e) {
             e.target.classList.add("selectButton")
             document.getElementById("textField").classList.remove("fieldSelected");
             if(temp[0] !== "a"){moveBackward(e);}else{moveForward(e);}
-            // resetButtons();
             resetTouch();
         }
     }
