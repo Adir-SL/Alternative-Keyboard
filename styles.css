@@ -63,8 +63,6 @@
   }
   #buttonWrapper, #moreButtonWrapper {
     display: flex;
-    /* gap: 2vmin; */
-    /* gap: 4.54vw; */
     height: 7vh;
     justify-content: space-between;
     transition: height 300ms ease-in-out 0s, opacity 300ms ease-in-out 0s, gap 300ms ease-in-out 0s;
@@ -145,7 +143,6 @@
   }
   #innerKeyboard.disabled{
     pointer-events: none;
-    /* opacity: 0.3; */
   }
   #innerKeyboard.disabled div{
     filter: brightness(50%);
