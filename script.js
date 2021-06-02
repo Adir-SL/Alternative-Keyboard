@@ -49,8 +49,6 @@ function keyCheck(e) {
             }
             window.keyNum += 1;
         }
-        // buttonsOn();
-        // resetButtons();
     }else{
         document.getElementsByClassName("selectButton")[0].setAttribute("keyValue", e.target.getAttribute("keyValue"));
         document.getElementsByClassName("selectButton")[0].innerText = e.target.getAttribute("keyValue");
@@ -240,7 +238,6 @@ function moreButtons(){
         document.getElementById("moreButtonWrapper").getElementsByClassName("greenBtn")[0].classList.add("circleBtn");
         document.getElementById("moreButtonWrapper").classList.add("noGap");
 
-        // document.getElementById("buttonWrapper").innerHTML = '<button class="redBtn circleBtn" onclick="cancelWord();"><i class="material-icons">cancel</i></button><button class="plusAfter circleBtn" onclick="addBackward();"><i class="material-icons">east</i></button><button id="moveForBtn" class="circleBtn" onclick="moveBackward();"><i class="material-icons">west</i></button><button class="muteBtn largerMute circleBtn"><i class="material-icons">volume_up</i></button><button id="moveBackBtn" class="circleBtn" onclick="moveForward();"><i class="material-icons">east</i></button><button class="plusBefore circleBtn" onclick="addForward();"><i class="material-icons">west</i></button><button class="greenBtn circleBtn" onclick="approveWord();"><i class="material-icons">check_circle</i></button>';
     }else{
         var x = document.getElementById("moreButtonWrapper").getElementsByClassName("circleBtn");
         var i;
@@ -251,9 +248,7 @@ function moreButtons(){
         document.getElementById("moreButtonWrapper").getElementsByClassName("greenBtn")[0].classList.add("circleBtn");
         document.getElementById("moreButtonWrapper").classList.add("noGap");
 
-        // document.getElementById("buttonWrapper").innerHTML = '<button class="redBtn circleBtn" onclick="cancelWord();"><i class="material-icons">cancel</i></button><button class="plusAfter circleBtn" onclick="addBackward();"><i class="material-icons">east</i></button><button id="moveBackBtn" class="circleBtn" onclick="moveBackward();"><i class="material-icons">east</i></button><button class="muteBtn largerMute"><i class="material-icons">volume_up</i></button><button id="moveForBtn" class="circleBtn" onclick="moveForward();"><i class="material-icons">west</i></button><button class="plusBefore circleBtn" onclick="addForward();"><i class="material-icons">west</i></button><button class="greenBtn circleBtn" onclick="approveWord();"><i class="material-icons">check_circle</i></button>';
     }
-    // document.getElementById("buttonWrapper").classList.add("noGap");
 }
 function lessButtons(){
     document.getElementById("moreButtonWrapper").classList.remove("noGap");
