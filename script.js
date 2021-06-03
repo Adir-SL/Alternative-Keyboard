@@ -480,7 +480,6 @@ function resetTouch(){
     window.touchY = undefined;
 }
 function biggerKeys(e){
-    console.log(e.target.tagName);
     if(e.target.classList[0] !== "flexDiv" && e.target.tagName == "DIV"){
         document.getElementById("biggerButtons").innerHTML = "";
             document.getElementById("innerKeyboard").classList.add("disabled");
