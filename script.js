@@ -484,7 +484,6 @@ function biggerKeys(e){
         document.getElementById("biggerButtons").innerHTML = "";
             document.getElementById("innerKeyboard").classList.add("disabled");
             document.getElementById("keyboard").classList.add("grayKeys");
-            // console.log(e.clientX + " , " + e.clientY);
             winX = document.getElementById("keyboard").clientWidth / 8;
             winY = document.getElementById("keyboard").clientHeight / 6;
             var x = document.getElementsByClassName("keyButton");
