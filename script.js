@@ -491,7 +491,6 @@ function biggerKeys(e){
             var i;
             for (i = 0; i < x.length; i++) {
                 if(x[i].getBoundingClientRect().left - e.clientX < winX && x[i].getBoundingClientRect().left - e.clientX > winX * -1 && x[i].getBoundingClientRect().top - e.clientY < winY && x[i].getBoundingClientRect().top - e.clientY > winY * -1){
-                    // console.log(x[i].getAttribute('keyValue'));
                     if(x[i].getAttribute('keyValue') !== null && x[i].getAttribute('keyValue') !== undefined){
                         if(temp[0] == "a"){
                             document.getElementById("biggerButtons").innerHTML += "<button class='bigButton engButton' onclick='keyCheck(event);' keyValue="+x[i].getAttribute('keyValue')+">"+x[i].getAttribute('keyValue')+"</button>";
