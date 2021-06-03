@@ -480,14 +480,9 @@ function resetTouch(){
     window.touchY = undefined;
 }
 function biggerKeys(e){
-    // console.log("BIGGER");
-    if(e.target.className == "flexDiv"){
-        if(document.getElementById("innerKeyboard").className == "disabled"){
-            document.getElementById("innerKeyboard").classList.remove("disabled");
-            document.getElementById("keyboard").classList.remove("grayKeys");
-            document.getElementById("biggerButtons").innerHTML = "";
-        }else{
-            document.getElementById("biggerButtons").innerHTML = "";
+    console.log(e.target.tagName);
+    if(e.target.classList[0] !== "flexDiv" && e.target.tagName == "DIV"){
+        document.getElementById("biggerButtons").innerHTML = "";
             document.getElementById("innerKeyboard").classList.add("disabled");
             document.getElementById("keyboard").classList.add("grayKeys");
             console.log(e.clientX + " , " + e.clientY);
@@ -496,8 +491,11 @@ function biggerKeys(e){
             var x = document.getElementsByClassName("keyButton");
             var i;
             for (i = 0; i < x.length; i++) {
-                if(x[i].offsetLeft - e.clientX < winX && x[i].offsetLeft - e.clientX > winX * -1 && x[i].getBoundingClientRect().top - e.clientY < winY && x[i].getBoundingClientRect().top - e.clientY > winY * -1){
-                    console.log(x[i].getAttribute('keyValue'));
+                localX = Math.round(x[i].getBoundingClientRect().left * 100)
+                localY = Math.round(x[i].getBoundingClientRect().top * 100)
+                // console.log(localX + " , " + localY)
+                if(x[i].getBoundingClientRect().left - e.clientX < winX && x[i].getBoundingClientRect().left - e.clientX > winX * -1 && x[i].getBoundingClientRect().top - e.clientY < winY && x[i].getBoundingClientRect().top - e.clientY > winY * -1){
+                    console.log(x[i].getAttribute('keyValue'))
                     if(x[i].getAttribute('keyValue') !== null && x[i].getAttribute('keyValue') !== undefined){
                         if(temp[0] == "a"){
                             document.getElementById("biggerButtons").innerHTML += "<button class='bigButton engButton' onclick='keyCheck(event);' keyValue="+x[i].getAttribute('keyValue')+">"+x[i].getAttribute('keyValue')+"</button>";
@@ -508,7 +506,5 @@ function biggerKeys(e){
                     }
                 }
             }
-        }
-        
     }
 }
