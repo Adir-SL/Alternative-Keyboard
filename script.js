@@ -480,6 +480,7 @@ function resetTouch(){
     window.touchY = undefined;
 }
 function biggerKeys(e){
+    // console.log("BIGGER");
     if(e.target.className == "flexDiv"){
         if(document.getElementById("innerKeyboard").className == "disabled"){
             document.getElementById("innerKeyboard").classList.remove("disabled");
@@ -496,6 +497,7 @@ function biggerKeys(e){
             var i;
             for (i = 0; i < x.length; i++) {
                 if(x[i].offsetLeft - e.clientX < winX && x[i].offsetLeft - e.clientX > winX * -1 && x[i].getBoundingClientRect().top - e.clientY < winY && x[i].getBoundingClientRect().top - e.clientY > winY * -1){
+                    console.log(x[i].getAttribute('keyValue'));
                     if(x[i].getAttribute('keyValue') !== null && x[i].getAttribute('keyValue') !== undefined){
                         if(temp[0] == "a"){
                             document.getElementById("biggerButtons").innerHTML += "<button class='bigButton engButton' onclick='keyCheck(event);' keyValue="+x[i].getAttribute('keyValue')+">"+x[i].getAttribute('keyValue')+"</button>";
