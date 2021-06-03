@@ -487,25 +487,25 @@ function biggerKeys(e){
             document.getElementById("biggerButtons").innerHTML = "";
         }else{
             document.getElementById("biggerButtons").innerHTML = "";
-        document.getElementById("innerKeyboard").classList.add("disabled");
-        document.getElementById("keyboard").classList.add("grayKeys");
-        console.log(e.clientX)
-        winX = document.getElementById("keyboard").clientWidth / 8;
-        winY = document.getElementById("keyboard").clientHeight / 6;
-        var x = document.getElementsByClassName("keyButton");
-        var i;
-        for (i = 0; i < x.length; i++) {
-            if(x[i].offsetLeft - e.clientX < winX && x[i].offsetLeft - e.clientX > winX * -1 && x[i].getBoundingClientRect().top - e.clientY < winY && x[i].getBoundingClientRect().top - e.clientY > winY * -1){
-                if(x[i].getAttribute('keyValue') !== null && x[i].getAttribute('keyValue') !== undefined){
-                    if(temp[0] == "a"){
-                        document.getElementById("biggerButtons").innerHTML += "<button class='bigButton engButton' onclick='keyCheck(event);' keyValue="+x[i].getAttribute('keyValue')+">"+x[i].getAttribute('keyValue')+"</button>";
-                    }else{
-                        document.getElementById("biggerButtons").innerHTML += "<button class='bigButton' onclick='keyCheck(event);' keyValue="+x[i].getAttribute('keyValue')+">"+x[i].getAttribute('keyValue')+"</button>";
+            document.getElementById("innerKeyboard").classList.add("disabled");
+            document.getElementById("keyboard").classList.add("grayKeys");
+            console.log(e.clientX + " , " + e.clientY);
+            winX = document.getElementById("keyboard").clientWidth / 8;
+            winY = document.getElementById("keyboard").clientHeight / 6;
+            var x = document.getElementsByClassName("keyButton");
+            var i;
+            for (i = 0; i < x.length; i++) {
+                if(x[i].offsetLeft - e.clientX < winX && x[i].offsetLeft - e.clientX > winX * -1 && x[i].getBoundingClientRect().top - e.clientY < winY && x[i].getBoundingClientRect().top - e.clientY > winY * -1){
+                    if(x[i].getAttribute('keyValue') !== null && x[i].getAttribute('keyValue') !== undefined){
+                        if(temp[0] == "a"){
+                            document.getElementById("biggerButtons").innerHTML += "<button class='bigButton engButton' onclick='keyCheck(event);' keyValue="+x[i].getAttribute('keyValue')+">"+x[i].getAttribute('keyValue')+"</button>";
+                        }else{
+                            document.getElementById("biggerButtons").innerHTML += "<button class='bigButton' onclick='keyCheck(event);' keyValue="+x[i].getAttribute('keyValue')+">"+x[i].getAttribute('keyValue')+"</button>";
+                        }
+                        
                     }
-                    
                 }
             }
-        }
         }
         
     }
