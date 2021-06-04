@@ -95,6 +95,7 @@
   .hiddenButtons #buttonWrapper, .hiddenButtons .muteBtn, .hiddenButtons #moreButtonWrapper{
     height: 0 !important;
     opacity: 0;
+    pointer-events: none;
   }
   #buttonWrapper{
     visibility: hidden;
