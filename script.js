@@ -500,7 +500,7 @@ function biggerKeys(e){
                     }
                 }
             }
-            if(document.getElementById("biggerButtons").children.length < 2){
+            if(document.getElementById("biggerButtons").children.length < 3){
                 document.getElementById("biggerButtons").innerHTML = "";
                 document.getElementById("innerKeyboard").classList.remove("disabled");
                 document.getElementById("keyboard").classList.remove("grayKeys");
