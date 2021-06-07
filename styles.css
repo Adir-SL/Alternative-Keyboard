@@ -202,12 +202,12 @@
   #innerWords{
     margin-top: 10vmin;
     margin-top: 11.5vw;
-    height: 27vw;
+    height: 26vw;
     overflow-y: auto;
     transition: height 300ms ease-in-out 0s;
   }
   .showMoreWords{
-    height: 36vw !important;
+    height: 35vw !important;
   }
   #innerWords button {
     border: none;
