@@ -411,7 +411,6 @@
     body::after{
       content: 'Rotate your device please';
       font-size: 10vmin;
-      /* font-family: Frank, sans-serif; */
       font-family: 'Varela Round', sans-serif;
       color: white;
     }
