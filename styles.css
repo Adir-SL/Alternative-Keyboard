@@ -291,6 +291,7 @@
   }
   .muteBtn{
     background-image: url(icons/sound.svg);
+    display: none !important;
   }
   .menuBtn{
     background-image: url(icons/menu.svg);
