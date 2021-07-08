@@ -35,10 +35,10 @@ function keyCheck(e) {
     if(document.getElementsByClassName("selectButton").length == 0){
         document.getElementById("textField").classList.add("fieldSelected");
     }
-    e.target.style.transform = "translateY(-50%)";
+    // e.target.style.transform = "translateY(-50%)";
     setTimeout(function () {
         setTimeout(function () {
-            e.target.style.transform = "translateY(0)";
+            // e.target.style.transform = "translateY(0)";
         }, 100);
     }, 100);
     if(document.getElementsByClassName("selectButton")[0] == undefined || document.getElementsByClassName("selectButton")[0].parentNode.id == "innerWords"){
@@ -46,6 +46,7 @@ function keyCheck(e) {
             if(temp[0] == "a"){
                 document.getElementById("textField").innerHTML += '<button class="keepLang engButton" num="'+window.keyNum+'" draggable="true" onclick="selectMe(event);" ontouchstart="dragElement(event);" ontouchmove="touchHandler(event);" ontouchend="stopDrag(event);" keyValue="' + e.target.getAttribute("keyValue") + '">' + e.target.getAttribute("keyValue") + "</button>";
             }else{
+                console.log("Key: "+e.target.getAttribute("keyValue"))
                 document.getElementById("textField").innerHTML += '<button class="keepLang" num="'+window.keyNum+'" draggable="true" onclick="selectMe(event);" ontouchstart="dragElement(event);" ontouchmove="touchHandler(event);" ontouchend="stopDrag(event);" keyValue="' + e.target.getAttribute("keyValue") + '">' + e.target.getAttribute("keyValue") + "</button>";
             }
             window.keyNum += 1;
