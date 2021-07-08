@@ -42,13 +42,13 @@ function keyCheck(e) {
     document.getElementsByClassName("absBtn")[0].style.backgroundColor = "#CCE2FF";
     document.getElementsByClassName("absBtn")[0].style.color = "#001D6C";
     document.getElementsByClassName("absBtn")[0].style.display = "block";
-    //Old animations...
+    
     // e.target.style.transform = "translateY(-50%)";
-    setTimeout(function () {
-        setTimeout(function () {
-            // e.target.style.transform = "translateY(0)";
-        }, 100);
-    }, 100);
+    // setTimeout(function () {
+    //     setTimeout(function () {
+    //         e.target.style.transform = "translateY(0)";
+    //     }, 100);
+    // }, 100);
     if(document.getElementsByClassName("selectButton")[0] == undefined || document.getElementsByClassName("selectButton")[0].parentNode.id == "innerWords"){
         if (document.getElementById("textField").getElementsByTagName("button").length < 8) {
             if(temp[0] == "a"){
