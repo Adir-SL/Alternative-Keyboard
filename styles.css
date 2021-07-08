@@ -378,6 +378,9 @@
   .showAll{
     height: calc(100vh - 11.5vw) !important;
   }
+  .absBtn{
+    position: absolute;
+  }
   @keyframes keyPress {
     0% {
       transform: scale(1);
