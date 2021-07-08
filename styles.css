@@ -380,6 +380,7 @@
   }
   .absBtn{
     position: absolute;
+    transition: all 300ms ease-in-out 0s;
   }
   @keyframes keyPress {
     0% {
