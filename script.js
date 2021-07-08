@@ -42,6 +42,7 @@ function keyCheck(e) {
     document.getElementsByClassName("absBtn")[0].style.backgroundColor = "#CCE2FF";
     document.getElementsByClassName("absBtn")[0].style.color = "#001D6C";
     document.getElementsByClassName("absBtn")[0].style.display = "block";
+    //Old animations...
     // e.target.style.transform = "translateY(-50%)";
     setTimeout(function () {
         setTimeout(function () {
