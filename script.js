@@ -36,6 +36,9 @@ function keyCheck(e) {
         document.getElementById("textField").classList.add("fieldSelected");
     }
     document.getElementsByClassName("absBtn")[0].style.transition = "all 1ms ease-in-out 0s";
+    document.getElementsByClassName("absBtn")[0].style.backgroundColor = "#CCE2FF";
+    document.getElementsByClassName("absBtn")[0].style.color = "#001D6C";
+    document.getElementsByClassName("absBtn")[0].style.display = "block";
     document.getElementsByClassName("absBtn")[0].style.left = e.target.offsetLeft+"px";
     document.getElementsByClassName("absBtn")[0].style.top = e.target.offsetTop+"px";
     // e.target.style.transform = "translateY(-50%)";
@@ -51,8 +54,14 @@ function keyCheck(e) {
                 setTimeout(function () {
                 document.getElementsByClassName("absBtn")[0].style.transition = "all 300ms ease-in-out 0s";
                 window.btnNum = document.getElementById("textField").getElementsByTagName("button").length-1;
+                document.getElementsByClassName("absBtn")[0].setAttribute("keyValue", e.target.getAttribute("keyValue"));
                 document.getElementsByClassName("absBtn")[0].style.left = document.getElementById("textField").getElementsByTagName("button")[window.btnNum].offsetLeft+"px";
                 document.getElementsByClassName("absBtn")[0].style.top = document.getElementById("textField").getElementsByTagName("button")[window.btnNum].offsetTop+"px";
+                document.getElementsByClassName("absBtn")[0].style.backgroundColor = "#3087FF";
+                document.getElementsByClassName("absBtn")[0].style.color = "#ffffff";
+                setTimeout(function () {
+                    document.getElementsByClassName("absBtn")[0].style.display = "none";
+                }, 300);
                 }, 50);
             }else{
                 console.log("Key: "+e.target.getAttribute("keyValue"))
@@ -60,8 +69,14 @@ function keyCheck(e) {
                 setTimeout(function () {
                 document.getElementsByClassName("absBtn")[0].style.transition = "all 300ms ease-in-out 0s";
                 window.btnNum = document.getElementById("textField").getElementsByTagName("button").length-1;
+                document.getElementsByClassName("absBtn")[0].setAttribute("keyValue", e.target.getAttribute("keyValue"));
                 document.getElementsByClassName("absBtn")[0].style.left = document.getElementById("textField").getElementsByTagName("button")[window.btnNum].offsetLeft+"px";
                 document.getElementsByClassName("absBtn")[0].style.top = document.getElementById("textField").getElementsByTagName("button")[window.btnNum].offsetTop+"px";
+                document.getElementsByClassName("absBtn")[0].style.backgroundColor = "#3087FF";
+                document.getElementsByClassName("absBtn")[0].style.color = "#ffffff";
+                setTimeout(function () {
+                    document.getElementsByClassName("absBtn")[0].style.display = "none";
+                }, 300);
                 }, 50);
             }
             window.keyNum += 1;
