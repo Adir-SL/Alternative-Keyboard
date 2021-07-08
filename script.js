@@ -36,6 +36,7 @@ function keyCheck(e) {
         document.getElementById("textField").classList.add("fieldSelected");
     }
     document.getElementsByClassName("absBtn")[0].style.transition = "all 1ms ease-in-out 0s";
+    document.getElementsByClassName("absBtn")[0].setAttribute("keyValue", e.target.getAttribute("keyValue"));
     document.getElementsByClassName("absBtn")[0].style.backgroundColor = "#CCE2FF";
     document.getElementsByClassName("absBtn")[0].style.color = "#001D6C";
     document.getElementsByClassName("absBtn")[0].style.display = "block";
@@ -52,31 +53,29 @@ function keyCheck(e) {
             if(temp[0] == "a"){
                 document.getElementById("textField").innerHTML += '<button class="keepLang engButton" num="'+window.keyNum+'" draggable="true" onclick="selectMe(event);" ontouchstart="dragElement(event);" ontouchmove="touchHandler(event);" ontouchend="stopDrag(event);" keyValue="' + e.target.getAttribute("keyValue") + '">' + e.target.getAttribute("keyValue") + "</button>";
                 setTimeout(function () {
-                document.getElementsByClassName("absBtn")[0].style.transition = "all 300ms ease-in-out 0s";
+                document.getElementsByClassName("absBtn")[0].style.transition = "all 3000ms ease-in-out 0s";
                 window.btnNum = document.getElementById("textField").getElementsByTagName("button").length-1;
-                document.getElementsByClassName("absBtn")[0].setAttribute("keyValue", e.target.getAttribute("keyValue"));
                 document.getElementsByClassName("absBtn")[0].style.left = document.getElementById("textField").getElementsByTagName("button")[window.btnNum].offsetLeft+"px";
                 document.getElementsByClassName("absBtn")[0].style.top = document.getElementById("textField").getElementsByTagName("button")[window.btnNum].offsetTop+"px";
                 document.getElementsByClassName("absBtn")[0].style.backgroundColor = "#3087FF";
                 document.getElementsByClassName("absBtn")[0].style.color = "#ffffff";
                 setTimeout(function () {
                     document.getElementsByClassName("absBtn")[0].style.display = "none";
-                }, 300);
+                }, 3000);
                 }, 50);
             }else{
                 console.log("Key: "+e.target.getAttribute("keyValue"))
                 document.getElementById("textField").innerHTML += '<button class="keepLang" num="'+window.keyNum+'" draggable="true" onclick="selectMe(event);" ontouchstart="dragElement(event);" ontouchmove="touchHandler(event);" ontouchend="stopDrag(event);" keyValue="' + e.target.getAttribute("keyValue") + '">' + e.target.getAttribute("keyValue") + "</button>";
                 setTimeout(function () {
-                document.getElementsByClassName("absBtn")[0].style.transition = "all 300ms ease-in-out 0s";
+                document.getElementsByClassName("absBtn")[0].style.transition = "all 3000ms ease-in-out 0s";
                 window.btnNum = document.getElementById("textField").getElementsByTagName("button").length-1;
-                document.getElementsByClassName("absBtn")[0].setAttribute("keyValue", e.target.getAttribute("keyValue"));
                 document.getElementsByClassName("absBtn")[0].style.left = document.getElementById("textField").getElementsByTagName("button")[window.btnNum].offsetLeft+"px";
                 document.getElementsByClassName("absBtn")[0].style.top = document.getElementById("textField").getElementsByTagName("button")[window.btnNum].offsetTop+"px";
                 document.getElementsByClassName("absBtn")[0].style.backgroundColor = "#3087FF";
                 document.getElementsByClassName("absBtn")[0].style.color = "#ffffff";
                 setTimeout(function () {
                     document.getElementsByClassName("absBtn")[0].style.display = "none";
-                }, 300);
+                }, 3000);
                 }, 50);
             }
             window.keyNum += 1;
