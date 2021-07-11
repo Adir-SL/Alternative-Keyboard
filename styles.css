@@ -161,6 +161,7 @@
     border: none;
     font-size: 5vmin;
     color: #001D6C;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
     transition: transform 100ms ease-in-out 0s, opacity 100ms linear 0s, box-shadow 200ms cubic-bezier(.47,-0.77,.6,1.8), background-color 200ms linear;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
