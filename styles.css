@@ -217,6 +217,7 @@
     border-radius: 999px;
     background-color: #CCE2FF;
     color: #001D6C;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
     transition: box-shadow 200ms cubic-bezier(.47,-0.77,.6,1.8), background-color 200ms linear;
   }
   #innerWords button:last-of-type{
