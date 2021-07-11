@@ -44,6 +44,7 @@ function keyCheck(e) {
     document.getElementsByClassName("absBtn")[0].style.display = "block";
     //Old animations - 6.7.21
     //New animations - 8.7.21
+    
     // e.target.style.transform = "translateY(-50%)";
     // setTimeout(function () {
     //     setTimeout(function () {
