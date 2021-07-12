@@ -268,6 +268,7 @@
     margin: 1vmin;
     margin: 1vh;
     background-color: #6DA7FF;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
     border: 0;
     outline: 0;
     color: #6DA7FF;
