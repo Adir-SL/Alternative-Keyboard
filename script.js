@@ -64,6 +64,7 @@ function keyCheck(e) {
                 document.getElementsByClassName("absBtn")[0].style.color = "#ffffff";
                 setTimeout(function () {
                     document.getElementsByClassName("absBtn")[0].style.display = "none";
+                    document.getElementsByClassName("lastAnim")[0].classList.remove("lastAnim");
                 }, 300);
                 }, 50);
             }else{
@@ -78,6 +79,7 @@ function keyCheck(e) {
                 document.getElementsByClassName("absBtn")[0].style.color = "#ffffff";
                 setTimeout(function () {
                     document.getElementsByClassName("absBtn")[0].style.display = "none";
+                    document.getElementsByClassName("lastAnim")[0].classList.remove("lastAnim");
                 }, 300);
                 }, 50);
             }
