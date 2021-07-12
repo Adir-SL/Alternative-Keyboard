@@ -173,7 +173,7 @@
     color: #ffffff;
     font-size: 0px;
   }
-  #textField .keepLang:last-of-type {
+  #textField .lastAnim {
     animation: addKey 350ms ease-out;
   }
   #textField button:empty{
