@@ -174,7 +174,7 @@
     font-size: 0px;
   }
   #textField .keepLang:last-of-type {
-    animation: addKey 350ms ease-out;
+    /* animation: addKey 350ms ease-out; */
   }
   #textField button:empty{
     color: transparent;
