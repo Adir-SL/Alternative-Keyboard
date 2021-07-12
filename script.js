@@ -54,7 +54,7 @@ function keyCheck(e) {
     if(document.getElementsByClassName("selectButton")[0] == undefined || document.getElementsByClassName("selectButton")[0].parentNode.id == "innerWords"){
         if (document.getElementById("textField").getElementsByTagName("button").length < 8) {
             if(temp[0] == "a"){
-                document.getElementById("textField").innerHTML += '<button class="keepLang engButton" num="'+window.keyNum+'" draggable="true" onclick="selectMe(event);" ontouchstart="dragElement(event);" ontouchmove="touchHandler(event);" ontouchend="stopDrag(event);" keyValue="' + e.target.getAttribute("keyValue") + '">' + e.target.getAttribute("keyValue") + "</button>";
+                document.getElementById("textField").innerHTML += '<button class="keepLang lastAnim engButton" num="'+window.keyNum+'" draggable="true" onclick="selectMe(event);" ontouchstart="dragElement(event);" ontouchmove="touchHandler(event);" ontouchend="stopDrag(event);" keyValue="' + e.target.getAttribute("keyValue") + '">' + e.target.getAttribute("keyValue") + "</button>";
                 setTimeout(function () {
                 document.getElementsByClassName("absBtn")[0].style.transition = "all 300ms ease-in-out 0s";
                 window.btnNum = document.getElementById("textField").getElementsByTagName("button").length-1;
@@ -68,7 +68,7 @@ function keyCheck(e) {
                 }, 50);
             }else{
                 console.log("Key: "+e.target.getAttribute("keyValue"))
-                document.getElementById("textField").innerHTML += '<button class="keepLang" num="'+window.keyNum+'" draggable="true" onclick="selectMe(event);" ontouchstart="dragElement(event);" ontouchmove="touchHandler(event);" ontouchend="stopDrag(event);" keyValue="' + e.target.getAttribute("keyValue") + '">' + e.target.getAttribute("keyValue") + "</button>";
+                document.getElementById("textField").innerHTML += '<button class="keepLang lastAnim" num="'+window.keyNum+'" draggable="true" onclick="selectMe(event);" ontouchstart="dragElement(event);" ontouchmove="touchHandler(event);" ontouchend="stopDrag(event);" keyValue="' + e.target.getAttribute("keyValue") + '">' + e.target.getAttribute("keyValue") + "</button>";
                 setTimeout(function () {
                 document.getElementsByClassName("absBtn")[0].style.transition = "all 300ms ease-in-out 0s";
                 window.btnNum = document.getElementById("textField").getElementsByTagName("button").length-1;
