@@ -195,6 +195,9 @@
   .hideMe {
     visibility: hidden;
   }
+  .opacMe{
+    opacity: 0;
+  }
   button:active,
   .button:focus {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);

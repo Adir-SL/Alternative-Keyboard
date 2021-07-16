@@ -90,16 +90,20 @@ function keyCheck(e) {
 function buttonsOn() {
 }
 function validWords(){
-    var x = document.getElementById("innerWords").getElementsByTagName("button");
-    var i;
-    for (i = 0; i < x.length; i++) {
-        if(x[i].innerText == ''){
-            x[i].outerHTML = '';
+    if(document.getElementById("innerWords").getElementsByTagName("button").length !== 0){
+        var x = document.getElementById("innerWords").getElementsByTagName("button");
+        var i;
+        for (i = 0; i < x.length; i++) {
+            if(x[i].innerText == ''){
+                x[i].outerHTML = '';
+            }
+            if(document.getElementsByClassName("lastWord").length > 0){
+                x[i].classList.remove("lastWord");
+            }
         }
-        x[i].classList.remove("lastWord");
-    }
-    if(document.getElementsByClassName("selectButton").length > 0){
-        document.getElementsByClassName("selectButton")[0].classList.remove("selectButton");
+        if(document.getElementsByClassName("selectButton").length > 0){
+            document.getElementsByClassName("selectButton")[0].classList.remove("selectButton");
+        }
     }
 }
 function approveWord() {
@@ -113,7 +117,7 @@ function approveWord() {
     }else{
         if(document.getElementsByClassName("lastWord").length == 0){
             if(document.getElementById("textField").innerHTML !== ""){
-        document.getElementById("innerWords").innerHTML += "<button num='"+window.wordNum+"' onclick='selectMe(event);' ontouchstart='dragElement(event);' ontouchmove='touchHandler(event);' ontouchend='stopDrag(event);'>" + document.getElementById("textField").innerText + "</button>";
+        document.getElementById("innerWords").innerHTML += "<button num='"+window.wordNum+"' class='opacMe' onclick='selectMe(event);' ontouchstart='dragElement(event);' ontouchmove='touchHandler(event);' ontouchend='stopDrag(event);'>" + document.getElementById("textField").innerText + "</button>";
             }
         }else{
             document.getElementsByClassName("lastWord")[0].innerText = document.getElementById("textField").innerText;
@@ -140,12 +144,13 @@ function animApproveT(){
     }, 300);
 }
 function animApprove(){
-    document.getElementsByClassName("absWord")[0].style.left = document.getElementById("textField").getElementsByTagName("button")[0].offsetLeft+"px";
-    document.getElementsByClassName("absWord")[0].style.top = document.getElementById("textField").getElementsByTagName("button")[0].offsetTop+"px";
+    document.getElementsByClassName("absWord")[0].style.left = document.getElementById("textField").getElementsByTagName("button")[0].getBoundingClientRect().left+"px";
+    document.getElementsByClassName("absWord")[0].style.top = document.getElementById("textField").getElementsByTagName("button")[0].getBoundingClientRect().top+"px";
+    document.getElementsByClassName("absWord")[0].innerText = document.getElementById("textField").innerText;
     setTimeout(function () {
         tempCount = document.getElementById("innerWords").getElementsByTagName("button").length-1;
-        document.getElementsByClassName("absWord")[0].style.left = document.getElementById("innerWords").getElementsByTagName("button")[tempCount].offsetLeft+"px";
-        document.getElementsByClassName("absWord")[0].style.top = document.getElementById("innerWords").getElementsByTagName("button")[tempCount].offsetTop+"px";
+        document.getElementsByClassName("absWord")[0].style.left = document.getElementById("innerWords").getElementsByTagName("button")[tempCount].getBoundingClientRect().left+"px";
+        document.getElementsByClassName("absWord")[0].style.top = document.getElementById("innerWords").getElementsByTagName("button")[tempCount].getBoundingClientRect().top+"px";
         toggleButtons();
         document.getElementById("buttonWrapper").getElementsByClassName("greenBtn")[0].style.transform = "scale(1)";
         lessButtons();
@@ -159,10 +164,11 @@ function animApprove(){
         document.getElementById("textField").classList.remove("fieldSelected");
     }, 200);
     setTimeout(function () {
+        document.getElementById("innerWords").getElementsByTagName("button")[tempCount].classList.remove("opacMe");
         document.getElementById("textField").classList.remove("innerApprove");
         window.localStorage.setItem('keyLang', document.getElementById("langButton").innerText);
         window.localStorage.setItem('wordsHeight', document.getElementById("innerWords").className);
-        location.reload();
+        // location.reload();
     }, 300);
 }
 function cancelWord() {
