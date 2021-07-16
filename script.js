@@ -162,6 +162,7 @@ function animApprove(){
         reNumWords();
         document.getElementById("textField").classList.remove("fieldSelected");
         document.getElementById("innerWords").getElementsByTagName("button")[tempCount].classList.remove("opacMe");
+        document.getElementsByClassName("absWord")[0].style.opacity = 0;
         window.localStorage.setItem('keyboardTyped', document.getElementById("innerWords").innerHTML);
     }, 200);
     setTimeout(function () {
