@@ -17,6 +17,7 @@ function changeLang(){
         if(x[i].getAttribute("keyValue") == "undefined"){
             x[i].className += " hideMe";
         }
+        document.getElementsByClassName("keyButton")[0].classList.add("absBtn");
     }
     var x = document.getElementsByClassName("keepLang");
     var i;
