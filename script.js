@@ -156,19 +156,19 @@ function animApprove(){
         lessButtons();
         window.keyNum = 0;
         window.wordNum += 1;
-        window.localStorage.setItem('keyboardTyped', document.getElementById("innerWords").innerHTML);
     }, 100);
     setTimeout(function () {
         document.getElementById("textField").innerHTML = "";
         reNumWords();
         document.getElementById("textField").classList.remove("fieldSelected");
+        document.getElementById("innerWords").getElementsByTagName("button")[tempCount].classList.remove("opacMe");
+        window.localStorage.setItem('keyboardTyped', document.getElementById("innerWords").innerHTML);
     }, 200);
     setTimeout(function () {
-        document.getElementById("innerWords").getElementsByTagName("button")[tempCount].classList.remove("opacMe");
         document.getElementById("textField").classList.remove("innerApprove");
         window.localStorage.setItem('keyLang', document.getElementById("langButton").innerText);
         window.localStorage.setItem('wordsHeight', document.getElementById("innerWords").className);
-        // location.reload();
+        location.reload();
     }, 300);
 }
 function cancelWord() {
