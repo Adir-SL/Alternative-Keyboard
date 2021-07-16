@@ -237,7 +237,7 @@
     color: transparent;
   }
   .innerApprove{
-    animation: approveAnim 300ms ease-in;
+    /* animation: approveAnim 300ms ease-in; */
   }
   .innerCancel{
     animation: cancelAnim 300ms ease-in;
