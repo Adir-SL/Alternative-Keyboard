@@ -132,6 +132,12 @@ function approveWord() {
     }
 }
 function animApprove(){
+    document.getElementsByClassName("absWord")[0].style.left = document.getElementById("textField").getElementsByTagName("button")[0].offsetLeft+"px";
+    document.getElementsByClassName("absWord")[0].style.top = document.getElementById("textField").getElementsByTagName("button")[0].offsetTop+"px";
+    setTimeout(function () {
+    }, 300);
+}
+function animApproveOLD(){
     setTimeout(function () {
         toggleButtons();
         document.getElementById("buttonWrapper").getElementsByClassName("greenBtn")[0].style.transform = "scale(1)";
