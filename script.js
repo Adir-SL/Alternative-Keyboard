@@ -143,6 +143,9 @@ function animApprove(){
     document.getElementsByClassName("absWord")[0].style.left = document.getElementById("textField").getElementsByTagName("button")[0].offsetLeft+"px";
     document.getElementsByClassName("absWord")[0].style.top = document.getElementById("textField").getElementsByTagName("button")[0].offsetTop+"px";
     setTimeout(function () {
+        tempCount = document.getElementById("innerWords").getElementsByTagName("button").length-1;
+        document.getElementsByClassName("absWord")[0].style.left = document.getElementById("innerWords").getElementsByTagName("button")[tempCount].offsetLeft+"px";
+        document.getElementsByClassName("absWord")[0].style.top = document.getElementById("innerWords").getElementsByTagName("button")[tempCount].offsetTop+"px";
         toggleButtons();
         document.getElementById("buttonWrapper").getElementsByClassName("greenBtn")[0].style.transform = "scale(1)";
         lessButtons();
@@ -154,8 +157,6 @@ function animApprove(){
         document.getElementById("textField").innerHTML = "";
         reNumWords();
         document.getElementById("textField").classList.remove("fieldSelected");
-        document.getElementsByClassName("absWord")[0].style.left = document.getElementById("innerWords").getElementsByTagName("button")[window.wordNum].offsetLeft+"px";
-        document.getElementsByClassName("absWord")[0].style.top = document.getElementById("innerWords").getElementsByTagName("button")[window.wordNum].offsetTop+"px";
     }, 200);
     setTimeout(function () {
         document.getElementById("textField").classList.remove("innerApprove");
