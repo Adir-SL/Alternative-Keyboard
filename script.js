@@ -131,13 +131,17 @@ function approveWord() {
         document.getElementById("innerWords").innerHTML += "<br/>";
     }
 }
-function animApprove(){
+function animApproveT(){
     document.getElementsByClassName("absWord")[0].style.left = document.getElementById("textField").getElementsByTagName("button")[0].offsetLeft+"px";
     document.getElementsByClassName("absWord")[0].style.top = document.getElementById("textField").getElementsByTagName("button")[0].offsetTop+"px";
     setTimeout(function () {
+        document.getElementsByClassName("absWord")[0].style.left = document.getElementById("innerWords").getElementsByTagName("button")[window.wordNum].offsetLeft+"px";
+        document.getElementsByClassName("absWord")[0].style.top = document.getElementById("innerWords").getElementsByTagName("button")[window.wordNum].offsetTop+"px";
     }, 300);
 }
-function animApproveOLD(){
+function animApprove(){
+    document.getElementsByClassName("absWord")[0].style.left = document.getElementById("textField").getElementsByTagName("button")[0].offsetLeft+"px";
+    document.getElementsByClassName("absWord")[0].style.top = document.getElementById("textField").getElementsByTagName("button")[0].offsetTop+"px";
     setTimeout(function () {
         toggleButtons();
         document.getElementById("buttonWrapper").getElementsByClassName("greenBtn")[0].style.transform = "scale(1)";
@@ -150,6 +154,8 @@ function animApproveOLD(){
         document.getElementById("textField").innerHTML = "";
         reNumWords();
         document.getElementById("textField").classList.remove("fieldSelected");
+        document.getElementsByClassName("absWord")[0].style.left = document.getElementById("innerWords").getElementsByTagName("button")[window.wordNum].offsetLeft+"px";
+        document.getElementsByClassName("absWord")[0].style.top = document.getElementById("innerWords").getElementsByTagName("button")[window.wordNum].offsetTop+"px";
     }, 200);
     setTimeout(function () {
         document.getElementById("textField").classList.remove("innerApprove");
