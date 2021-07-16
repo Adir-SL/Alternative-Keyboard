@@ -152,6 +152,7 @@ function animApprove(){
         tempCount = document.getElementById("innerWords").getElementsByTagName("button").length-1;
         document.getElementsByClassName("absWord")[0].style.left = document.getElementById("innerWords").getElementsByTagName("button")[tempCount].getBoundingClientRect().left+"px";
         document.getElementsByClassName("absWord")[0].style.top = document.getElementById("innerWords").getElementsByTagName("button")[tempCount].getBoundingClientRect().top+"px";
+        document.getElementById("innerWords").getElementsByTagName("button")[tempCount].classList.remove("opacMe");
         toggleButtons();
         document.getElementById("buttonWrapper").getElementsByClassName("greenBtn")[0].style.transform = "scale(1)";
         lessButtons();
@@ -162,7 +163,6 @@ function animApprove(){
         document.getElementById("textField").innerHTML = "";
         reNumWords();
         document.getElementById("textField").classList.remove("fieldSelected");
-        document.getElementById("innerWords").getElementsByTagName("button")[tempCount].classList.remove("opacMe");
         document.getElementsByClassName("absWord")[0].style.opacity = 0;
         window.localStorage.setItem('keyboardTyped', document.getElementById("innerWords").innerHTML);
     }, 200);
