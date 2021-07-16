@@ -8,7 +8,7 @@ function changeLang(){
     var x = document.getElementsByClassName("keyButton");
     var i;
     for (i = 0; i < x.length; i++) {
-        x[i].setAttribute("keyValue",temp[i]);
+        x[i].setAttribute("keyValue",temp[i-1]);
         if(temp[0] == "a"){
             x[i].className = "keyButton engButton";
         }else{
@@ -18,6 +18,8 @@ function changeLang(){
             x[i].className += " hideMe";
         }
         document.getElementsByClassName("keyButton")[0].classList.add("absBtn");
+        document.getElementsByClassName("keyButton")[0].classList.remove("hideMe");
+        document.getElementsByClassName("keyButton")[0].setAttribute("keyValue",temp[0]);
     }
     var x = document.getElementsByClassName("keepLang");
     var i;
