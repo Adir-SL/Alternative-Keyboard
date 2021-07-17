@@ -150,6 +150,8 @@ function animApprove(){
     document.getElementsByClassName("absWord")[0].style.display = 'block';
     setTimeout(function () {
         tempCount = document.getElementById("innerWords").getElementsByTagName("button").length-1;
+        document.getElementsByClassName("absWord")[0].style.fontSize = "5vmin";
+        document.getElementsByClassName("absWord")[0].style.letterSpacing = "normal";
         document.getElementsByClassName("absWord")[0].style.left = document.getElementById("innerWords").getElementsByTagName("button")[tempCount].getBoundingClientRect().left+"px";
         document.getElementsByClassName("absWord")[0].style.top = document.getElementById("innerWords").getElementsByTagName("button")[tempCount].getBoundingClientRect().top+"px";
         document.getElementById("innerWords").getElementsByTagName("button")[tempCount].classList.remove("opacMe");
