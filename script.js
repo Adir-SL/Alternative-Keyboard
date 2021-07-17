@@ -148,6 +148,7 @@ function animApprove(){
     document.getElementsByClassName("absWord")[0].style.top = document.getElementById("textField").getElementsByTagName("button")[0].getBoundingClientRect().top+"px";
     document.getElementsByClassName("absWord")[0].innerText = document.getElementById("textField").innerText;
     document.getElementsByClassName("absWord")[0].style.display = 'block';
+    document.getElementsByClassName("absWord")[0].style.opacity = "1";
     setTimeout(function () {
         tempCount = document.getElementById("innerWords").getElementsByTagName("button").length-1;
         document.getElementsByClassName("absWord")[0].style.fontSize = "5vmin";
