@@ -253,7 +253,7 @@
     box-shadow: 0 3px 6px rgb(0 0 0 / 16%);
     transition: top 200ms ease-in-out 0s, left 200ms ease-in-out 0s, opacity 100ms ease-in-out 100ms;
     /* display: none; */
-    letter-spacing: 1em;
+    letter-spacing: .7em;
     font-size: 3em;
     z-index: 11;
   }
