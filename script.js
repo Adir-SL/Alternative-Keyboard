@@ -173,7 +173,7 @@ function animApprove(){
         document.getElementById("textField").classList.remove("innerApprove");
         window.localStorage.setItem('keyLang', document.getElementById("langButton").innerText);
         window.localStorage.setItem('wordsHeight', document.getElementById("innerWords").className);
-        location.reload();
+        // location.reload();
     }, 300);
 }
 function cancelWord() {
