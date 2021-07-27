@@ -49,7 +49,7 @@ function keyCheck(e) {
     //New animations - 8.7.21
     
     if(document.getElementsByClassName("selectButton")[0] == undefined || document.getElementsByClassName("selectButton")[0].parentNode.id == "innerWords"){
-        if (document.getElementById("textField").getElementsByTagName("button").length < 8) {
+        if (document.getElementById("textField").getElementsByTagName("button").length < 7) {
             if(temp[0] == "a"){
                 document.getElementById("textField").innerHTML += '<button class="keepLang lastAnim engButton" num="'+window.keyNum+'" draggable="true" onclick="selectMe(event);" ontouchstart="dragElement(event);" ontouchmove="touchHandler(event);" ontouchend="stopDrag(event);" keyValue="' + e.target.getAttribute("keyValue") + '">' + e.target.getAttribute("keyValue") + "</button>";
                 setTimeout(function () {
