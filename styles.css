@@ -57,6 +57,10 @@
     margin-right: -1vh;
     margin-left: -1vh;
     border-radius: 999px;
+    display: flex;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
   }
   #buttonWrapper, #moreButtonWrapper {
     display: flex;
