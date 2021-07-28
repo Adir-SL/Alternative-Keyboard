@@ -122,8 +122,8 @@
   .engKeyboard .muteBtn{
     transform: scale(-1,1);
   }
-  .engKeyboard .disabled{
-    pointer-events: none;
+  .muteBtn.disabled{
+    pointer-events: none !important;
     opacity: .3 !important;
   }
   .material-icons{
