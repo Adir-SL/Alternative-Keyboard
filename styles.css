@@ -124,7 +124,7 @@
   }
   .engKeyboard .disabled{
     pointer-events: none;
-    opacity: .3;
+    opacity: .3 !important;
   }
   .material-icons{
     font-size: 3em !important;
