@@ -122,6 +122,10 @@
   .engKeyboard .muteBtn{
     transform: scale(-1,1);
   }
+  .engKeyboard .disabled{
+    pointer-events: none;
+    opacity: .3;
+  }
   .material-icons{
     font-size: 3em !important;
   }
