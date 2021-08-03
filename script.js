@@ -78,7 +78,7 @@ function keyCheck(e) {
                 setTimeout(function () {
                     document.getElementsByClassName("absBtn")[0].style.display = "none";
                     document.getElementsByClassName("lastAnim")[0].classList.remove("lastAnim");
-                    e.target.style.opacity = 0;
+                    e.target.style.opacity = 1;
                 }, 300);
                 }, 50);
             }
