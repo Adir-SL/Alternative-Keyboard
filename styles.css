@@ -182,6 +182,11 @@
     background-color: #3087FF;
     color: #ffffff;
     font-size: 0px;
+    animation: colorKey 300ms linear;
+  }
+  @keyframes colorKey {
+    0%{background-color:#FDDC69;}
+    100%{background-color:#3087FF;}
   }
   /* #textField button:last-of-type */
   #textField .lastAnim {
