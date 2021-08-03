@@ -189,7 +189,7 @@
   }
   /* #textField button:last-of-type */
   #textField .lastAnim {
-    animation: addKey 350ms ease-out, colorKey 300 linear;
+    animation: addKey 350ms ease-out, colorKey 300ms linear 300ms;
   }
   #textField button:empty{
     color: transparent;
