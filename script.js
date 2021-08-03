@@ -62,8 +62,10 @@ function keyCheck(e) {
                 document.getElementsByClassName("absBtn")[0].style.color = "#ffffff";
                 setTimeout(function () {
                     document.getElementsByClassName("absBtn")[0].style.display = "none";
-                    document.getElementsByClassName("lastAnim")[0].classList.remove("lastAnim");
                 }, 300);
+                setTimeout(function () {
+                    document.getElementsByClassName("lastAnim")[0].classList.remove("lastAnim");
+                }, 600);
                 }, 50);
             }else{
                 console.log("Key: "+e.target.getAttribute("keyValue"))
@@ -77,9 +79,11 @@ function keyCheck(e) {
                 document.getElementsByClassName("absBtn")[0].style.color = "#ffffff";
                 setTimeout(function () {
                     document.getElementsByClassName("absBtn")[0].style.display = "none";
-                    document.getElementsByClassName("lastAnim")[0].classList.remove("lastAnim");
                     e.target.style.opacity = 1;
                 }, 300);
+                setTimeout(function () {
+                    document.getElementsByClassName("lastAnim")[0].classList.remove("lastAnim");
+                }, 600);
                 }, 50);
             }
             window.keyNum += 1;
