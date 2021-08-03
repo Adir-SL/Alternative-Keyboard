@@ -182,7 +182,6 @@
     background-color: #3087FF;
     color: #ffffff;
     font-size: 0px;
-    animation: colorKey 300ms linear;
   }
   @keyframes colorKey {
     0%{background-color:#FDDC69;}
@@ -190,7 +189,7 @@
   }
   /* #textField button:last-of-type */
   #textField .lastAnim {
-    animation: addKey 350ms ease-out;
+    animation: addKey 350ms ease-out, colorKey 300 linear;
   }
   #textField button:empty{
     color: transparent;
