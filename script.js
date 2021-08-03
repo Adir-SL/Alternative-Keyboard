@@ -37,7 +37,7 @@ function keyCheck(e) {
     document.getElementById("innerKeyboard").classList.remove("disabled");
     document.getElementById("keyboard").classList.remove("grayKeys");
     if(document.getElementsByClassName("selectButton").length == 0){
-        document.getElementById("textField").classList.add("fieldSelected");
+        // document.getElementById("textField").classList.add("fieldSelected");
     }
     document.getElementsByClassName("absBtn")[0].style.transition = "all 1ms ease-in-out 0s";
     document.getElementsByClassName("absBtn")[0].setAttribute("keyValue", e.target.getAttribute("keyValue"));
