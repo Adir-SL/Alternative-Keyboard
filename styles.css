@@ -189,7 +189,19 @@
   }
   /* #textField button:last-of-type */
   #textField .lastAnim {
+    position: relative;
     animation: addKey 350ms ease-out, colorKey 300ms linear 300ms;
+  }
+  #textField .lastAnim::before{
+    content: '';
+    position: absolute;
+    width: 130%;
+    height: 130%;
+    top: -15%;
+    left: -15%;
+    transform: translate(-1px,-1px);
+    border: 2px solid #3087FF;
+    border-radius: 50%;
   }
   #textField button:empty{
     color: transparent;
