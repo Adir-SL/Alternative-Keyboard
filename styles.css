@@ -124,7 +124,7 @@
   }
   .muteBtn.disabled{
     pointer-events: none !important;
-    opacity: .3 !important;
+    /* opacity: .3 !important; */
   }
   .material-icons{
     font-size: 3em !important;
