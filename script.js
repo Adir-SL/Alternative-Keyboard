@@ -497,7 +497,10 @@ function reNumWords(){
 function dragElement(e) {
     window.touchXStart = e.touches[0].clientX;
     window.touchYStart = e.touches[0].clientY;
-    e.target.classList.add("selectButton")
+    e.target.classList.add("selectButton");
+    if(e.target.id == "textField"){
+        e.target.classList.add('fieldSelected');
+    }
   }
   function stopDrag(e){
     if(window.touchYStart - window.touchY > 30 || window.touchX == undefined){
