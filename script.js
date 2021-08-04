@@ -274,6 +274,7 @@ function selectMe(e){
         e.target.classList.add("lastWord");
     }
     moreButtons();
+    setTimeout(function(){ document.getElementById("textField").classList.remove("fieldSelected"); }, 50);
 }
 function getSelectedWord(y){
     if(tempY == y.length){
@@ -499,7 +500,9 @@ function dragElement(e) {
     window.touchYStart = e.touches[0].clientY;
     e.target.classList.add("selectButton");
     if(e.target.id == "textField"){
-        e.target.classList.add('fieldSelected');
+        document.getElementById("textField").classList.add('fieldSelected');
+    }else{
+        document.getElementById("textField").classList.remove('fieldSelected');
     }
   }
   function stopDrag(e){
