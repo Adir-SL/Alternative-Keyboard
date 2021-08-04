@@ -28,7 +28,7 @@
         <div id="keyboard" class="flexDiv" onclick="biggerKeys(event);">
             <div id="biggerButtons"></div>
             <div id="innerKeyboard">
-                <div id="textField" ontouchstart="dragElement(event);" ontouchmove="touchHandler(event);" ontouchend="fieldStop(event);"></div>
+                <div id="textField" onclick="this.classList.toggle('fieldSelected');" ontouchstart="dragElement(event);" ontouchmove="touchHandler(event);" ontouchend="fieldStop(event);"></div>
                 <div id="buttonWrapper">
                     <button class="redBtn disabled" onclick="cancelWord();"><i class="material-icons">cancel</i></button>
                     <button class="muteBtn disabled"><i class="material-icons">volume_up</i></button>
