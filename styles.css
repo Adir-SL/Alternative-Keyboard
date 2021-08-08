@@ -122,7 +122,6 @@
   .muteBtn.disabled{
     pointer-events: none !important;
     background-image: url(icons/sound_disabled.svg);
-    /* opacity: .3 !important; */
   }
   .material-icons{
     font-size: 3em !important;
