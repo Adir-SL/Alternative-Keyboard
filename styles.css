@@ -280,6 +280,7 @@
     color: #001D6C;
     background-color: #F1C21B;
     color: #001D6C;
+    box-shadow: 0 0 0 8px white, 0 0 0 10px #3087ff !important;
     font-family: 'Varela Round', sans-serif;
     box-shadow: 0 3px 6px rgb(0 0 0 / 16%);
     transition: all 200ms ease-in-out 0s;
