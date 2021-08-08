@@ -31,6 +31,9 @@ function changeLang(){
         }
     }
 }
+function selectField(){
+    document.getElementById("textField").classList.add('fieldSelected');
+}
 function keyCheck(e) {
     e.target.style.opacity = 0;
     document.getElementById("biggerButtons").innerHTML = "";
