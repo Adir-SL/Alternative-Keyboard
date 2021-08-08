@@ -169,7 +169,6 @@ function animApprove(){
         document.getElementsByClassName("absWord")[0].style.letterSpacing = "normal";
         document.getElementsByClassName("absWord")[0].style.left = document.getElementById("innerWords").getElementsByTagName("button")[tempCount].getBoundingClientRect().left+"px";
         document.getElementsByClassName("absWord")[0].style.top = document.getElementById("innerWords").getElementsByTagName("button")[tempCount].getBoundingClientRect().top+"px";
-        document.getElementById("innerWords").getElementsByTagName("button")[tempCount].classList.remove("opacMe");
         toggleButtons();
         document.getElementById("buttonWrapper").getElementsByClassName("greenBtn")[0].style.transform = "scale(1)";
         lessButtons();
@@ -177,6 +176,7 @@ function animApprove(){
         window.wordNum += 1;
     }, 100);
     setTimeout(function () {
+        document.getElementById("innerWords").getElementsByTagName("button")[tempCount].classList.remove("opacMe");
         document.getElementById("textField").innerHTML = "";
         reNumWords();
         document.getElementById("textField").classList.remove("fieldSelected");
