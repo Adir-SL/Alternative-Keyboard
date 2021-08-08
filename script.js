@@ -32,6 +32,7 @@ function changeLang(){
     }
 }
 function selectField(){
+    resetButtons();
     document.getElementById("textField").classList.add('fieldSelected');
 }
 function keyCheck(e) {
@@ -261,6 +262,7 @@ function toggleLang(e){
     }
 }
 function selectMe(e){
+    setTimeout(function(){
     document.getElementById("textField").classList.remove("fieldSelected");
     resetButtons();
     e.target.classList.add("selectButton");
@@ -277,7 +279,8 @@ function selectMe(e){
         e.target.classList.add("lastWord");
     }
     moreButtons();
-    setTimeout(function(){ document.getElementById("textField").classList.remove("fieldSelected"); }, 10);
+    document.getElementById("textField").classList.remove("fieldSelected");
+}, 10);
 }
 function getSelectedWord(y){
     if(tempY == y.length){
