@@ -223,6 +223,8 @@
   }
   .opacMe{
     opacity: 0;
+    background-color: #F1C21B !important;
+    color: #001D6C !important;
   }
   button:active,
   .button:focus {
