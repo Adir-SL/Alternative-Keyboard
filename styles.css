@@ -58,10 +58,6 @@
     margin-left: -1vh;
     border-radius: 999px;
     transition: background-color 200ms linear 100ms;
-    /* display: flex;
-    align-content: center;
-    justify-content: flex-start;
-    align-items: center; */
   }
   #buttonWrapper, #moreButtonWrapper {
     display: flex;
