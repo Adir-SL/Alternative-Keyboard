@@ -274,7 +274,7 @@ function selectMe(e){
         e.target.classList.add("lastWord");
     }
     moreButtons();
-    setTimeout(function(){ document.getElementById("textField").classList.remove("fieldSelected"); }, 50);
+    setTimeout(function(){ document.getElementById("textField").classList.remove("fieldSelected"); }, 10);
 }
 function getSelectedWord(y){
     if(tempY == y.length){
