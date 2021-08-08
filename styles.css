@@ -225,6 +225,7 @@
     opacity: 0;
     background-color: #F1C21B !important;
     color: #001D6C !important;
+    box-shadow: 0 0 0 8px white, 0 0 0 10px #3087ff !important;
   }
   button:active,
   .button:focus {
@@ -250,7 +251,7 @@
     background-color: #CCE2FF;
     color: #001D6C;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
-    transition: box-shadow 200ms cubic-bezier(.47,-0.77,.6,1.8), background-color 200ms linear, color 200ms linear;
+    transition: box-shadow 200ms cubic-bezier(.47,-0.77,.6,1.8), background-color 200ms linear, color 200ms linear, box-shadow 200ms linear;
   }
   #innerWords button:last-of-type{
     margin-bottom: 3.2vmin;
