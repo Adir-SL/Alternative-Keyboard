@@ -42,7 +42,7 @@ function keyCheck(e) {
     document.getElementById("letterSound").src = "sounds/" + testNum + ".mp3";
     document.getElementById("letterSound").play();
 
-    if(tempY == 0){
+    if(tempY == 0 && document.getElementById("textField").getElementsByTagName("button").length < 7){
         e.target.style.opacity = 0;
     }
     document.getElementById("biggerButtons").innerHTML = "";
