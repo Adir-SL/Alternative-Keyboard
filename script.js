@@ -37,6 +37,11 @@ function selectField(){
     document.getElementById("textField").classList.add('fieldSelected');
 }
 function keyCheck(e) {
+    testNum = e.target.getAttribute("keyvalue");
+    testNum = temp.lastIndexOf(testNum)+1;
+    document.getElementById("letterSound").src = "sounds/" + testNum + ".mp3";
+    document.getElementById("letterSound").play();
+
     if(tempY == 0){
         e.target.style.opacity = 0;
     }
