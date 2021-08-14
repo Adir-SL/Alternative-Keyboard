@@ -4,6 +4,7 @@ window.abcHeb = ["א","ב","ג","ד","ה","ו","ז","ח","ט","י","כ","ך","ל
 temp = window.abcHeb;
 window.keyNum = 0;
 window.wordNum = 0;
+tempY = 0;
 function changeLang(){
     var x = document.getElementsByClassName("keyButton");
     var i;
@@ -36,7 +37,9 @@ function selectField(){
     document.getElementById("textField").classList.add('fieldSelected');
 }
 function keyCheck(e) {
-    // e.target.style.opacity = 0;
+    if(tempY == 0){
+        e.target.style.opacity = 0;
+    }
     document.getElementById("biggerButtons").innerHTML = "";
     document.getElementById("innerKeyboard").classList.remove("disabled");
     document.getElementById("keyboard").classList.remove("grayKeys");
