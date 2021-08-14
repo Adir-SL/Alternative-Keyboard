@@ -195,7 +195,7 @@ function animApprove(){
         window.localStorage.setItem('keyLang', document.getElementById("langButton").innerText);
         window.localStorage.setItem('wordsHeight', document.getElementById("innerWords").className);
         location.reload();
-    }, 300);
+    }, 400);
 }
 function cancelWord() {
     document.getElementById("textField").classList.remove("fieldSelected");
