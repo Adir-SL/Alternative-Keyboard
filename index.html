@@ -17,6 +17,7 @@
         </script>
     </head>
     <body onload="scrollWords();validWords();">
+        <audio id="letterSound"><source src="sounds/1.mp3" type="audio/mpeg"></audio>
         <div class="statusBar flexDiv">
             <button class="menuBtn newButton" onclick="toggleKeys();">O</button>
             <button class="reloadBtn" onclick="window.localStorage.setItem('keyboardTyped','');window.localStorage.setItem('wordsHeight','');window.localStorage.setItem('keyLang','');location.reload();" style="color:white;"><i class="material-icons" style="font-size: 4vmin;line-height:5vmin;">refresh</i></button>
