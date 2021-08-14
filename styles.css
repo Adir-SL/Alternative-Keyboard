@@ -120,7 +120,7 @@
     transform: scale(-1,1);
   }
   .muteBtn.disabled{
-    pointer-events: none !important;
+    /* pointer-events: none !important; */
     background-image: url(icons/sound_disabled.svg);
   }
   .material-icons{
