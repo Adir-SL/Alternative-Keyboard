@@ -44,7 +44,7 @@ function keyCheck(e) {
         document.getElementById("letterSound").play();
     }
 
-    if(tempY == 0 && document.getElementById("textField").getElementsByTagName("button").length < 7){
+    if(document.getElementsByClassName("selectButton")[0] == undefined && document.getElementById("textField").getElementsByTagName("button").length < 7){
         e.target.style.opacity = 0;
     }
     document.getElementById("biggerButtons").innerHTML = "";
