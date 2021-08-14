@@ -153,6 +153,13 @@ function animApproveT(){
         document.getElementsByClassName("absWord")[0].style.top = document.getElementById("innerWords").getElementsByTagName("button")[window.wordNum].offsetTop+"px";
     }, 300);
 }
+function muteFunc(){
+    var x = document.getElementsByClassName("muteBtn");
+    var i;
+    for (i = 0; i < x.length; i++) {
+        x[i].classList.toggle('disabled');
+    }
+}
 function animApprove(){
     if(temp[0] == "a"){
         document.getElementsByClassName("absWord")[0].style.left = document.getElementById("textField").getElementsByTagName("button")[0].getBoundingClientRect().left+(document.getElementsByClassName("absWord")[0].offsetWidth)-(document.getElementById("textField").getElementsByTagName("button")[0].offsetWidth*4)+"px";
