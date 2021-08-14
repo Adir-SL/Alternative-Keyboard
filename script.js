@@ -37,10 +37,12 @@ function selectField(){
     document.getElementById("textField").classList.add('fieldSelected');
 }
 function keyCheck(e) {
-    testNum = e.target.getAttribute("keyvalue");
-    testNum = temp.lastIndexOf(testNum)+1;
-    document.getElementById("letterSound").src = "sounds/" + testNum + ".mp3";
-    document.getElementById("letterSound").play();
+    if(document.getElementsByClassName("muteBtn")[0].className == "muteBtn"){
+        testNum = e.target.getAttribute("keyvalue");
+        testNum = temp.lastIndexOf(testNum)+1;
+        document.getElementById("letterSound").src = "sounds/" + testNum + ".mp3";
+        document.getElementById("letterSound").play();
+    }
 
     if(tempY == 0 && document.getElementById("textField").getElementsByTagName("button").length < 7){
         e.target.style.opacity = 0;
