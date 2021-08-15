@@ -329,6 +329,9 @@
     width: 5vh;
     text-align: center;
   }
+  #langButton{
+    display: none;
+  }
   .reloadBtn, .muteBtn, .menuBtn, .showBtn, .redBtn, .greenBtn, .plusBefore, .plusAfter, #moveForBtn, #moveBackBtn{
     color: transparent !important;
     background-size: 45% 45% !important;
