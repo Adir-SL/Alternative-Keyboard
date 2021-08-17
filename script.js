@@ -156,8 +156,6 @@ function approveWord() {
     }
 }
 function animApproveT(){
-    document.getElementById("textField").style.transform = "translateY(-50%)";
-    document.getElementById("textField").style.opacity = "0";
     document.getElementsByClassName("absWord")[0].style.left = document.getElementById("textField").getElementsByTagName("button")[0].offsetLeft+"px";
     document.getElementsByClassName("absWord")[0].style.top = document.getElementById("textField").getElementsByTagName("button")[0].offsetTop+"px";
     setTimeout(function () {
@@ -178,6 +176,8 @@ function animApprove(){
     }else{
         document.getElementsByClassName("absWord")[0].style.left = document.getElementById("textField").getElementsByTagName("button")[0].getBoundingClientRect().left-document.getElementsByClassName("absWord")[0].offsetWidth+document.getElementById("textField").getElementsByTagName("button")[0].offsetWidth+"px";
     }
+    document.getElementById("textField").style.transform = "translateY(-50%)";
+    document.getElementById("textField").style.opacity = "0";
     document.getElementsByClassName("absWord")[0].style.top = document.getElementById("textField").getElementsByTagName("button")[0].getBoundingClientRect().top+"px";
     document.getElementsByClassName("absWord")[0].innerText = document.getElementById("textField").innerText;
     document.getElementsByClassName("absWord")[0].style.display = 'block';
