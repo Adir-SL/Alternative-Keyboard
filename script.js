@@ -156,6 +156,8 @@ function approveWord() {
     }
 }
 function animApproveT(){
+    document.getElementById("textField").style.transform = "translateY(-50%)";
+    document.getElementById("textField").style.opacity = "0";
     document.getElementsByClassName("absWord")[0].style.left = document.getElementById("textField").getElementsByTagName("button")[0].offsetLeft+"px";
     document.getElementsByClassName("absWord")[0].style.top = document.getElementById("textField").getElementsByTagName("button")[0].offsetTop+"px";
     setTimeout(function () {
