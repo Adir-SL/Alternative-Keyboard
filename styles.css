@@ -255,6 +255,7 @@
   }
   #innerWords button:last-of-type{
     margin-bottom: 3.2vmin;
+    /* animation: newWord 300ms ease-out; */
   }
   #innerWords .selectButton, #textField .selectButton{
     background-color: #F1C21B;
@@ -305,6 +306,10 @@
     60%{transform: translateY(100%);opacity:0;}
     61%{transform: translateY(-50%);opacity:0;}
     100%{transform: translateY(0);opacity:1;}
+  }
+  @keyframes newWord {
+    0%{transform: translateX(-50%);}
+    100%{transform: translateX(0);}
   }
   .statusBar{
     position: fixed;
