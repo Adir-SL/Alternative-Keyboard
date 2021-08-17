@@ -193,6 +193,8 @@ function animApprove(){
         lessButtons();
         window.keyNum = 0;
         window.wordNum += 1;
+        document.getElementById("textField").style.transition = "all 0s linear";
+        document.getElementById("textField").style.transform = "translateY(50%)";
     }, 100);
     setTimeout(function () {
         document.getElementById("innerWords").getElementsByTagName("button")[tempCount].classList.remove("opacMe");
@@ -201,6 +203,9 @@ function animApprove(){
         document.getElementById("textField").classList.remove("fieldSelected");
         document.getElementsByClassName("absWord")[0].style.opacity = 0;
         window.localStorage.setItem('keyboardTyped', document.getElementById("innerWords").innerHTML);
+        document.getElementById("textField").style.transition = "all 100ms ease-in-out, background-color 200ms linear 100ms";
+        document.getElementById("textField").style.transform = "translateY(0)";
+        document.getElementById("textField").style.opacity = "1";
     }, 200);
     setTimeout(function () {
         document.getElementById("textField").classList.remove("innerApprove");
