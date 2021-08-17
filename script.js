@@ -182,8 +182,9 @@ function animApprove(){
     document.getElementsByClassName("absWord")[0].innerText = document.getElementById("textField").innerText;
     document.getElementsByClassName("absWord")[0].style.display = 'block';
     document.getElementsByClassName("absWord")[0].style.opacity = "1";
+    tempCount = document.getElementById("innerWords").getElementsByTagName("button").length-1;
+    document.getElementById("innerWords").getElementsByTagName("button")[tempCount].classList.add("lastAnim");
     setTimeout(function () {
-        tempCount = document.getElementById("innerWords").getElementsByTagName("button").length-1;
         document.getElementsByClassName("absWord")[0].style.fontSize = "5vmin";
         document.getElementsByClassName("absWord")[0].style.letterSpacing = "normal";
         document.getElementsByClassName("absWord")[0].style.left = document.getElementById("innerWords").getElementsByTagName("button")[tempCount].getBoundingClientRect().left+"px";
@@ -206,6 +207,7 @@ function animApprove(){
         document.getElementById("textField").style.transition = "all 100ms ease-in-out, background-color 200ms linear 100ms";
         document.getElementById("textField").style.transform = "translateY(0)";
         document.getElementById("textField").style.opacity = "1";
+        document.getElementById("innerWords").getElementsByTagName("button")[tempCount].classList.remove("lastAnim");
     }, 200);
     setTimeout(function () {
         document.getElementById("textField").classList.remove("innerApprove");
