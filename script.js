@@ -9,7 +9,7 @@ tempY = 0;
 if(window.localStorage.getItem('wordsHeight') == null){
     setTimeout(function () {
         toggleMenu();
-    }, 300);
+    }, 10);
 }
 
 function changeLang(){
