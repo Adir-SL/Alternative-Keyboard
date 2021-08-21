@@ -5,6 +5,13 @@ temp = window.abcHeb;
 window.keyNum = 0;
 window.wordNum = 0;
 tempY = 0;
+
+if(window.localStorage.getItem('wordsHeight') == null){
+    setTimeout(function () {
+        toggleMenu();
+    }, 300);
+}
+
 function changeLang(){
     var x = document.getElementsByClassName("keyButton");
     var i;
