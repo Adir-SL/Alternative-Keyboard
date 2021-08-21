@@ -352,6 +352,8 @@
   }
   .muteBtn{
     background-image: url(icons/sound.svg);
+    pointer-events: none;
+    opacity: .5;
   }
   .menuBtn{
     background-image: url(icons/menu.svg);
