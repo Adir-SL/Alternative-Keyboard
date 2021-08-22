@@ -6,6 +6,13 @@ window.keyNum = 0;
 window.wordNum = 0;
 tempY = 0;
 
+setTimeout(function () {
+    if(document.getElementById("innerWords").className.slice(-9) !== "MoreWords"){
+        document.getElementById("buttonWrapper").style.opacity = "1";
+        document.getElementById("moreButtonWrapper").style.opacity = "1";
+    }
+}, 50);
+
 if(window.localStorage.getItem('wordsHeight') == null){
     setTimeout(function () {
         toggleMenu();
@@ -490,6 +497,9 @@ function toggleMenu(){
     if(document.getElementById("innerWords").className.slice(-9) !== "MoreWords"){
         document.getElementById("buttonWrapper").style.opacity = "1";
         document.getElementById("moreButtonWrapper").style.opacity = "1";
+    }else{
+        document.getElementById("buttonWrapper").style.opacity = "0";
+        document.getElementById("moreButtonWrapper").style.opacity = "0";
     }
 }
 function toggleKeys(){
