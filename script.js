@@ -303,26 +303,26 @@ function toggleLang(e){
     }
 }
 function selectMe(e){
-    setTimeout(function(){
-        document.getElementById("textField").classList.remove("fieldSelected");
-        resetButtons();
-        e.target.classList.add("selectButton");
-        if(e.target.parentNode.id == "innerWords"){
-            var x = document.getElementsByTagName("button");
-            var i;
-            for (i = 0; i < x.length; i++) {
-                x[i].classList.remove("lastWord");
+        setTimeout(function(){
+            document.getElementById("textField").classList.remove("fieldSelected");
+            resetButtons();
+            e.target.classList.add("selectButton");
+            if(e.target.parentNode.id == "innerWords"){
+                var x = document.getElementsByTagName("button");
+                var i;
+                for (i = 0; i < x.length; i++) {
+                    x[i].classList.remove("lastWord");
+                }
+    
+                tempY = 0;
+                document.getElementById("textField").innerHTML = '';
+                getSelectedWord(e.target.innerText);
+                e.target.classList.add("lastWord");
             }
-
-            tempY = 0;
-            document.getElementById("textField").innerHTML = '';
-            getSelectedWord(e.target.innerText);
-            e.target.classList.add("lastWord");
-        }
-        moreButtons();
-        document.getElementById("textField").classList.remove("fieldSelected");
-        // setTimeout(function(){ document.getElementById("textField").classList.remove("fieldSelected"); }, 10);
-    }, 10);
+            moreButtons();
+            document.getElementById("textField").classList.remove("fieldSelected");
+            // setTimeout(function(){ document.getElementById("textField").classList.remove("fieldSelected"); }, 10);
+        }, 10);
 }
 function getSelectedWord(y){
     if(tempY == y.length){
@@ -401,6 +401,8 @@ function moveForward(){
             flattenWords();
         }
     }
+    resetButtons();
+    lessButtons();
 }
 function moveBackward(){
     if(document.getElementsByClassName("selectButton")[0].parentElement.id == "textField"){
@@ -424,6 +426,8 @@ function moveBackward(){
             flattenWords();
         }
     }
+    resetButtons();
+    lessButtons();
 }
 function flatten(){
     var x = document.getElementById("textField").getElementsByTagName("button");
