@@ -76,14 +76,6 @@ function keyCheck(e) {
     document.getElementsByClassName("absBtn")[0].style.display = "block";
     document.getElementsByClassName("absBtn")[0].style.opacity = "1";
 
-    setTimeout(function () {
-        document.getElementsByClassName("absBtn")[0].style.transition = "all 300ms ease-in-out 0s";
-        document.getElementsByClassName("absBtn")[0].style.opacity = "0";
-        setTimeout(function () {
-            document.getElementsByClassName("absBtn")[0].style.display = "none";
-        }, 400);
-    }, 100);
-
     //New animations - 8.7.21
     
     if(document.getElementsByClassName("selectButton")[0] == undefined || document.getElementsByClassName("selectButton")[0].parentNode.id == "innerWords"){
@@ -128,6 +120,14 @@ function keyCheck(e) {
     }else{
         document.getElementsByClassName("selectButton")[0].setAttribute("keyValue", e.target.getAttribute("keyValue"));
         document.getElementsByClassName("selectButton")[0].innerText = e.target.getAttribute("keyValue");
+
+        setTimeout(function () {
+            document.getElementsByClassName("absBtn")[0].style.transition = "all 300ms ease-in-out 0s";
+            document.getElementsByClassName("absBtn")[0].style.opacity = "0";
+            setTimeout(function () {
+                document.getElementsByClassName("absBtn")[0].style.display = "none";
+            }, 400);
+        }, 100);
     }
 }
 function buttonsOn() {
