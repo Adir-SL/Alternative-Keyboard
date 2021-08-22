@@ -54,8 +54,6 @@ function keyCheck(e) {
     if(document.getElementsByClassName("muteBtn")[0].className == "muteBtn"){
         testNum = e.target.getAttribute("keyvalue");
         testNum = temp.lastIndexOf(testNum);
-        // document.getElementById("letterSound").src = "sounds/" + testNum + ".mp3";
-        // document.getElementById("letterSound").play();
         document.getElementsByClassName("letterSound")[testNum].play();
     }
 
