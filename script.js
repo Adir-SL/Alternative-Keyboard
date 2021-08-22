@@ -53,9 +53,10 @@ function selectField(){
 function keyCheck(e) {
     if(document.getElementsByClassName("muteBtn")[0].className == "muteBtn"){
         testNum = e.target.getAttribute("keyvalue");
-        testNum = temp.lastIndexOf(testNum)+1;
-        document.getElementById("letterSound").src = "sounds/" + testNum + ".mp3";
-        document.getElementById("letterSound").play();
+        testNum = temp.lastIndexOf(testNum);
+        // document.getElementById("letterSound").src = "sounds/" + testNum + ".mp3";
+        // document.getElementById("letterSound").play();
+        document.getElementsByClassName("letterSound")[testNum].play();
     }
 
     if(document.getElementsByClassName("selectButton")[0] == undefined && document.getElementById("textField").getElementsByTagName("button").length < 7){
