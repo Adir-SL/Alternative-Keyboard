@@ -487,6 +487,10 @@ function selectBeforeWord(){
 function toggleMenu(){
     document.getElementById("keyboard").classList.toggle("hiddenButtons");
     document.getElementById("innerWords").classList.toggle("showMoreWords");
+    if(document.getElementById("innerWords").className.slice(-9) !== "MoreWords"){
+        document.getElementById("buttonWrapper").style.opacity = "1";
+        document.getElementById("moreButtonWrapper").style.opacity = "1";
+    }
 }
 function toggleKeys(){
     document.getElementById("keyboard").classList.toggle("noKeyboard");
