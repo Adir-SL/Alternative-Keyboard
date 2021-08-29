@@ -50,7 +50,7 @@
 
         <div class="statusBar flexDiv">
             <button class="menuBtn newButton" onclick="toggleKeys();">O</button>
-            <button class="reloadBtn" onclick="window.localStorage.setItem('keyboardTyped','');window.localStorage.setItem('wordsHeight','');window.localStorage.setItem('keyLang','');location.reload();" style="color:white;"><i class="material-icons" style="font-size: 4vmin;line-height:5vmin;">refresh</i></button>
+            <button class="reloadBtn" onclick="window.localStorage.setItem('keyboardTyped','');window.localStorage.setItem('wordsHeight','');window.localStorage.setItem('keyLang','');location.reload();" style="color:white;"></button>
             <button class="showBtn" id="langButton" keyValue="a" onclick="toggleLang(event);">a</button>
             <button class="menuBtn" onclick="toggleMenu();">O</button>
         </div>
@@ -61,22 +61,22 @@
             <div id="innerKeyboard">
                 <div id="textField" onclick="selectField();" ontouchstart="dragElement(event);" ontouchmove="touchHandler(event);" ontouchend="fieldStop(event);"></div>
                 <div id="buttonWrapper">
-                    <button class="redBtn disabled" onclick="cancelWord();"><i class="material-icons">cancel</i></button>
-                    <button class="muteBtn" onclick="muteFunc();"><i class="material-icons">volume_up</i></button>
-                    <button class="greenBtn disabled" onclick="approveWord();"><i class="material-icons">check_circle</i></button>
+                    <button class="redBtn disabled" onclick="cancelWord();"></button>
+                    <button class="muteBtn" onclick="muteFunc();"></button>
+                    <button class="greenBtn disabled" onclick="approveWord();"></button>
                 </div>
                 <div id="moreButtonWrapper">
-                    <button class="redBtn disabled" onclick="cancelWord();"><i class="material-icons">cancel</i></button>
+                    <button class="redBtn disabled" onclick="cancelWord();"></button>
 
-                    <button class="plusAfter circleBtn skinButton" onclick="addBackward();"><i class="material-icons">east</i></button>
-                    <button id="moveForBtn" class="circleBtn skinButton" onclick="moveBackward();"><i class="material-icons">west</i></button>
+                    <button class="plusAfter circleBtn skinButton" onclick="addBackward();"></button>
+                    <button id="moveForBtn" class="circleBtn skinButton" onclick="moveBackward();"></button>
 
-                    <button class="muteBtn" onclick="muteFunc();"><i class="material-icons">volume_up</i></button>
+                    <button class="muteBtn" onclick="muteFunc();"></button>
 
-                    <button id="moveBackBtn" class="circleBtn skinButton" onclick="moveForward();"><i class="material-icons">east</i></button>
-                    <button class="plusBefore circleBtn skinButton" onclick="addForward();"><i class="material-icons">west</i></button>
+                    <button id="moveBackBtn" class="circleBtn skinButton" onclick="moveForward();"></button>
+                    <button class="plusBefore circleBtn skinButton" onclick="addForward();"></button>
 
-                    <button class="greenBtn disabled" onclick="approveWord();"><i class="material-icons">check_circle</i></button>
+                    <button class="greenBtn disabled" onclick="approveWord();"></button>
                     
                 </div>
                 <button class="keyButton absBtn" keyValue="א"></button>
