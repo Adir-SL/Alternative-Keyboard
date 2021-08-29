@@ -126,11 +126,11 @@
   .material-icons{
     font-size: 3em !important;
   }
-  .plusBefore::before, .plusAfter::after{
+  /* .plusBefore::before, .plusAfter::after{
     content: "+";
     font-weight: bold;
     margin-top: -4px;
-  }
+  } */
   #moreButtonWrapper, #buttonWrapper{
     opacity: 0;
   }
