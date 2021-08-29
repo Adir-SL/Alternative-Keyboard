@@ -376,12 +376,12 @@
     background-size: auto;
   }
   .plusBefore, .plusAfter{
-    background-image: url(icons/plus.svg);
+    background-image: url(icons/plus.svg) !important;
     width: 2em;
     background-size: auto;
   }
   #moveForBtn, #moveBackBtn{
-    background-image: url(icons/arrow.svg);
+    background-image: url(icons/arrow.svg) !important;
     width: 2em;
     background-size: auto;
   }
