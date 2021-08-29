@@ -409,8 +409,8 @@ function moveForward(){
             flattenWords();
         }
     }
-    resetButtons();
-    lessButtons();
+    // resetButtons();
+    // lessButtons();
 }
 function moveBackward(){
     if(document.getElementsByClassName("selectButton")[0].parentElement.id == "textField"){
@@ -434,8 +434,8 @@ function moveBackward(){
             flattenWords();
         }
     }
-    resetButtons();
-    lessButtons();
+    // resetButtons();
+    // lessButtons();
 }
 function flatten(){
     var x = document.getElementById("textField").getElementsByTagName("button");
