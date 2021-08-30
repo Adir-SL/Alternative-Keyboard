@@ -292,6 +292,8 @@
     letter-spacing: .7em;
     font-size: 3em;
     z-index: 11;
+    pointer-events: none;
+    touch-action: none;
   }
   .innerApprove{
     /* animation: approveAnim 300ms ease-in; */
