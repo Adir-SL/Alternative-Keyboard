@@ -11,6 +11,7 @@ setTimeout(function () {
         document.getElementById("buttonWrapper").style.opacity = "1";
         document.getElementById("moreButtonWrapper").style.opacity = "1";
     }
+    window.origKeyboard = document.getElementById("keyboard").innerHTML;
 }, 50);
 
 if(window.localStorage.getItem('wordsHeight') == null){
