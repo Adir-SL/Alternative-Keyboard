@@ -237,6 +237,7 @@ function animApprove(){
         window.localStorage.setItem('keyLang', document.getElementById("langButton").innerText);
         window.localStorage.setItem('wordsHeight', document.getElementById("innerWords").className);
         //location.reload();
+        resetUI();
     }, 400);
 }
 function cancelWord() {
@@ -278,9 +279,13 @@ function cancelWord() {
             window.localStorage.setItem('keyLang', document.getElementById("langButton").innerText);
             window.localStorage.setItem('wordsHeight', document.getElementById("innerWords").className);
             //location.reload();
+            resetUI();
         }, 310);
         }
     }
+}
+function resetUI(){
+    document.getElementById("keyboard").innerHTML = window.origKeyboard;
 }
 function toggleButtons() {
     if (document.getElementById("buttonWrapper").getElementsByTagName("button")[0].className == "redBtn disabled") {
