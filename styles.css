@@ -43,6 +43,7 @@
     margin-left: 4.54vw;
     margin-right: 4.54vw;
     margin-top: 16px;
+    gap: 1vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
