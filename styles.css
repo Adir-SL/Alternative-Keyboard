@@ -52,10 +52,10 @@
     height: 8vmin;
     height: 8vh;
     padding: 1vmin;
-    padding: 1.2vh;
+    padding: 1.2vh 2vh;
     width: 90.92vw;
-    margin-right: -1vh;
-    margin-left: -1vh;
+    margin-right: -2vh;
+    margin-left: -2vh;
     border-radius: 999px;
     transition: all 100ms ease-in-out, background-color 200ms linear 100ms;
   }
