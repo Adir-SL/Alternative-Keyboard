@@ -102,7 +102,7 @@
   }
   #moreButtonWrapper{
     position: absolute;
-    top: 20.1vmin;
+    top: 19vmin;
     width: calc(100% - 9.08vw);
   }
   .hiddenButtons{
