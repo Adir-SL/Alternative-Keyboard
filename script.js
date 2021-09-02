@@ -453,6 +453,12 @@ function moveForward(){
             document.getElementsByClassName("selectButton")[0].classList.remove("selectButton");
             document.getElementById("innerWords").getElementsByTagName("button")[tempNum+1].classList.add("selectButton");
             flattenWords();
+
+            var x = document.getElementById("innerWords").getElementsByTagName("button");
+            var i;
+            for (i = 0; i < x.length; i++) {
+                x[i].classList.remove("lastWord");
+            }
         }
     }
     // setTimeout(function(){
