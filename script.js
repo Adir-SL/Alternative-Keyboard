@@ -167,6 +167,7 @@ function approveWord() {
             document.getElementsByClassName("lastWord")[0].innerText = document.getElementById("textField").innerText;
             document.getElementsByClassName("selectButton")[0].classList.remove("selectButton");
             document.getElementsByClassName("lastWord")[0].classList.add("selectButton");
+            document.getElementById("textField").innerHTML = '';
         }
     document.getElementById("buttonWrapper").getElementsByClassName("greenBtn")[0].style.transform = "scale(0.8)";
     if(document.getElementById("textField").innerHTML !== ""){
@@ -325,12 +326,8 @@ function selectMe(e){
             document.getElementById("textField").classList.remove("fieldSelected");
             // alert(e.target.classList.length)
             e.target.classList.remove("selectButton");
-            if(e.target.classList.length > 1){
-                // resetButtons();
-            }else{
-                // resetButtons();
-            }
             if(e.target.parentNode.id == "innerWords"){
+                resetButtons();
                 var x = document.getElementsByTagName("button");
                 var i;
                 for (i = 0; i < x.length; i++) {
@@ -351,12 +348,8 @@ function selectMe(e){
             document.getElementById("textField").classList.remove("fieldSelected");
             // alert(e.target.classList.length)
             e.target.classList.add("selectButton");
-            if(e.target.classList.length > 1){
-                // resetButtons();
-            }else{
-                // resetButtons();
-            }
             if(e.target.parentNode.id == "innerWords"){
+                resetButtons();
                 var x = document.getElementsByTagName("button");
                 var i;
                 for (i = 0; i < x.length; i++) {
