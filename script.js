@@ -453,7 +453,7 @@ function moveForward(){
             document.getElementsByClassName("selectButton")[0].classList.remove("selectButton");
             document.getElementById("innerWords").getElementsByTagName("button")[tempNum+1].classList.add("selectButton");
             flattenWords();
-
+            //removes the lastWord bug
             var x = document.getElementById("innerWords").getElementsByTagName("button");
             var i;
             for (i = 0; i < x.length; i++) {
@@ -489,7 +489,7 @@ function moveBackward(){
             document.getElementsByClassName("selectButton")[0].classList.remove("selectButton");
             document.getElementById("innerWords").getElementsByTagName("button")[tempNum-1].classList.add("selectButton");
             flattenWords();
-            
+            //removes the lastWord bug
             var x = document.getElementById("innerWords").getElementsByTagName("button");
             var i;
             for (i = 0; i < x.length; i++) {
