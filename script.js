@@ -416,7 +416,7 @@ function moveForward(){
             flattenWords();
         }
     }
-    setTimeout(function(){ document.getElementsByClassName("selectButton")[0].classList.remove("selectButton"); }, 100);
+    setTimeout(function(){ document.getElementsByClassName("selectButton")[0].classList.remove("selectButton"); }, 300);
     // resetButtons();
     // lessButtons();
 }
@@ -442,9 +442,12 @@ function moveBackward(){
             flattenWords();
         }
     }
-    setTimeout(function(){ document.getElementsByClassName("selectButton")[0].classList.remove("selectButton"); }, 100);
+    setTimeout(function(){ document.getElementsByClassName("selectButton")[0].classList.remove("selectButton"); }, 300);
     // resetButtons();
     // lessButtons();
+}
+function swipeIt(){
+    setTimeout(function(){ document.getElementsByClassName("selectButton")[0].classList.remove("selectButton"); }, 100);
 }
 function flatten(){
     var x = document.getElementById("textField").getElementsByTagName("button");
