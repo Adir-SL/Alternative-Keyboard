@@ -635,14 +635,14 @@ function dragElement(e) {
             cancelWord();
         }
         if(window.touchXStart - window.touchX > 0 && window.touchX !== undefined){
-            selectMe(e);
+            // selectMe(e);
             resetButtons();
             e.target.classList.add("selectButton")
             document.getElementById("textField").classList.remove("fieldSelected");
             if(temp[0] == "a"){moveBackward(e);swipeIt();}else{moveForward(e);swipeIt();}
             resetTouch();
         }else{
-            selectMe(e);
+            // selectMe(e);
             resetButtons();
             e.target.classList.add("selectButton")
             document.getElementById("textField").classList.remove("fieldSelected");
