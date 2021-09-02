@@ -416,7 +416,11 @@ function moveForward(){
             flattenWords();
         }
     }
-    setTimeout(function(){ document.getElementsByClassName("selectButton")[0].classList.remove("selectButton"); }, 300);
+    setTimeout(function(){
+        if(document.getElementsByClassName("selectButton").length > 0){
+            document.getElementsByClassName("selectButton")[0].classList.remove("selectButton");
+        }
+    }, 300);
     // resetButtons();
     // lessButtons();
 }
@@ -442,7 +446,11 @@ function moveBackward(){
             flattenWords();
         }
     }
-    setTimeout(function(){ document.getElementsByClassName("selectButton")[0].classList.remove("selectButton"); }, 300);
+    setTimeout(function(){
+        if(document.getElementsByClassName("selectButton").length > 0){
+            document.getElementsByClassName("selectButton")[0].classList.remove("selectButton");
+        }
+    }, 300);
     // resetButtons();
     // lessButtons();
 }
