@@ -161,6 +161,7 @@ function approveWord() {
         if(document.getElementsByClassName("lastWord").length == 0){
             if(document.getElementById("textField").innerHTML !== ""){
         document.getElementById("innerWords").innerHTML += "<button num='"+window.wordNum+"' class='opacMe' onclick='selectMe(event);' ontouchstart='dragElement(event);' ontouchmove='touchHandler(event);' ontouchend='stopDrag(event);'>" + document.getElementById("textField").innerText + "</button>";
+        animApprove();
             }
         }else{
             // alert("L")
