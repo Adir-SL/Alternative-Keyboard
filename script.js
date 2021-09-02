@@ -163,6 +163,7 @@ function approveWord() {
         document.getElementById("innerWords").innerHTML += "<button num='"+window.wordNum+"' class='opacMe' onclick='selectMe(event);' ontouchstart='dragElement(event);' ontouchmove='touchHandler(event);' ontouchend='stopDrag(event);'>" + document.getElementById("textField").innerText + "</button>";
             }
         }else{
+            // alert("L")
             document.getElementsByClassName("lastWord")[0].innerText = document.getElementById("textField").innerText;
             document.getElementsByClassName("selectButton")[0].classList.remove("selectButton");
             document.getElementsByClassName("lastWord")[0].classList.add("selectButton");
