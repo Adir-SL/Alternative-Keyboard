@@ -141,7 +141,7 @@ function validWords(){
                 x[i].outerHTML = '';
             }
             if(document.getElementsByClassName("lastWord").length > 0){
-                x[i].classList.remove("lastWord");
+                // x[i].classList.remove("lastWord");
             }
         }
         if(document.getElementsByClassName("selectButton").length > 0){
@@ -166,7 +166,10 @@ function approveWord() {
             // alert("L")
             document.getElementsByClassName("lastWord")[0].innerText = document.getElementById("textField").innerText;
             document.getElementsByClassName("selectButton")[0].classList.remove("selectButton");
-            document.getElementsByClassName("lastWord")[0].classList.add("selectButton");
+            
+            setTimeout(function(){
+                document.getElementsByClassName("lastWord")[0].classList.add("selectButton");
+            }, 100);
         }
     document.getElementById("buttonWrapper").getElementsByClassName("greenBtn")[0].style.transform = "scale(0.8)";
     if(document.getElementById("textField").innerHTML !== ""){
