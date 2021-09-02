@@ -178,6 +178,7 @@ function approveWord() {
         document.getElementById("innerWords").innerHTML += "<br/>";
     }
 }
+
 function animApproveT(){
     document.getElementsByClassName("absWord")[0].style.left = document.getElementById("textField").getElementsByTagName("button")[0].offsetLeft+"px";
     document.getElementsByClassName("absWord")[0].style.top = document.getElementById("textField").getElementsByTagName("button")[0].offsetTop+"px";
