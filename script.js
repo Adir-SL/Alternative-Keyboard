@@ -318,10 +318,11 @@ function toggleLang(e){
     }
 }
 function selectMe(e){
+    if(e.target.classList.length > 1){
         setTimeout(function(){
             document.getElementById("textField").classList.remove("fieldSelected");
             // alert(e.target.classList.length)
-            e.target.classList.toggle("selectButton");
+            e.target.classList.remove("selectButton");
             if(e.target.classList.length > 1){
                 // resetButtons();
             }else{
@@ -343,6 +344,36 @@ function selectMe(e){
             document.getElementById("textField").classList.remove("fieldSelected");
             // setTimeout(function(){ document.getElementById("textField").classList.remove("fieldSelected"); }, 10);
         }, 10);
+    }else{
+        setTimeout(function(){
+            document.getElementById("textField").classList.remove("fieldSelected");
+            // alert(e.target.classList.length)
+            e.target.classList.add("selectButton");
+            if(e.target.classList.length > 1){
+                // resetButtons();
+            }else{
+                // resetButtons();
+            }
+            if(e.target.parentNode.id == "innerWords"){
+                var x = document.getElementsByTagName("button");
+                var i;
+                for (i = 0; i < x.length; i++) {
+                    x[i].classList.remove("lastWord");
+                }
+    
+                tempY = 0;
+                document.getElementById("textField").innerHTML = '';
+                getSelectedWord(e.target.innerText);
+                e.target.classList.add("lastWord");
+            }
+            moreButtons();
+            document.getElementById("textField").classList.remove("fieldSelected");
+            // setTimeout(function(){ document.getElementById("textField").classList.remove("fieldSelected"); }, 10);
+        }, 10);
+    }
+
+
+        
 }
 function getSelectedWord(y){
     if(tempY == y.length){
@@ -590,7 +621,7 @@ function reNumWords(){
 function dragElement(e) {
     window.touchXStart = e.touches[0].clientX;
     window.touchYStart = e.touches[0].clientY;
-    e.target.classList.add("selectButton");
+    // e.target.classList.add("selectButton");
     if(e.target.id == "textField"){
         document.getElementById("textField").classList.add('fieldSelected');
     }else{
