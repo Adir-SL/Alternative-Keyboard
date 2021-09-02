@@ -339,6 +339,8 @@ function selectMe(e){
                 getSelectedWord(e.target.innerText);
                 e.target.classList.add("lastWord");
                 e.target.classList.add("selectButton");
+            }else{
+                e.target.classList.add("selectButton");
             }
             moreButtons();
             document.getElementById("textField").classList.remove("fieldSelected");
@@ -360,6 +362,8 @@ function selectMe(e){
                 document.getElementById("textField").innerHTML = '';
                 getSelectedWord(e.target.innerText);
                 e.target.classList.add("lastWord");
+                e.target.classList.add("selectButton");
+            }else{
                 e.target.classList.add("selectButton");
             }
             moreButtons();
