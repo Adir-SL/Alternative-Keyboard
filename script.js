@@ -238,6 +238,7 @@ function animApprove(){
         window.localStorage.setItem('keyLang', document.getElementById("langButton").innerText);
         window.localStorage.setItem('wordsHeight', document.getElementById("innerWords").className);
         //location.reload();
+        window.origKeyboard = document.getElementById("keyboard").innerHTML;
         resetUI();
     }, 400);
 }
