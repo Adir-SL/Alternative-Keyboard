@@ -491,7 +491,7 @@ function moveBackward(){
     // lessButtons();
 }
 function swipeIt(){
-    setTimeout(function(){ document.getElementsByClassName("selectButton")[0].classList.remove("selectButton"); }, 100);
+    setTimeout(function(){ document.getElementsByClassName("selectButton")[0].classList.remove("selectButton"); }, 300);
 }
 function flatten(){
     var x = document.getElementById("textField").getElementsByTagName("button");
