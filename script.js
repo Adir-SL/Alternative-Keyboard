@@ -150,7 +150,7 @@ function validWords(){
     }
 }
 function approveWord() {
-    if(document.getElementsByClassName("lastWord")[0] !== undefined){animApprove();}
+    // if(document.getElementsByClassName("lastWord")[0] !== undefined){animApprove();}
     if(document.getElementsByClassName("selectButton").length > 0 && document.getElementsByClassName("selectButton")[0].parentNode.id == "innerWords"){
         document.getElementsByClassName("selectButton")[0].innerText = document.getElementById("textField").innerText;
         lessButtons();
