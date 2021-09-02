@@ -320,11 +320,12 @@ function toggleLang(e){
 function selectMe(e){
         setTimeout(function(){
             document.getElementById("textField").classList.remove("fieldSelected");
-            resetButtons();
-            if(e.target.className.slice(-12) == "selectButton"){
-                e.target.classList.remove("selectButton");
+            // alert(e.target.classList.length)
+            e.target.classList.toggle("selectButton");
+            if(e.target.classList.length > 1){
+                // resetButtons();
             }else{
-                e.target.classList.add("selectButton");
+                // resetButtons();
             }
             if(e.target.parentNode.id == "innerWords"){
                 var x = document.getElementsByTagName("button");
