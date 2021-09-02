@@ -167,14 +167,13 @@ function approveWord() {
             document.getElementsByClassName("lastWord")[0].innerText = document.getElementById("textField").innerText;
             document.getElementsByClassName("selectButton")[0].classList.remove("selectButton");
             document.getElementsByClassName("lastWord")[0].classList.add("selectButton");
-            document.getElementById("textField").innerHTML = '';
         }
     document.getElementById("buttonWrapper").getElementsByClassName("greenBtn")[0].style.transform = "scale(0.8)";
     if(document.getElementById("textField").innerHTML !== ""){
         document.getElementById("textField").classList.add("innerApprove");
         validWords();
     }
-    animApprove();
+    // animApprove();
     }
     if(document.getElementById("textField").innerText.slice(-1) == "."){
         document.getElementById("innerWords").innerHTML += "<br/>";
