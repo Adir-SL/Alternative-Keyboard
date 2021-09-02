@@ -416,6 +416,7 @@ function moveForward(){
             flattenWords();
         }
     }
+    document.getElementsByClassName("selectButton")[0].classList.remove("selectButton");
     // resetButtons();
     // lessButtons();
 }
@@ -441,6 +442,7 @@ function moveBackward(){
             flattenWords();
         }
     }
+    document.getElementsByClassName("selectButton")[0].classList.remove("selectButton");
     // resetButtons();
     // lessButtons();
 }
