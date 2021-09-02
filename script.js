@@ -327,11 +327,18 @@ function selectMe(e){
             // alert(e.target.classList.length)
             e.target.classList.remove("selectButton");
             if(e.target.parentNode.id == "innerWords"){
-                resetButtons();
+                // resetButtons();
                 var x = document.getElementsByTagName("button");
                 var i;
                 for (i = 0; i < x.length; i++) {
                     x[i].classList.remove("lastWord");
+                    resetButtons();
+                    // alert(x[i].className.slice(-8))
+                    setTimeout(function(){
+                        if(x[i].className.slice(-8) == "lastWord"){
+                            x[i].classList.add("selectButton");
+                        }
+                    }, 300);
                 }
     
                 tempY = 0;
@@ -349,11 +356,20 @@ function selectMe(e){
             // alert(e.target.classList.length)
             e.target.classList.add("selectButton");
             if(e.target.parentNode.id == "innerWords"){
-                resetButtons();
+                // resetButtons();
                 var x = document.getElementsByTagName("button");
                 var i;
                 for (i = 0; i < x.length; i++) {
                     x[i].classList.remove("lastWord");
+                    resetButtons();
+                    console.log(x[i])
+                    console.log(x[i].className.slice(-8))
+
+                    setTimeout(function(){
+                        if(x[i].className.slice(-8) == "lastWord"){
+                            x[i].classList.add("selectButton");
+                        }
+                    }, 300);
                 }
     
                 tempY = 0;
