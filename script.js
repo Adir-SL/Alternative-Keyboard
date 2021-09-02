@@ -321,7 +321,11 @@ function selectMe(e){
         setTimeout(function(){
             document.getElementById("textField").classList.remove("fieldSelected");
             resetButtons();
-            e.target.classList.add("selectButton");
+            if(e.target.className.slice(-12) == "selectButton"){
+                e.target.classList.remove("selectButton");
+            }else{
+                e.target.classList.add("selectButton");
+            }
             if(e.target.parentNode.id == "innerWords"){
                 var x = document.getElementsByTagName("button");
                 var i;
