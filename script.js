@@ -416,7 +416,7 @@ function moveForward(){
             flattenWords();
         }
     }
-    document.getElementsByClassName("selectButton")[0].classList.remove("selectButton");
+    setTimeout(function(){ document.getElementsByClassName("selectButton")[0].classList.remove("selectButton"); }, 100);
     // resetButtons();
     // lessButtons();
 }
@@ -442,7 +442,7 @@ function moveBackward(){
             flattenWords();
         }
     }
-    document.getElementsByClassName("selectButton")[0].classList.remove("selectButton");
+    setTimeout(function(){ document.getElementsByClassName("selectButton")[0].classList.remove("selectButton"); }, 100);
     // resetButtons();
     // lessButtons();
 }
@@ -592,14 +592,14 @@ function dragElement(e) {
             resetButtons();
             e.target.classList.add("selectButton")
             document.getElementById("textField").classList.remove("fieldSelected");
-            if(temp[0] == "a"){moveBackward(e);}else{moveForward(e);}
+            if(temp[0] == "a"){moveBackward(e);swipeIt();}else{moveForward(e);swipeIt();}
             resetTouch();
         }else{
             selectMe(e);
             resetButtons();
             e.target.classList.add("selectButton")
             document.getElementById("textField").classList.remove("fieldSelected");
-            if(temp[0] !== "a"){moveBackward(e);}else{moveForward(e);}
+            if(temp[0] !== "a"){moveBackward(e);swipeIt();}else{moveForward(e);swipeIt();}
             resetTouch();
         }
     }
