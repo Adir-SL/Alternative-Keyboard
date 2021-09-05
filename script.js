@@ -343,11 +343,12 @@ function selectMe(e){
                 // getSelectedWord(e.target.innerText);
                 e.target.classList.remove("lastWord");
                 e.target.classList.remove("selectButton");
+                lessButtons();
                 // e.target.classList.add("selectButton");
             }else{
                 // e.target.classList.add("selectButton");
             }
-            moreButtons();
+            // moreButtons();
             document.getElementById("textField").classList.remove("fieldSelected");
             // setTimeout(function(){ document.getElementById("textField").classList.remove("fieldSelected"); }, 10);
         }, 10);
