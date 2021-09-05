@@ -340,8 +340,9 @@ function selectMe(e){
     
                 tempY = 0;
                 document.getElementById("textField").innerHTML = '';
-                getSelectedWord(e.target.innerText);
-                e.target.classList.add("lastWord");
+                // getSelectedWord(e.target.innerText);
+                e.target.classList.remove("lastWord");
+                e.target.classList.remove("selectButton");
                 // e.target.classList.add("selectButton");
             }else{
                 // e.target.classList.add("selectButton");
