@@ -373,10 +373,7 @@ function selectMe(e){
             document.getElementById("textField").classList.remove("fieldSelected");
             // setTimeout(function(){ document.getElementById("textField").classList.remove("fieldSelected"); }, 10);
         }, 10);
-    }
-
-
-        
+    }   
 }
 function getSelectedWord(y){
     if(tempY == y.length){
