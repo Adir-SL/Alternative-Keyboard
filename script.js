@@ -507,6 +507,7 @@ function moveBackward(){
 function swipeIt(){
     setTimeout(function(){
         document.getElementsByClassName("selectButton")[0].classList.remove("selectButton");
+        document.getElementById("textField").innerHTML = "";
     }, 300);
 }
 function flatten(){
