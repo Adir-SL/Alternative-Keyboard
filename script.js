@@ -346,6 +346,7 @@ function selectMe(e){
                 lessButtons();
                 // e.target.classList.add("selectButton");
             }else{
+                document.getElementsByClassName("lastWord")[0].classList.add("selectButton");
                 // e.target.classList.add("selectButton");
             }
             // moreButtons();
