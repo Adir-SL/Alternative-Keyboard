@@ -508,7 +508,7 @@ function moveBackward(){
 function swipeIt(){
     //Additional functionality that only happpens of swipes.
     setTimeout(function(){
-        if(document.getElementsByClassName("selectButton")[0].className == "keepLang selectButton"){
+        if(document.getElementsByClassName("selectButton")[0].className == "keepLang selectButton" || document.getElementsByClassName("selectButton")[0].className == "keepLang"){
             document.getElementsByClassName("selectButton")[0].classList.remove("selectButton");
         }else{
             document.getElementsByClassName("selectButton")[0].classList.remove("selectButton");
