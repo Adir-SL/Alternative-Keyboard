@@ -170,6 +170,7 @@ function approveWord() {
             
             setTimeout(function(){
                 document.getElementsByClassName("lastWord")[0].classList.add("selectButton");
+                animApprove();
             }, 100);
         }
     document.getElementById("buttonWrapper").getElementsByClassName("greenBtn")[0].style.transform = "scale(0.8)";
