@@ -328,8 +328,6 @@ function selectMe(e){
     if(e.target.classList.length > 1){
         setTimeout(function(){
             document.getElementById("textField").classList.remove("fieldSelected");
-            // alert(e.target.classList.length)
-            // e.target.classList.remove("selectButton");
             if(e.target.parentNode.id == "innerWords"){
                 // resetButtons();
                 var x = document.getElementsByTagName("button");
