@@ -324,7 +324,7 @@ function toggleLang(e){
     }
 }
 function selectMe(e){
-    console.log(e.target.classList.length)
+    // console.log(e.target.classList.length)
     if(e.target.classList.length > 1){
         setTimeout(function(){
             document.getElementById("textField").classList.remove("fieldSelected");
