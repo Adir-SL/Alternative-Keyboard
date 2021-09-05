@@ -169,7 +169,7 @@ function approveWord() {
             document.getElementsByClassName("selectButton")[0].classList.remove("selectButton");
             
             setTimeout(function(){
-                document.getElementsByClassName("lastWord")[0].classList.add("selectButton");
+                // document.getElementsByClassName("lastWord")[0].classList.add("selectButton");
                 animApprove();
             }, 100);
         }
