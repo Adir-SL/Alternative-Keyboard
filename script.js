@@ -505,7 +505,7 @@ function moveBackward(){
     // lessButtons();
 }
 function swipeIt(){
-    //Additional function that only happpens of swipes.
+    //Additional functionality that only happpens of swipes.
     setTimeout(function(){
         document.getElementsByClassName("selectButton")[0].classList.remove("selectButton");
         document.getElementById("textField").innerHTML = "";
