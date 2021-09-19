@@ -654,7 +654,6 @@ function dragElement(e) {
   }
   function stopDrag(e){
     if(window.touchYStart - window.touchY > 30 || window.touchX == undefined){
-        approveWord();
     }else{
         if(window.touchYStart - window.touchY < -30 && e.target.classList[0] == "keepLang"){
             cancelWord();
