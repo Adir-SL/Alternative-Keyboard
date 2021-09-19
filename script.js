@@ -648,6 +648,7 @@ function dragElement(e) {
     if(e.target.id == "textField"){
         document.getElementById("textField").classList.add('fieldSelected');
     }else{
+        e.target.classList.add("selectButton");
         document.getElementById("textField").classList.remove('fieldSelected');
     }
   }
