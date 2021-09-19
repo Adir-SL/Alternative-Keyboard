@@ -684,6 +684,7 @@ function fieldStop(e){
     if(window.touchYStart - window.touchY > 30 && window.touchY !== undefined){
         approveWord();
         resetTouch();
+        document.getElementById("textField").innerHTML = "";
     }else{
         if(window.touchYStart - window.touchY < -30 && window.touchY !== undefined){
             console.log(e.target.id)
