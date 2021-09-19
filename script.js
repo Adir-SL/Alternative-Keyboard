@@ -166,7 +166,9 @@ function approveWord() {
         }else{
             // alert("L")
             document.getElementsByClassName("lastWord")[0].innerText = document.getElementById("textField").innerText;
-            document.getElementsByClassName("selectButton")[0].classList.remove("selectButton");
+            if(document.getElementsByClassName("selectButton").length > 0){
+                document.getElementsByClassName("selectButton")[0].classList.remove("selectButton");
+            }
             
             setTimeout(function(){
                 // document.getElementsByClassName("lastWord")[0].classList.add("selectButton");
@@ -184,6 +186,10 @@ function approveWord() {
         document.getElementById("innerWords").innerHTML += "<br/>";
     }
     document.getElementById("textField").innerHTML = "";
+    document.getElementById("textField").classList.remove("fieldSelected");
+    if(document.getElementsByClassName("lastWord").length > 0){
+        document.getElementsByClassName("lastWord")[0].classList.remove("lastWord");
+    }
 }
 
 function animApproveT(){
