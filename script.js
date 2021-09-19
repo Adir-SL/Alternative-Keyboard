@@ -183,6 +183,7 @@ function approveWord() {
     if(document.getElementById("textField").innerText.slice(-1) == "."){
         document.getElementById("innerWords").innerHTML += "<br/>";
     }
+    document.getElementById("textField").innerHTML = "";
 }
 
 function animApproveT(){
