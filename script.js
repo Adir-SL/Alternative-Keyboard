@@ -355,7 +355,7 @@ function selectMe(e){
             }else{
 
                 /* 22.09 Fix
-                    flipped the next 2 lines of code (commented the other one originally) */
+                    flipped the next 2 lines of code (commented the 'lastWord' one originally) */
                 e.target.classList.add("selectButton");
                 // document.getElementsByClassName("lastWord")[0].classList.add("selectButton");
                 // e.target.classList.add("selectButton");
