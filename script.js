@@ -353,6 +353,9 @@ function selectMe(e){
                 lessButtons();
                 // e.target.classList.add("selectButton");
             }else{
+
+                /* 22.09 Fix
+                    flipped the next 2 lines of code (commented the other one originally) */
                 e.target.classList.add("selectButton");
                 // document.getElementsByClassName("lastWord")[0].classList.add("selectButton");
                 // e.target.classList.add("selectButton");
