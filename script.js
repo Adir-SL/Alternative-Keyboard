@@ -334,6 +334,7 @@ function toggleLang(e){
 function selectMe(e){
     // console.log(e.target.classList.length)
     if(e.target.classList.length > 1){
+        console.log("Class");
         setTimeout(function(){
             document.getElementById("textField").classList.remove("fieldSelected");
             if(e.target.parentNode.id == "innerWords"){
@@ -360,6 +361,7 @@ function selectMe(e){
             // setTimeout(function(){ document.getElementById("textField").classList.remove("fieldSelected"); }, 10);
         }, 10);
     }else{
+        console.log("noClass");
         setTimeout(function(){
             document.getElementById("textField").classList.remove("fieldSelected");
             // alert(e.target.classList.length)
